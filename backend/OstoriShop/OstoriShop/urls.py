@@ -28,7 +28,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="СПО РКОТ",
         default_version='v1',
-        description="API сервиса СПО РКОТ",
+        description="API магазина Ostori",
     ),
     public=True,
     permission_classes=[permissions.IsAdminUser],
