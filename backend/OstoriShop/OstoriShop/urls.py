@@ -26,7 +26,7 @@ from rest_framework_simplejwt.views import (TokenObtainPairView,
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="СПО РКОТ",
+        title="Магазин Ostori",
         default_version='v1',
         description="API магазина Ostori",
     ),
