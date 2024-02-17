@@ -16,3 +16,11 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['last_name'] = user.last_name
 
         return token
+
+
+class UserSerializer(serializers.ModelSerializer):
+    avatar = serializers.CharField()
+
+    class Meta:
+        model = get_user_model()
+        fields = ('id', 'email', 'first_name', 'last_name', 'avatar')

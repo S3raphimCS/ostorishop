@@ -48,6 +48,7 @@ def signup_user(request):
         return Response({"error": 'Пользователь с такой почтой уже существует'}, status=status.HTTP_400_BAD_REQUEST)
     password = data["POST"]["password"]
     user = CustomUser(email=data["email"].value(),
+                      is_email_verified=False,
                       first_name=data["first_name"].value(),
                       last_name=data["last_name"].value(),
                       )
@@ -60,3 +61,4 @@ def signup_user(request):
             'password': password,
         },
         status=status.HTTP_201_CREATED)
+

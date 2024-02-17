@@ -30,11 +30,10 @@ class ProductAdmin(admin.ModelAdmin):
 class ProductCommentAdmin(admin.ModelAdmin):
     fieldsets = (
         ("Пользователь и товар", {"fields": ('user', 'product_name')}),
-        ("Отзыв", {"fields": ('rating', "message")}),
+        ("Отзыв", {"fields": ("message",)}),
         ("Модерирование", {"fields": ('is_moderated',)}),
     )
-    list_filter = ("rating", "is_moderated",)
-    list_display = ('is_moderated', 'product_name', 'rating', 'user')
+    list_filter = ("is_moderated",)
+    list_display = ('is_moderated', 'product_name', 'user')
     list_per_page = 15
     search_fields = ("product_name", "user",)
-    ordering = ("rating",)

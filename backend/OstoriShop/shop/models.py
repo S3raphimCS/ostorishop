@@ -1,19 +1,30 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
-from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 from django.core.validators import MinValueValidator, MaxValueValidator
+from slugify import slugify
 
 
 class Category(models.Model):
     """Категория товара"""
 
-    name = models.CharField(_("Название"), max_length=256)
+    name = models.CharField(
+        _("Название"),
+        max_length=256
+    )
     icon = models.ImageField(
         _("Иконка"),
         upload_to="images/products",
         blank=True, null=True
     )
+    slug = models.SlugField(
+        blank=True, null=True
+    )
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Category, self).save(*args, **kwargs)
 
     def __str__(self):
         return f'{self.name}'
@@ -35,6 +46,10 @@ class Product(models.Model):
         blank=True,
         related_query_name='categories'
     )
+    image = models.ImageField(
+        upload_to="images/products",
+        blank=True
+    )
     article = models.CharField(
         _("Артикул"),
         max_length=127,
@@ -50,7 +65,7 @@ class Product(models.Model):
         blank=True,
         default=0
     )
-    description = RichTextField(
+    description = CKEditor5Field(
         _("Описание"),
         blank=True
     )
@@ -64,9 +79,19 @@ class Product(models.Model):
         blank=True,
         default=0
     )
+    slug = models.SlugField(
+        blank=True, null=True,
+    )
+    available = models.BooleanField(
+        default=True,
+    )
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        return super(Product, self).save(*args, **kwargs)
 
     def get_categories(self):
-        return ','.join([p.category for p in self.categories.all()])
+        return ', '.join([str(p.name) for p in self.categories.all()])
 
     def __str__(self):
         return f"{self.name}"
@@ -88,19 +113,6 @@ class ProductComment(models.Model):
         on_delete=models.CASCADE,
         related_name='comments',
         verbose_name=_("Товар")
-    )
-    rating = models.FloatField(
-        default=0,
-        validators=[
-            MinValueValidator(
-                limit_value=1,
-                message=_("Минимальное значение рейтинга не может быть меньше 1")
-            ),
-            MaxValueValidator(
-                limit_value=5,
-                message=_("Максимальное значение рейтинга не может превышать 5")
-            )
-        ]
     )
     message = models.TextField(
         _("Комментарий"),
