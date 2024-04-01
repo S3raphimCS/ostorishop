@@ -1,9 +1,67 @@
-import { Carousel, Dropdown, Loading } from '@/components/shared/ui';
-import { Button } from '@/components/shared/ui/Buttons/Button';
+import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
+import { Button } from '@/shared/ui/Buttons/Button';
+import { Card } from '@/entities';
 
 export default function Debug() {
+  const images = [
+    'kross3.png',
+    '/kross3.png',
+    '/kross3.png',
+    'kross3.png',
+    '/kross3.png',
+    '/kross3.png',
+    'kross3.png',
+    '/kross3.png',
+    '/kross3.png',
+    'kross3.png',
+    '/kross3.png',
+    '/kross3.png',
+  ];
+  const alts = [
+    'Alt 1',
+    'Alt 2',
+    'Alt 3',
+    'Alt 1',
+    'Alt 2',
+    'Alt 3',
+    'Alt 1',
+    'Alt 2',
+    'Alt 3',
+    'Alt 1',
+    'Alt 2',
+    'Alt 3',
+  ];
+  const title = [
+    'Title1',
+    'Title2',
+    'Title3',
+    'Title4',
+    'Title5',
+    'Title6',
+    'Title7',
+    'Title8',
+    'Title9',
+    'Title10',
+    'Title11',
+    'Title12',
+  ];
+  const description = [
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+    'Кроссовки',
+  ];
   return (
-    <>
+    // В div можно подстраивать data-theme="название темы" и тестить цвета и темы
+    <div>
       <div className="mx-4 my-4 flex gap-12">
         <Button variant={'success'} size={'large'} outline={true}>
           Debug test 1
@@ -48,11 +106,37 @@ export default function Debug() {
         <Loading form="ring" size="xs" color="accent"></Loading>
       </div>
       <div className="mx-8 flex gap-6">
-        <Carousel
-          images={['/kross3.png', '/kross2.png', '/kross3.png']}
-          alt={['чек', 'чек', 'чек']}
+        <Carousel>
+          {images.map((imageUrl, index) => (
+            <Card
+              key={index}
+              imageUrl={imageUrl}
+              alt={alts[index]}
+              title={title[index]}
+              description={description[index]}
+            />
+          ))}
+        </Carousel>
+      </div>
+      <div className="mx-auto my-4 max-w-lg">
+        <ProgressBar value={65} color="primary" />
+        <ProgressBar value={10} color="secondary" />
+        <ProgressBar value={32} color="error" />
+      </div>
+      <div className="mx-8 mt-8 flex gap-24">
+        <Card
+          imageUrl={'/kross2.png'}
+          alt={'Krossovka'}
+          title={'Кросы'}
+          description={'Крутые кросы бро'}
+        />
+        <Card
+          imageUrl={'/kross2.png'}
+          alt={'Krossovka'}
+          title={'Кросы'}
+          description={'Крутые кросы бро'}
         />
       </div>
-    </>
+    </div>
   );
 }

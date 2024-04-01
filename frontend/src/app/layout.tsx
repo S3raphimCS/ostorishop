@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Header } from '@/widgets/header/ui';
 
 export const metadata: Metadata = {
   title: 'OstoriShop | Магазин одежды',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

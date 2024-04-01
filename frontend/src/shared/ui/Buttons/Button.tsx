@@ -1,5 +1,6 @@
 import { combineClasses } from '../../lib/combineClasses';
 import { ButtonHTMLAttributes } from 'react';
+import { IconType } from 'react-icons';
 
 export type ButtonVariant =
   | 'default'
@@ -14,6 +15,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: Size;
   outline?: boolean;
   hidden?: boolean;
+  icon?: IconType;
+  iconSize?: string;
 }
 
 const BASE_CLASSES = ['items-center'];
@@ -39,6 +42,8 @@ export const Button: React.FC<ButtonProps> = ({
   size,
   outline,
   hidden,
+  icon: Icon,
+  iconSize,
   onClick,
   children,
   ...rest
@@ -53,7 +58,8 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={classes} onClick={onClick} {...rest}>
-      {children}
+      {Icon && <Icon style={{ fontSize: iconSize }} />}
+      {children ? children : undefined}
     </button>
   );
 };
