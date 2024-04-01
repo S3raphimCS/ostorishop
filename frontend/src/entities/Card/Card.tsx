@@ -1,5 +1,6 @@
 import { Button } from '@/shared/ui';
 import { FaHeart } from 'react-icons/fa';
+import { Icon } from '@/shared/ui';
 
 interface CardProps {
   imageUrl: string;
@@ -23,7 +24,9 @@ export const Card: React.FC<CardProps> = ({
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <Button variant={'secondary'} size={'small'} icon={FaHeart}></Button>
+          <Button variant={'secondary'} size={'small'}>
+            <Icon icon="heart" size={14} color="black" className="my-icon" />
+          </Button>
         </div>
       </div>
     </div>
