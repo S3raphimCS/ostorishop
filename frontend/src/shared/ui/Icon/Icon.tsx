@@ -1,8 +1,8 @@
 import { IconType } from 'react-icons';
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaSun, FaMoon } from 'react-icons/fa';
 import { RiAccountCircleFill } from 'react-icons/ri';
 
-export type IconTypes = 'heart' | 'account';
+export type IconTypes = 'heart' | 'account' | 'lightTheme' | 'darkTheme';
 
 interface IconProps {
   icon: IconTypes;
@@ -14,6 +14,8 @@ interface IconProps {
 const ICON_TYPES: Record<IconTypes, IconType> = {
   heart: FaHeart,
   account: RiAccountCircleFill,
+  lightTheme: FaSun,
+  darkTheme: FaMoon,
 };
 
 export const Icon: React.FC<IconProps> = ({
