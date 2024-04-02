@@ -6,6 +6,8 @@ export type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'success'
+  | 'warning'
+  | 'info'
   | 'delete';
 type Size = 'normal' | 'small' | 'large' | 'wide' | 'tiny';
 
@@ -14,6 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: Size;
   outline?: boolean;
   hidden?: boolean;
+  circle?: boolean;
   iconSize?: string;
 }
 
@@ -24,6 +27,8 @@ const VARIANTS: Record<ButtonVariant, string[]> = {
   primary: ['btn', 'btn-primary'],
   secondary: ['btn', 'btn-secondary'],
   success: ['btn', 'btn-success'],
+  warning: ['btn', 'btn-warning'],
+  info: ['btn', 'btn-info'],
   delete: ['btn', 'btn-error'],
 };
 
@@ -39,6 +44,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant,
   size,
   outline,
+  circle,
   hidden,
   iconSize,
   onClick,
@@ -50,6 +56,7 @@ export const Button: React.FC<ButtonProps> = ({
     ...VARIANTS[variant],
     ...SIZES[size],
     outline ? 'btn-outline' : undefined,
+    circle ? 'btn-circle' : undefined,
     hidden ? 'hidden' : undefined
   );
 

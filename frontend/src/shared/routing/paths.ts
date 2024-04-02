@@ -1,5 +1,7 @@
 export const paths = {
   home: '/',
+  cart: '/cart',
+  wishlist: '/wishlist',
 
   men: '/men',
   menClothing: '/men-clothing',
