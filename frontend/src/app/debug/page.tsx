@@ -1,4 +1,4 @@
-import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
+import { Carousel, Dropdown, Icon, Loading, ProgressBar } from '@/shared/ui';
 import { Button } from '@/shared/ui/Buttons/Button';
 import { Card } from '@/entities';
 
@@ -137,6 +137,7 @@ export default function Debug() {
           description={'Крутые кросы бро'}
         />
       </div>
+      <div className="mx-auto my-4 max-w-lg"></div>
     </div>
   );
 }

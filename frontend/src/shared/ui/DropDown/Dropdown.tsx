@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface DropdownProps {
   buttonText: string;
   items: string[];
-  hrefs: string[];
+  hrefs?: string[];
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -29,7 +29,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div tabIndex={0} role="button" className="btn m-1">
+      <div tabIndex={0} role="button" className="m-1 mx-5">
         {buttonText}
       </div>
       {isOpen && (
@@ -41,7 +41,11 @@ export const Dropdown: React.FC<DropdownProps> = ({
         >
           {items.map((item, index) => (
             <li key={index}>
-              <Link href={hrefs[index]}>{item}</Link>
+              {hrefs && hrefs[index] ? (
+                <Link href={hrefs[index]}>{item}</Link>
+              ) : (
+                <span>{item}</span>
+              )}
             </li>
           ))}
         </ul>

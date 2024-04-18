@@ -5,14 +5,16 @@ import {
   FaMoon,
   FaSearch,
   FaShoppingBag,
+  FaMapMarkerAlt,
 } from 'react-icons/fa';
 import { RiAccountCircleFill } from 'react-icons/ri';
 
 export type IconTypes =
   | 'heart'
-  | 'account'
+  | 'profile'
   | 'search'
   | 'cart'
+  | 'location'
   | 'lightTheme'
   | 'darkTheme';
 
@@ -25,9 +27,10 @@ interface IconProps {
 
 const ICON_TYPES: Record<IconTypes, IconType> = {
   heart: FaHeart,
-  account: RiAccountCircleFill,
+  profile: RiAccountCircleFill,
   search: FaSearch,
   cart: FaShoppingBag,
+  location: FaMapMarkerAlt,
   lightTheme: FaSun,
   darkTheme: FaMoon,
 };
