@@ -1,7 +1,9 @@
-export { Button } from './Buttons/Button';
-export { Carousel } from './Carousel/Carousel';
-export { Dropdown } from './DropDown/Dropdown';
-export { Icon } from './Icon/Icon';
-export { Loading } from './Loading/Loading';
-export { ProgressBar } from './ProgressBar/ProgressBar';
-export { ThemeController } from './ThemeController/ThemeController';
+export { Button } from './buttons/Button';
+export { Carousel } from './carousel/Carousel';
+export { Dropdown } from './drop-down/Dropdown';
+export { Icon } from './icons/Icon';
+export { Input } from './input/Input';
+export { InputLabel } from './input/Input';
+export { Loading } from './loading/Loading';
+export { ProgressBar } from './progress-bar/ProgressBar';
+export { ThemeController } from './theme-controller/ThemeController';

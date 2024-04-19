@@ -1,5 +1,5 @@
 import { Carousel, Dropdown, Icon, Loading, ProgressBar } from '@/shared/ui';
-import { Button } from '@/shared/ui/Buttons/Button';
+import { Button } from '@/shared/ui';
 import { Card } from '@/entities';
 
 export default function Debug() {

@@ -1,5 +1,5 @@
 import { Icon } from '@/shared/ui';
-import { Input, InputLabel } from '@/shared/ui/Input';
+import { Input, InputLabel } from '@/shared/ui';
 
 export const Search = () => {
   return (
