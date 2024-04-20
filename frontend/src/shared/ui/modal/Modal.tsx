@@ -25,7 +25,7 @@ export const Modal: React.FC<ModalProps> = ({ id, name, children }) => {
         {name}
       </Button>
       <dialog id={id} className="modal">
-        <div className="modal-box text-white">
+        <div className="modal-box overflow-auto text-primary sm:max-h-screen sm:max-w-sm md:max-h-screen md:max-w-md lg:max-h-screen lg:max-w-lg xl:max-h-screen xl:max-w-xl">
           <form method="dialog">
             <div className="flex justify-end">
               <Button variant={'ghost'} size={'tiny'} circle>

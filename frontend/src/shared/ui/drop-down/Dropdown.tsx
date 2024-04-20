@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 interface DropdownProps {
+  background?: string;
   buttonText: string;
   items: string[];
   hrefs?: string[];
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
+  background = 'bg-base-200',
   buttonText,
   items,
   hrefs,
@@ -35,7 +37,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
       {isOpen && (
         <ul
           tabIndex={0}
-          className="menu dropdown-content z-[1] w-52 rounded-box bg-base-200 p-2 shadow"
+          className={`menu dropdown-content z-[1] w-52 rounded-box ${background} p-2 shadow`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

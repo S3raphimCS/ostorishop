@@ -20,7 +20,16 @@ const config: Config = {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['cupcake', 'dark', 'light', 'emerald'],
+    // Определить собственную тему через которую будут использоваться цвета
+    themes: [
+      {
+        sunrise: {
+          primary: '#EC7357',
+        },
+      },
+      'light',
+      'dark',
+    ],
   },
 };
 export default config;

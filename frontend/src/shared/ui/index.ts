@@ -7,4 +7,5 @@ export { InputLabel } from './input/Input';
 export { Modal } from './modal/Modal';
 export { Loading } from './loading/Loading';
 export { ProgressBar } from './progress-bar/ProgressBar';
+export { Select } from './select/Select';
 export { ThemeController } from './theme-controller/ThemeController';

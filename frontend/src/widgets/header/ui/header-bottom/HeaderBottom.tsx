@@ -5,6 +5,8 @@ import { Search } from './search';
 import { Cart } from './cart';
 import { Wishlist } from './wishlist';
 
+import { ThemeController } from '@/shared/ui';
+
 export const HeaderBottom = () => {
   return (
     <div className="navbar bg-neutral">
@@ -19,6 +21,7 @@ export const HeaderBottom = () => {
         <Cart />
         <Wishlist />
         <Profile />
+        <ThemeController />
       </div>
     </div>
   );
