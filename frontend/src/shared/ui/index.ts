@@ -4,6 +4,7 @@ export { Dropdown } from './drop-down/Dropdown';
 export { Icon } from './icons/Icon';
 export { Input } from './input/Input';
 export { InputLabel } from './input/Input';
+export { Modal } from './modal/Modal';
 export { Loading } from './loading/Loading';
 export { ProgressBar } from './progress-bar/ProgressBar';
 export { ThemeController } from './theme-controller/ThemeController';

@@ -5,10 +5,12 @@ export type ButtonVariant =
   | 'default'
   | 'primary'
   | 'secondary'
+  | 'accent'
   | 'success'
   | 'warning'
   | 'info'
-  | 'delete';
+  | 'delete'
+  | 'ghost';
 type Size = 'normal' | 'small' | 'large' | 'wide' | 'tiny';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -26,10 +28,12 @@ const VARIANTS: Record<ButtonVariant, string[]> = {
   default: ['btn'],
   primary: ['btn', 'btn-primary'],
   secondary: ['btn', 'btn-secondary'],
+  accent: ['btn', 'btn-accent'],
   success: ['btn', 'btn-success'],
   warning: ['btn', 'btn-warning'],
   info: ['btn', 'btn-info'],
   delete: ['btn', 'btn-error'],
+  ghost: ['btn', 'btn-ghost'],
 };
 
 const SIZES: Record<Size, string[]> = {
@@ -51,7 +55,10 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   ...rest
 }) => {
+  const restClassName = rest.className ? [rest.className] : [];
+
   const classes = combineClasses(
+    ...restClassName,
     ...BASE_CLASSES,
     ...VARIANTS[variant],
     ...SIZES[size],
