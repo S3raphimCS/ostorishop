@@ -4,8 +4,9 @@ import { Icon } from '@/shared/ui';
 
 export const Wishlist = () => {
   return (
-    <Link href={paths.cart}>
-      <Icon icon={'cart'} size={24} color="white"></Icon>
+    <Link className="flex flex-col items-center" href={paths.cart}>
+      <Icon icon={'heart'} color="white" />
+      <span className="text-sm">Избранное</span>
     </Link>
   );
 };

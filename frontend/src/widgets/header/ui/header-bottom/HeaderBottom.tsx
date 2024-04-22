@@ -4,12 +4,11 @@ import { Profile } from './profile';
 import { Search } from './search';
 import { Cart } from './cart';
 import { Wishlist } from './wishlist';
-
-import { ThemeController } from '@/shared/ui';
+import { ThemeController } from '@/entities';
 
 export const HeaderBottom = () => {
   return (
-    <div className="navbar bg-neutral">
+    <div className="navbar bg-neutral text-base-content">
       <div className="navbar-start">
         <Logo />
       </div>

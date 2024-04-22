@@ -4,8 +4,9 @@ import { paths } from '@/shared/routing';
 
 export const Cart = () => {
   return (
-    <Link href={paths.wishlist}>
-      <Icon icon={'heart'} size={24} color="white"></Icon>
+    <Link className="flex flex-col items-center" href={paths.wishlist}>
+      <Icon icon={'cart'} color="white" />
+      <span className="text-sm">Корзина</span>
     </Link>
   );
 };

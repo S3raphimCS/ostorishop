@@ -1,5 +1,5 @@
 'use client';
-import { Icon } from '..';
+import { Icon } from '@/shared/ui';
 import { useEffect, useState } from 'react';
 import { saveThemeToLocalStorage } from './lib/saveThemeToLocalStorage';
 

@@ -58,10 +58,10 @@ export const Button: React.FC<ButtonProps> = ({
   const restClassName = rest.className ? [rest.className] : [];
 
   const classes = combineClasses(
-    ...restClassName,
     ...BASE_CLASSES,
     ...VARIANTS[variant],
     ...SIZES[size],
+    ...restClassName,
     outline ? 'btn-outline' : undefined,
     circle ? 'btn-circle' : undefined,
     hidden ? 'hidden' : undefined

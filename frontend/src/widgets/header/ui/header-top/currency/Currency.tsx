@@ -1,4 +1,4 @@
-import { Dropdown, Modal, Select } from '@/shared/ui';
+import { Modal, Select } from '@/shared/ui';
 import { currencies } from './config';
 
 export const Currency = () => {
