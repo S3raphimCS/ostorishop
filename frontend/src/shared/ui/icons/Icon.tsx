@@ -6,6 +6,8 @@ import {
   FaSearch,
   FaShoppingBag,
   FaMapMarkerAlt,
+  FaArrowRight,
+  FaArrowLeft,
 } from 'react-icons/fa';
 import { IoIosCloseCircle } from 'react-icons/io';
 import { RiAccountCircleFill } from 'react-icons/ri';
@@ -17,6 +19,8 @@ export type IconTypes =
   | 'search'
   | 'cart'
   | 'location'
+  | 'left-arrow'
+  | 'right-arrow'
   | 'lightTheme'
   | 'darkTheme';
 
@@ -34,6 +38,8 @@ const ICON_TYPES: Record<IconTypes, IconType> = {
   search: FaSearch,
   cart: FaShoppingBag,
   location: FaMapMarkerAlt,
+  'left-arrow': FaArrowLeft,
+  'right-arrow': FaArrowRight,
   lightTheme: FaSun,
   darkTheme: FaMoon,
 };

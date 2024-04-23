@@ -1,5 +1,5 @@
 import clsx from 'clsx';
 
 export const combineClasses = (...classNames: (string | undefined)[]) => {
-  return clsx(...classNames);
+  return clsx(classNames.filter((className) => className !== undefined));
 };

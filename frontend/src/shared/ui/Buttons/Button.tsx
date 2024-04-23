@@ -14,8 +14,9 @@ export type ButtonVariant =
 type Size = 'normal' | 'small' | 'large' | 'wide' | 'tiny';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string;
   variant: ButtonVariant;
-  size: Size;
+  size?: Size;
   outline?: boolean;
   hidden?: boolean;
   circle?: boolean;
@@ -45,8 +46,9 @@ const SIZES: Record<Size, string[]> = {
 };
 
 export const Button: React.FC<ButtonProps> = ({
+  className,
   variant,
-  size,
+  size = 'normal',
   outline,
   circle,
   hidden,
@@ -55,13 +57,11 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   ...rest
 }) => {
-  const restClassName = rest.className ? [rest.className] : [];
-
   const classes = combineClasses(
     ...BASE_CLASSES,
     ...VARIANTS[variant],
     ...SIZES[size],
-    ...restClassName,
+    className,
     outline ? 'btn-outline' : undefined,
     circle ? 'btn-circle' : undefined,
     hidden ? 'hidden' : undefined

@@ -1,4 +1,4 @@
-import { Carousel, Dropdown, Icon, Loading, ProgressBar } from '@/shared/ui';
+import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
 import { Button } from '@/shared/ui';
 import { Card } from '@/entities';
 
@@ -105,8 +105,8 @@ export default function Debug() {
         <Loading form="infinity" size="md" color="error"></Loading>
         <Loading form="ring" size="xs" color="accent"></Loading>
       </div>
-      <div className="mx-8 flex gap-6">
-        <Carousel>
+      <div>
+        <Carousel autoWidth disableDotsControls countVisibleElements={5}>
           {images.map((imageUrl, index) => (
             <Card
               key={index}
