@@ -38,7 +38,7 @@ const VARIANTS: Record<ButtonVariant, string[]> = {
 };
 
 const SIZES: Record<Size, string[]> = {
-  normal: [''],
+  normal: ['btn-md'],
   small: ['btn-sm'],
   large: ['btn-lg'],
   tiny: ['btn-xs'],

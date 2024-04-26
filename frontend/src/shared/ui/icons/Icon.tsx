@@ -1,6 +1,7 @@
 import { IconType } from 'react-icons';
 import {
   FaHeart,
+  FaRegHeart,
   FaSun,
   FaMoon,
   FaSearch,
@@ -14,6 +15,7 @@ import { RiAccountCircleFill } from 'react-icons/ri';
 
 export type IconTypes =
   | 'close'
+  | 'heart-outline'
   | 'heart'
   | 'profile'
   | 'search'
@@ -34,6 +36,7 @@ interface IconProps {
 const ICON_TYPES: Record<IconTypes, IconType> = {
   close: IoIosCloseCircle,
   heart: FaHeart,
+  'heart-outline': FaRegHeart,
   profile: RiAccountCircleFill,
   search: FaSearch,
   cart: FaShoppingBag,

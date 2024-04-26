@@ -1,7 +1,7 @@
 import { InputHTMLAttributes } from 'react';
 import { combineClasses } from '@/shared/lib';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 

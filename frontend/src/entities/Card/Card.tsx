@@ -15,18 +15,18 @@ export const Card: React.FC<CardProps> = ({
   description,
 }) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-full shadow-xl hover:rounded hover:border-4 hover:border-accent-content sm:w-80 md:w-96">
+      <div className="card-actions items-center justify-end text-gray-400">
+        <Button className="mr-2 mt-2" circle size={'small'} variant={'ghost'}>
+          <Icon icon="heart-outline" />
+        </Button>
+      </div>
       <figure>
-        <img src={imageUrl} alt={alt} />
+        <img className="h-auto w-80 object-cover" src={imageUrl} alt={alt} />
       </figure>
-      <div className="card-body bg-neutral">
+      <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
-        <div className="card-actions justify-end">
-          <Button variant={'secondary'} size={'small'}>
-            <Icon icon="heart" size={14} color="black" />
-          </Button>
-        </div>
       </div>
     </div>
   );

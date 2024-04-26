@@ -5,6 +5,7 @@ import AliceCarousel, { Responsive } from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 interface CarouselProps {
+  readonly id: string;
   readonly children: JSX.Element[] | Element[];
   readonly disableButtonsControls?: boolean;
   readonly autoPlay?: boolean;
@@ -18,6 +19,7 @@ interface CarouselProps {
 }
 
 export const Carousel: React.FC<CarouselProps> = ({
+  id,
   children,
   disableButtonsControls,
   autoWidth,
