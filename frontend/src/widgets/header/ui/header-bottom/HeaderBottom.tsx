@@ -4,7 +4,7 @@ import { Profile } from './profile';
 import { Search } from './search';
 import { Cart } from './cart';
 import { Wishlist } from './wishlist';
-import { ThemeController } from '@/entities';
+import { ThemeController } from '@/entities/theme-controller';
 
 export const HeaderBottom = () => {
   return (

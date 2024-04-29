@@ -1,64 +1,13 @@
-import { Banner } from '@/entities';
-import { Range } from '@/shared/ui';
+import { Banner } from '@/entities/banner';
+import { Range, Rating } from '@/shared/ui';
 import { ProductCategory } from '@/widgets/product-category';
 import { Carousel } from '@/shared/ui';
-import { Card } from '@/entities';
-const images = [
-  'kross3.png',
-  '/kross3.png',
-  '/kross3.png',
-  'kross3.png',
-  '/kross3.png',
-  '/kross3.png',
-  'kross3.png',
-  '/kross3.png',
-  '/kross3.png',
-  'kross3.png',
-  '/kross3.png',
-  '/kross3.png',
-];
-const alts = [
-  'Alt 1',
-  'Alt 2',
-  'Alt 3',
-  'Alt 1',
-  'Alt 2',
-  'Alt 3',
-  'Alt 1',
-  'Alt 2',
-  'Alt 3',
-  'Alt 1',
-  'Alt 2',
-  'Alt 3',
-];
-const title = [
-  'Title1',
-  'Title2',
-  'Title3',
-  'Title4',
-  'Title5',
-  'Title6',
-  'Title7',
-  'Title8',
-  'Title9',
-  'Title10',
-  'Title11',
-  'Title12',
-];
-const description = [
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-  'Кроссовки',
-];
+import { Card } from '@/entities/card';
+
+const images = ['boots2.jpg', 'boots2.jpg', '/boots3.jpg'];
+const alts = ['Полный вайб для ваших ног', 'Alt 2', 'Alt 3'];
+const title = ['Нереальные кроссовки жестяк', 'Title2', 'Title3'];
+const description = ['Кроссовки', 'Кроссовки', 'Кроссовки'];
 
 const responsive = {
   0: { items: 1 },
@@ -69,19 +18,24 @@ export default function Home() {
   return (
     <main>
       <Banner />
-      <ProductCategory title={'Подобрано для вас'}>
-        <Carousel responsive={responsive} id={'dd'}>
-          {images.map((imageUrl, index) => (
-            <Card
-              key={index}
-              imageUrl={imageUrl}
-              alt={alts[index]}
-              title={title[index]}
-              description={description[index]}
-            />
-          ))}
-        </Carousel>
-      </ProductCategory>
+      <div className="flex-column flex justify-center">
+        <ProductCategory title={'Подобрано для вас'}>
+          <Carousel responsive={responsive} autoWidth id={'dd'}>
+            {images.map((imageUrl, index) => (
+              <Card
+                key={index}
+                imageUrl={imageUrl}
+                alt={alts[index]}
+                title={title[index]}
+                description={description[index]}
+                rating={5}
+                reviewsCount={10}
+                price={999}
+              />
+            ))}
+          </Carousel>
+        </ProductCategory>
+      </div>
     </main>
   );
 }

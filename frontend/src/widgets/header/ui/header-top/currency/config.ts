@@ -1,5 +1,5 @@
 export const currencies = [
-  { value: 'RUB', label: 'Российский рубль, RUB' },
-  { value: 'BYN', label: 'Белорусский рубль, BYN' },
-  { value: 'USD', label: 'Доллар США, USD' },
+  { value: 'RUB', label: 'Российский рубль, RUB', symbol: '₽' },
+  { value: 'BYN', label: 'Белорусский рубль, BYN', symbol: 'Br' },
+  { value: 'USD', label: 'Доллар США, USD', symbol: '$' },
 ];

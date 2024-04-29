@@ -1,6 +1,8 @@
+'use client';
 import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
 import { Button } from '@/shared/ui';
-import { Card } from '@/entities';
+import { Card } from '@/entities/card';
+import Image from 'next/image';
 
 export default function Debug() {
   const images = [
@@ -59,6 +61,8 @@ export default function Debug() {
     'Кроссовки',
     'Кроссовки',
   ];
+  const imagess = ['/Banner1.jpg', '/Banner2.jpg', '/Banner3.jpg'];
+
   return (
     // В div можно подстраивать data-theme="название темы" и тестить цвета и темы
     <div>
@@ -105,39 +109,11 @@ export default function Debug() {
         <Loading form="infinity" size="md" color="error"></Loading>
         <Loading form="ring" size="xs" color="accent"></Loading>
       </div>
-      <div>
-        <Carousel autoWidth disableDotsControls countVisibleElements={5}>
-          {images.map((imageUrl, index) => (
-            <Card
-              key={index}
-              imageUrl={imageUrl}
-              alt={alts[index]}
-              title={title[index]}
-              description={description[index]}
-            />
-          ))}
-        </Carousel>
-      </div>
       <div className="mx-auto my-4 max-w-lg">
         <ProgressBar value={65} color="primary" />
         <ProgressBar value={10} color="secondary" />
         <ProgressBar value={32} color="error" />
       </div>
-      <div className="mx-8 mt-8 flex gap-24">
-        <Card
-          imageUrl={'/kross2.png'}
-          alt={'Krossovka'}
-          title={'Кросы'}
-          description={'Крутые кросы бро'}
-        />
-        <Card
-          imageUrl={'/kross2.png'}
-          alt={'Krossovka'}
-          title={'Кросы'}
-          description={'Крутые кросы бро'}
-        />
-      </div>
-      <div className="mx-auto my-4 max-w-lg"></div>
     </div>
   );
 }

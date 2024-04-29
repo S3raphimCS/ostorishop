@@ -60,6 +60,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   return (
     <div className={classes}>
       <AliceCarousel
+        controlsStrategy="responsive"
         autoPlay={autoPlay}
         disableButtonsControls={disableButtonsControls}
         infinite={infinite}

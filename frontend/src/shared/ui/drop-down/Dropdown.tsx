@@ -27,17 +27,17 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div
-      className="dropdown dropdown-hover"
+      className="dropdown dropdown-hover border-primary hover:border-b-4"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div tabIndex={0} role="button" className="m-1 mx-5">
+      <div tabIndex={0} role="button" className="mx-5">
         {buttonText}
       </div>
       {isOpen && (
         <ul
           tabIndex={0}
-          className={`menu dropdown-content z-[1] w-52 rounded-box ${background} p-2 shadow`}
+          className={`menu dropdown-content z-[1] w-full rounded-box sm:w-52 md:w-64 ${background} p-2 shadow`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
