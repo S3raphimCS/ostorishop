@@ -9,6 +9,7 @@ interface CardPlateProps {
 }
 
 const BASE_CLASSES = 'inline-block p-2';
+
 const VARIANTS: Record<Variant, string> = {
   discount: 'text-md bg-fuchsia-100 text-black',
   guarantee: 'text-sm bg-slate-200 text-gray-500',

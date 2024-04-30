@@ -1,6 +1,7 @@
+import { Providers } from '@/app/providers';
+import { Header } from '@/widgets/header/ui';
 import type { Metadata } from 'next';
 import './globals.css';
-import { Header } from '@/widgets/header/ui';
 
 export const metadata: Metadata = {
   title: 'OstoriShop | Магазин одежды',
@@ -13,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <Providers>
+      <html lang="ru">
+        <body>
+          <Header />
+          {children}
+        </body>
+      </html>
+    </Providers>
   );
 }

@@ -36,8 +36,6 @@ export const Card: React.FC<CardProps> = ({
         </Button>
       </div>
       <div className="absolute left-2 top-2/4 flex gap-2">
-        <CardPlate variant={'guarantee'} label={'Гарантия 30 дней'} />
-        <CardPlate variant={'new'} label={'Новинка'} />
         <CardPlate variant={'popular'} label={'Популярное'} />
       </div>
       <div className="card-body">
