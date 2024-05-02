@@ -1,5 +1,4 @@
 import { Banner } from '@/entities/banner';
-import { Range, Rating } from '@/shared/ui';
 import { ProductCategory } from '@/widgets/product-category';
 import { Carousel } from '@/shared/ui';
 import { Card } from '@/entities/card';
@@ -20,7 +19,7 @@ export default function Home() {
       <Banner />
       <div className="flex-column flex justify-center">
         <ProductCategory title={'Подобрано для вас'}>
-          <Carousel responsive={responsive} autoWidth id={'dd'}>
+          <Carousel responsive={responsive} id={'dd'}>
             {images.map((imageUrl, index) => (
               <Card
                 key={index}
@@ -31,6 +30,7 @@ export default function Home() {
                 rating={5}
                 reviewsCount={10}
                 price={999}
+                cardPlates={[{ variant: 'popular', label: 'Популярное' }]}
               />
             ))}
           </Carousel>

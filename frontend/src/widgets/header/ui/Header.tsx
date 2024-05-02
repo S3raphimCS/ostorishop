@@ -1,4 +1,5 @@
 import { HeaderTop } from './header-top';
+import { HeaderCatalog } from './header-catalog';
 import { HeaderBottom } from './header-bottom';
 
 export const Header = () => {
@@ -6,6 +7,7 @@ export const Header = () => {
     <header>
       <HeaderTop />
       <HeaderBottom />
+      <HeaderCatalog />
     </header>
   );
 };

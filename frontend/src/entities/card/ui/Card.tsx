@@ -1,6 +1,6 @@
 import { Button, Rating, Icon } from '@/shared/ui';
 import { Price } from '@/entities/price';
-import { CardPlate } from '@/entities/card';
+import { CardPlate, CardPlateProps } from '@/entities/card';
 
 interface CardProps {
   imageUrl: string;
@@ -10,6 +10,7 @@ interface CardProps {
   rating: number;
   reviewsCount: number;
   price: number;
+  cardPlates: CardPlateProps[];
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -20,6 +21,7 @@ export const Card: React.FC<CardProps> = ({
   rating,
   reviewsCount,
   price,
+  cardPlates,
 }) => {
   return (
     <div className="card w-full shadow-xl hover:border-4 hover:border-accent sm:w-80 md:w-96">
@@ -30,13 +32,15 @@ export const Card: React.FC<CardProps> = ({
           alt={alt}
         />
       </figure>
-      <div className="card-actions absolute right-0 p-4 text-gray-400">
+      <div className="card-actions absolute right-0 p-4 text-gray-400 ">
         <Button circle size={'small'} variant={'ghost'}>
           <Icon icon="heart-outline" />
         </Button>
       </div>
       <div className="absolute left-2 top-2/4 flex gap-2">
-        <CardPlate variant={'popular'} label={'Популярное'} />
+        {cardPlates.map((plate, index) => (
+          <CardPlate key={index} {...plate} />
+        ))}
       </div>
       <div className="card-body">
         <Price price={price} />

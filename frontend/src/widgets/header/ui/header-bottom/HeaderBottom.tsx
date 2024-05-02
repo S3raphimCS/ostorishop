@@ -1,5 +1,4 @@
 import { Logo } from './logo';
-import { Nav } from './nav';
 import { Profile } from './profile';
 import { Search } from './search';
 import { Cart } from './cart';
@@ -13,10 +12,9 @@ export const HeaderBottom = () => {
         <Logo />
       </div>
       <div className="navbar-center">
-        <Nav />
+        <Search />
       </div>
       <div className="navbar-end mx-2 flex items-center gap-6">
-        <Search />
         <Cart />
         <Wishlist />
         <Profile />
