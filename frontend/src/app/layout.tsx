@@ -1,4 +1,4 @@
-import { Providers } from '@/app/providers';
+import { Providers } from '@/app-wrapper/providers';
 import { Header } from '@/widgets/header/ui';
 import type { Metadata } from 'next';
 import './globals.css';

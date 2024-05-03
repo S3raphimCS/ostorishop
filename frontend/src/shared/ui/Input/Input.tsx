@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from 'react';
-import { combineClasses } from '@/shared/lib';
+import { combineClasses } from '@/shared/lib/style-worker';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;

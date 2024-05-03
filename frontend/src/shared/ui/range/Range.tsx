@@ -1,4 +1,4 @@
-import { combineClasses } from '../../lib/combineClasses';
+import { combineClasses } from '../../lib/style-worker/combineClasses';
 import { InputProps } from '@/shared/ui';
 
 export type RangeVariant =

@@ -1,5 +1,5 @@
 import { Icon } from '@/shared/ui';
-import { combineClasses } from '@/shared/lib';
+import { combineClasses } from '@/shared/lib/style-worker';
 
 const BASE_CLASSES =
   'grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible';

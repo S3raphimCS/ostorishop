@@ -1,6 +1,6 @@
 'use client';
 import { Icon, Button } from '@/shared/ui';
-import { combineClasses } from '@/shared/lib';
+import { combineClasses } from '@/shared/lib/style-worker';
 import AliceCarousel, { Responsive } from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 

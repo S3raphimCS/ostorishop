@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { combineClasses } from '../../lib/combineClasses';
+import { combineClasses } from '../../lib/style-worker/combineClasses';
 
 type SelectVariant =
   | 'primary'

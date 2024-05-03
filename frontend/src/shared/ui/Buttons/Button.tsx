@@ -1,4 +1,4 @@
-import { combineClasses } from '../../lib/combineClasses';
+import { combineClasses } from '../../lib/style-worker/combineClasses';
 import { ButtonHTMLAttributes } from 'react';
 
 export type ButtonVariant =

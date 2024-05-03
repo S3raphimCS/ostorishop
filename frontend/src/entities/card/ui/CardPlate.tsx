@@ -1,4 +1,4 @@
-import { combineClasses } from '@/shared/lib';
+import { combineClasses } from '@/shared/lib/style-worker';
 
 type Variant = 'discount' | 'guarantee' | 'popular' | 'new';
 

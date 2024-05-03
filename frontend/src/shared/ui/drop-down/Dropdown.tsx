@@ -1,6 +1,6 @@
 'use client';
 import { ReactNode, useState } from 'react';
-import { combineClasses } from '@/shared/lib';
+import { combineClasses } from '@/shared/lib/style-worker';
 
 export interface DropdownProps {
   className?: string;
