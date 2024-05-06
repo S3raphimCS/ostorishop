@@ -4,8 +4,12 @@ import { Carousel } from '@/shared/ui';
 import { Card } from '@/entities/card';
 
 const images = ['boots2.jpg', 'boots2.jpg', '/boots3.jpg'];
-const alts = ['Полный вайб для ваших ног', 'Alt 2', 'Alt 3'];
-const title = ['Нереальные кроссовки жестяк', 'Title2', 'Title3'];
+const alts = ['Кроссовки женские Athlex Ice', 'Alt 2', 'Alt 3'];
+const title = [
+  'Кроссовки женские Athlex Ice',
+  'Кроссовки женские Kappa Authentic Run Mesh',
+  'Title3',
+];
 const description = ['Кроссовки', 'Кроссовки', 'Кроссовки'];
 
 const responsive = {
@@ -26,11 +30,20 @@ export default function Home() {
                 imageUrl={imageUrl}
                 alt={alts[index]}
                 title={title[index]}
-                description={description[index]}
-                rating={5}
+                rating={3.4}
                 reviewsCount={10}
-                price={999}
-                cardPlates={[{ variant: 'popular', label: 'Популярное' }]}
+                price={5425}
+                cardPlates={[
+                  {
+                    variant: 'discount',
+                    label: '-20%',
+                    discountPrice: 4231,
+                  },
+                  {
+                    variant: 'popular',
+                    label: 'Популярное',
+                  },
+                ]}
               />
             ))}
           </Carousel>

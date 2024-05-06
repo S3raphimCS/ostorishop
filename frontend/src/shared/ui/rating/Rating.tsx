@@ -2,7 +2,7 @@ import { Icon } from '@/shared/ui';
 import { combineClasses } from '@/shared/lib/style-worker';
 
 const BASE_CLASSES =
-  'grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible';
+  'grid mt-4 w-full overflow-x-scroll rounded-lg lg:overflow-visible';
 
 export const Rating = ({
   className,
@@ -15,8 +15,11 @@ export const Rating = ({
 }) => {
   const MAX_RATING = 5;
 
-  const filledStars = Math.floor(rating);
-  const emptyStars = MAX_RATING - filledStars;
+  const finalRating = Math.min(rating, MAX_RATING);
+
+  const filledStars = Math.floor(finalRating);
+  const hasHalfStar = finalRating % 1 !== 0;
+  const emptyStars = MAX_RATING - filledStars - (hasHalfStar ? 1 : 0);
 
   const classes = combineClasses(className, BASE_CLASSES);
 
@@ -29,15 +32,18 @@ export const Rating = ({
               <Icon icon={'star'} color="orange" />
             </span>
           ))}
+          {hasHalfStar && (
+            <span>
+              <Icon icon={'half-star'} color="orange" />
+            </span>
+          )}
           {[...Array(emptyStars)].map((_, index) => (
             <span key={index}>
-              <Icon icon={'star'} color="gray" />
+              <Icon icon={'empty-star'} color="gray" />
             </span>
           ))}
         </div>
-        <span className="ml-2 text-sm text-gray-600">
-          {reviewsCount} отзывов
-        </span>
+        <span className="text-md ml-2 text-gray-400">{reviewsCount}</span>
       </div>
     </div>
   );
