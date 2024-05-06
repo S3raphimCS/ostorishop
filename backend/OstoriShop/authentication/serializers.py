@@ -18,7 +18,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         return token
 
 
-class UserSerializer(serializers.ModelSerializer):
+class CustomUserSerializer(serializers.ModelSerializer):
     avatar = serializers.CharField()
 
     class Meta:

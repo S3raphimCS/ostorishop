@@ -39,9 +39,11 @@ INSTALLED_APPS = [
 
     'shop',
     'authentication',
+    'cart',
 
-    'django_ckeditor_5',
     'rest_framework',
+    'djoser',
+    'django_ckeditor_5',
     'corsheaders',
     'drf_yasg',
     'rest_framework_simplejwt',
@@ -59,21 +61,30 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+DJOSER = {
+    "PASSWORD_RESET_CONFIRM_URL": "reset_password_confirm/{uid}/{token}",
+    "ACTIVATION_URL": "activate/{uid}/{token}",
+    "SEND_ACTIVATION_EMAIL": True,
+    "SERIALIZERS": {},
+}
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     "PAGE_SIZE": 15,
     "DEFAULT_AUTHENTICATION_CLASSES": [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'TOKEN_OBTAIN_SERIALIZER': 'authentication.serializers.MyTokenObtainPairSerializer',
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
-    'AUTH_HEADER_TYPES': ('Bearer',),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'AUTH_HEADER_TYPES': ('Bearer', 'JWT',),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
 }
 
 CORS_ALLOWED_ORIGINS = [
@@ -91,7 +102,7 @@ CORS_ALLOW_METHODS = (
 )
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
 
-ROOT_URLCONF = 'OstoriShop.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -109,7 +120,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'OstoriShop.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -252,6 +263,14 @@ CKEDITOR_5_CONFIGS = {
     }
 }
 
+# SMTP
+
+EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "set_in_prod")
+EMAIL_HOST = os.environ.get("EMAIL_HOST", "set_in_prod")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "set_in_prod")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "set_in_prod")
+EMAIL_PORT = os.environ.get("EMAIL_PORT", "set_in_prod")
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -266,3 +285,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Auth model here
 AUTH_USER_MODEL = 'authentication.CustomUser'
+
+SITE_NAME = "Ostori Shop"

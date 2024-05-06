@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
 from django_ckeditor_5.fields import CKEditor5Field
-from django.core.validators import MinValueValidator, MaxValueValidator
 from slugify import slugify
 
 
