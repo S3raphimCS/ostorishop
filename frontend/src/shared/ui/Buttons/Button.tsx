@@ -11,7 +11,7 @@ export type ButtonVariant =
   | 'info'
   | 'delete'
   | 'ghost';
-type Size = 'normal' | 'small' | 'large' | 'wide' | 'tiny';
+type Size = 'normal' | 'small' | 'large' | 'wide' | 'tiny' | 'responsive';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -43,6 +43,7 @@ const SIZES: Record<Size, string[]> = {
   large: ['btn-lg'],
   tiny: ['btn-xs'],
   wide: ['btn-wide'],
+  responsive: ['btn btn-xs sm:btn-sm md:btn-md'],
 };
 
 export const Button: React.FC<ButtonProps> = ({

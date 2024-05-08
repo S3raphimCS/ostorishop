@@ -11,6 +11,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        banner: '36rem',
+      },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -1,38 +1,30 @@
-'use client';
-import { Carousel } from '@/shared/ui';
+import { Button } from '@/shared/ui';
+import Link from 'next/link';
 
-export const Banner = () => {
-  const images = ['/Banner1.jpg', '/Banner2.jpg', '/Banner3.jpg'];
-  const responsive = {
-    0: {
-      items: 1,
-    },
-    568: {
-      items: 2,
-    },
-    1024: {
-      items: 3,
-      itemsFit: 'contain',
-    },
-  };
+interface BannerProps {
+  imageUrl: string;
+  link?: string;
+  alt?: string;
+}
 
+export const Banner: React.FC<BannerProps> = ({ imageUrl, link, alt }) => {
   return (
     <div>
-      <Carousel
-        id="banner"
-        mouseTracking={false}
-        autoWidth
-        responsive={responsive}
-        disableDotsControls
-      >
-        {images.map((imageUrl, index) => (
-          <img
-            className="h-56 w-full object-cover sm:h-auto md:h-80 lg:h-96"
-            src={imageUrl}
-            key={index}
-          />
-        ))}
-      </Carousel>
+      {link && (
+        <Link
+          className="absolute bottom-5 left-1/2 -translate-x-1/2 transform rounded-md px-4 py-2"
+          href={link}
+        >
+          <Button size="responsive" variant={'accent'}>
+            Подробнее
+          </Button>
+        </Link>
+      )}
+      <img
+        className="lg:h-banner h-56 w-full object-cover sm:h-auto md:h-80"
+        src={imageUrl}
+        alt={alt || 'Изображение баннера'}
+      />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { Banner } from '@/entities/banner';
+import { BannerSection } from '@/widgets/banner-section';
 import { ProductCategory } from '@/widgets/product-category';
 import { Carousel } from '@/shared/ui';
 import { Card } from '@/entities/card';
@@ -20,7 +20,7 @@ const responsive = {
 export default function Home() {
   return (
     <main>
-      <Banner />
+      <BannerSection />
       <div className="flex-column flex justify-center">
         <ProductCategory title={'Подобрано для вас'}>
           <Carousel responsive={responsive} id={'dd'}>

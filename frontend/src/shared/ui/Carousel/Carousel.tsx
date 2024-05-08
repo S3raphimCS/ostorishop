@@ -10,6 +10,7 @@ interface CarouselProps {
   readonly disableButtonsControls?: boolean;
   readonly autoPlay?: boolean;
   readonly infinite?: boolean;
+  readonly animationType?: 'slide' | 'fadeout';
   readonly animationDuration?: number;
   readonly autoWidth?: boolean;
   readonly mouseTracking?: boolean;
@@ -26,6 +27,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   autoPlay,
   infinite,
   animationDuration,
+  animationType,
   mouseTracking,
   responsive,
   disableDotsControls = true,
@@ -36,11 +38,12 @@ export const Carousel: React.FC<CarouselProps> = ({
   const renderNextButton = ({ isDisabled }: { isDisabled: boolean }) => {
     return (
       <Button
-        className="absolute right-2 top-1/2 translate-y-1/2"
+        className="absolute right-2 top-1/2 translate-y-1/2 opacity-20 hover:opacity-100"
         variant={'accent'}
+        size="responsive"
         circle
       >
-        <Icon icon={'right-arrow'} />
+        <Icon icon={'right-arrow'} size={'50%'} />
       </Button>
     );
   };
@@ -48,11 +51,12 @@ export const Carousel: React.FC<CarouselProps> = ({
   const renderPrevButton = ({ isDisabled }: { isDisabled: boolean }) => {
     return (
       <Button
-        className="absolute left-2 top-1/2 translate-y-1/2"
+        className="absolute left-2 top-1/2 translate-y-1/2 opacity-20 hover:opacity-100"
         variant={'accent'}
+        size="responsive"
         circle
       >
-        <Icon icon={'left-arrow'} />
+        <Icon icon={'left-arrow'} size={'50%'} />
       </Button>
     );
   };
@@ -61,6 +65,7 @@ export const Carousel: React.FC<CarouselProps> = ({
     <div className={classes}>
       <AliceCarousel
         controlsStrategy="responsive"
+        animationType={animationType}
         autoPlay={autoPlay}
         disableButtonsControls={disableButtonsControls}
         infinite={infinite}

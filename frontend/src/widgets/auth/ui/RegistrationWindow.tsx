@@ -1,7 +1,7 @@
 import { Input } from '@/shared/ui';
 import Link from 'next/link';
 
-export const AuthWindow = () => {
+export const RegistrationWindow = () => {
   return (
     <section className="bg-white">
       <div>

@@ -1,3 +1,5 @@
+type Id = string | null | undefined;
+
 export const paths = {
   home: '/',
   cart: '/cart',
@@ -17,4 +19,6 @@ export const paths = {
   kidsClothing: '/kids-clothing',
   kidsShoes: '/kids-shoes',
   kidsAccessories: '/kids-accessories',
+
+  promo: (id: Id): string => `/promo/${id}`,
 };

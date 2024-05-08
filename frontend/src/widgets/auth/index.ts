@@ -1,1 +1,1 @@
-export { AuthWindow } from './ui/AuthWindow';
+export { RegistrationWindow } from './ui/RegistrationWindow';
