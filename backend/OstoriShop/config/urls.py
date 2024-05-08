@@ -18,7 +18,8 @@ urlpatterns = [
     # path('auth/', include('djoser.urls.authtoken')),
     path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
     path('products/', include('shop.urls'), name='products'),
-    path('cart/', include('cart.urls'), name='cart'),
+    path('cart/', include('cart.urls.cart_urls'), name='cart'),
+    path('favorite/', include('cart.urls.favorite_urls'), name='favorite')
 ]
 
 urlpatterns += docs_urls

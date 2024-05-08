@@ -35,9 +35,9 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
     avatar = models.ImageField(
         _("Аватар"),
-        upload_to='images/users',
+        upload_to='authentication/',
         blank=True, null=True,
-        default='images/users/blank.jpg',
+        default='authentication/blank.png',
     )
     email = models.EmailField(
         _("Электронная почта"),

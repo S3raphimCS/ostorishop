@@ -19,7 +19,8 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
-    avatar = serializers.CharField()
+    avatar = serializers.CharField(read_only=True)
+    email = serializers.EmailField()
 
     class Meta:
         model = get_user_model()

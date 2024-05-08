@@ -14,15 +14,18 @@ class Category(models.Model):
     )
     icon = models.ImageField(
         _("Иконка"),
-        upload_to="images/products",
+        default="products/blank_category.png",
+        upload_to="products/",
         blank=True, null=True
     )
     slug = models.SlugField(
+        unique=True,
         blank=True, null=True
     )
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if not self.slug:
+            self.slug = slugify(self.name)
         return super(Category, self).save(*args, **kwargs)
 
     def __str__(self):
@@ -46,8 +49,10 @@ class Product(models.Model):
         related_query_name='categories'
     )
     image = models.ImageField(
-        upload_to="images/products",
-        blank=True
+        _("Фотография"),
+        default="products/blank_product.png",
+        upload_to="products/",
+        blank=True, null=True
     )
     article = models.CharField(
         _("Артикул"),
@@ -86,7 +91,8 @@ class Product(models.Model):
     )
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if not self.slug:
+            self.slug = slugify(self.name)
         return super(Product, self).save(*args, **kwargs)
 
     def get_categories(self):

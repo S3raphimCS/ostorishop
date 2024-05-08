@@ -3,12 +3,15 @@ from .models import Category, Product, ProductComment
 
 
 class ProductDetailSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField()
+    name = serializers.CharField(read_only=True)
+
     class Meta:
         model = Product
         fields = "__all__"
         depth = 1
 
-    image = serializers.CharField()
+    # image = serializers.CharField()
 
 
 class CategoryListSerializer(serializers.ModelSerializer):

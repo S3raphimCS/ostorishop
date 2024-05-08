@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     fieldsets = (
-        ("Основная информация", {"fields": ('name', 'categories', 'price', 'quantity', 'description', 'article')}),
+        ("Основная информация", {"fields": ('name', 'image', 'categories', 'price', 'quantity', 'description', 'article')}),
         ("Физические показатели", {"fields": ('weight', 'volume')}),
     )
     list_filter = ('categories',)
