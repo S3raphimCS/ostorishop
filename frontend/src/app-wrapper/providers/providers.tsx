@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { ThemeProvider } from '@/entities/theme-controller';
 import { Provider } from 'react-redux';
 
 interface IProviders {
@@ -9,7 +8,7 @@ interface IProviders {
 export const Providers: FC<IProviders> = ({ children }) => {
   return (
     // <Provider store={}>
-    <ThemeProvider>{children}</ThemeProvider>
+    { children }
     // </Provider>
   );
 };

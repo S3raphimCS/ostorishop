@@ -3,7 +3,6 @@ import { Profile } from './profile';
 import { Search } from './search';
 import { Cart } from './cart';
 import { Wishlist } from './wishlist';
-import { ThemeController } from '@/entities/theme-controller';
 
 export const HeaderBottom = () => {
   return (
@@ -18,7 +17,6 @@ export const HeaderBottom = () => {
         <Cart />
         <Wishlist />
         <Profile />
-        <ThemeController />
       </div>
     </div>
   );
