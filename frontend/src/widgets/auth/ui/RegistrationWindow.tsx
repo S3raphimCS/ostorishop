@@ -1,3 +1,4 @@
+import { paths } from '@/shared/routing';
 import { Input } from '@/shared/ui';
 import Link from 'next/link';
 
@@ -114,11 +115,17 @@ export const RegistrationWindow = () => {
               <div className="col-span-6">
                 <p className="text-sm text-gray-500">
                   Создавая учетную запись, вы соглашаетесь с нашими{' '}
-                  <Link className="text-gray-700 underline" href={'#'}>
+                  <Link
+                    className="text-gray-700 underline"
+                    href={paths.termsAndConditions}
+                  >
                     условиями
                   </Link>{' '}
                   и{' '}
-                  <Link className="text-gray-700 underline" href={'#'}>
+                  <Link
+                    className="text-gray-700 underline"
+                    href={paths.privacyPolicy}
+                  >
                     политикой конфиденциальности
                   </Link>
                   .

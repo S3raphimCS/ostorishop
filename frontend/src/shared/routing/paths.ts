@@ -20,5 +20,7 @@ export const paths = {
   kidsShoes: '/kids-shoes',
   kidsAccessories: '/kids-accessories',
 
+  termsAndConditions: '/help/terms-and-conditions',
+  privacyPolicy: '/help/privacy-policy',
   promo: (id: Id): string => `/promo/${id}`,
 };
