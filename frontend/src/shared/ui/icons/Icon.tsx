@@ -12,8 +12,13 @@ import {
   FaStar,
   FaStarHalfAlt,
   FaRegStar,
+  FaTelegram,
+  FaYoutube,
 } from 'react-icons/fa';
-import { IoIosCloseCircle } from 'react-icons/io';
+import { FiYoutube } from 'react-icons/fi';
+import { FaInstagram } from 'react-icons/fa6';
+import { SlSocialVkontakte } from 'react-icons/sl';
+import { IoIosCloseCircle, IoLogoWhatsapp } from 'react-icons/io';
 import { RiAccountCircleFill } from 'react-icons/ri';
 
 export type IconTypes =
@@ -30,7 +35,12 @@ export type IconTypes =
   | 'left-arrow'
   | 'right-arrow'
   | 'lightTheme'
-  | 'darkTheme';
+  | 'darkTheme'
+  | 'youtube'
+  | 'instagram'
+  | 'telegram'
+  | 'whatsapp'
+  | 'vkontakte';
 
 interface IconProps {
   icon: IconTypes;
@@ -54,6 +64,11 @@ const ICON_TYPES: Record<IconTypes, IconType> = {
   'right-arrow': FaArrowRight,
   lightTheme: FaSun,
   darkTheme: FaMoon,
+  instagram: FaInstagram,
+  youtube: FiYoutube,
+  telegram: FaTelegram,
+  whatsapp: IoLogoWhatsapp,
+  vkontakte: SlSocialVkontakte,
 };
 
 export const Icon: React.FC<IconProps> = ({

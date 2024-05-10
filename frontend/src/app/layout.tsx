@@ -1,5 +1,6 @@
 import { Providers } from '@/app-wrapper/providers';
 import { Header } from '@/widgets/header/ui';
+import { Footer } from '@/widgets/footer';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
     //</Providers>
