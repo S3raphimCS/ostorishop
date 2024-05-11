@@ -20,7 +20,7 @@ export const CatalogNavigation: React.FC<CatalogNavigationProps> = ({
 }) => {
   return (
     <div className="absolute left-0 right-0 z-[1] mt-2 w-[99vw]">
-      <div className="bg-black xl:menu-horizontal lg:min-w-full">
+      <div className="bg-base-200 xl:menu-horizontal lg:min-w-full">
         <ul className="grid grid-flow-col gap-24 p-4">
           {items.map((category, index) => (
             <li key={index}>

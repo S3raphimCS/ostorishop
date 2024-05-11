@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     //<Providers>
-    <html lang="ru">
+    <html data-theme="sunrise" lang="ru">
       <body>
         <Header />
         {children}

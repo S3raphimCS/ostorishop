@@ -64,16 +64,15 @@ export default function Debug() {
   const imagess = ['/Banner1.jpg', '/Banner2.jpg', '/Banner3.jpg'];
 
   return (
-    // В div можно подстраивать data-theme="название темы" и тестить цвета и темы
     <div>
-      <div className="mx-4 my-4 flex gap-12">
-        <Button variant={'success'} size={'large'} outline={true}>
-          Debug test 1
-        </Button>
+      <div className="mx-4 my-4 flex items-center gap-12">
         <Button variant={'primary'} size={'small'}>
           Debug test 2
         </Button>
         <Button variant={'secondary'} size={'normal'}>
+          Debug test 3
+        </Button>
+        <Button variant={'accent'} size={'normal'}>
           Debug test 3
         </Button>
         <Button variant={'delete'} size={'wide'}>
@@ -82,25 +81,11 @@ export default function Debug() {
         <Button variant={'default'} size={'tiny'}>
           Debug test 5
         </Button>
+        <Button variant={'success'} size={'large'} outline>
+          Debug test 1
+        </Button>
         <br></br>
         <br></br>
-      </div>
-      <div className="mx-4 flex gap-6 ">
-        <Dropdown
-          items={['Кеды', 'Кроссовки']}
-          hrefs={['/', '/debug']}
-          buttonText={'Для мужчин'}
-        />
-        <Dropdown
-          items={['Кеды', 'Кроссовки', 'Платья', 'Свитеры', 'Водолазки']}
-          hrefs={['/', '/debug', '/', '/', '/', '/', '/', '/']}
-          buttonText={'Для женщин'}
-        />
-        <Dropdown
-          items={['Часы', 'Очки']}
-          hrefs={['/', '/debug']}
-          buttonText={'Для аксессуары'}
-        />
       </div>
       <div className="mx-8 my-5 flex gap-9">
         <Loading form="spinner" size="lg" color="success"></Loading>

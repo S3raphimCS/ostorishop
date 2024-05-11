@@ -9,7 +9,7 @@ export const Profile = () => {
       className="flex cursor-pointer flex-col items-center"
       onClick={() => openModal('auth')}
     >
-      <Icon icon={'profile'} color="white" />
+      <Icon icon={'profile'} color="black" />
       <span className="text-sm">Профиль</span>
       <Modal className="cursor-auto" id={'auth'}>
         <RegistrationWindow />

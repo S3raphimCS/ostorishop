@@ -6,7 +6,7 @@ import { Wishlist } from './wishlist';
 
 export const HeaderBottom = () => {
   return (
-    <div className="navbar bg-neutral text-base-content">
+    <div className="navbar bg-neutral-100 text-base-content shadow-md">
       <div className="navbar-start">
         <Logo />
       </div>

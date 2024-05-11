@@ -5,7 +5,7 @@ import { Icon } from '@/shared/ui';
 export const Wishlist = () => {
   return (
     <Link className="flex flex-col items-center" href={paths.cart}>
-      <Icon icon={'heart'} color="white" />
+      <Icon icon={'heart'} color="black" />
       <span className="text-sm">Избранное</span>
     </Link>
   );

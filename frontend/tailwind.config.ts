@@ -24,11 +24,16 @@ const config: Config = {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    // Определить собственную тему через которую будут использоваться цвета
     themes: [
       {
         sunrise: {
-          primary: '#EC7357',
+          primary: '#d5f2e3',
+          'primary-content': '',
+          secondary: '#FF4040',
+          accent: '#C1121F',
+          neutral: '#D4A373',
+          'base-100': '#fdfeff',
+          'base-content': '#161616',
         },
       },
       'light',

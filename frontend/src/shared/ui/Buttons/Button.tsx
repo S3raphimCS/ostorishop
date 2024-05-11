@@ -28,7 +28,7 @@ const BASE_CLASSES = ['items-center'];
 const VARIANTS: Record<ButtonVariant, string[]> = {
   default: ['btn'],
   primary: ['btn', 'btn-primary'],
-  secondary: ['btn', 'btn-secondary'],
+  secondary: ['btn', 'btn-secondary', 'text-gray-200'],
   accent: ['btn', 'btn-accent'],
   success: ['btn', 'btn-success'],
   warning: ['btn', 'btn-warning'],

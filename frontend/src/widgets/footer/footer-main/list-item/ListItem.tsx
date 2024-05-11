@@ -7,7 +7,7 @@ interface ListItemProps {
   children: React.ReactNode;
 }
 
-const BASE_CLASSES = 'text-gray-700 transition hover:text-gray-700/75';
+const BASE_CLASSES = 'transition hover:text-gray-100/75';
 
 export const ListItem: React.FC<ListItemProps> = ({
   className,
