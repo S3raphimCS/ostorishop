@@ -3,6 +3,9 @@ import { Icon, Button } from '@/shared/ui';
 import { combineClasses } from '@/shared/lib/style-worker';
 import AliceCarousel, { Responsive } from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import { useState, useEffect } from 'react';
+
+// Hydrataion Error InnerWidth : https://github.com/maxmarinich/react-alice-carousel/issues/210
 
 interface CarouselProps {
   readonly id: string;
@@ -34,15 +37,22 @@ export const Carousel: React.FC<CarouselProps> = ({
   className,
 }) => {
   const classes = combineClasses(className);
+  const [isSmallOrMediumScreen, setIsSmallOrMediumScreen] =
+    useState<boolean>(false);
 
-  const isSmallOrMediumScreen = () => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth <= 768;
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallOrMediumScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const renderNextButton = ({ isDisabled }: { isDisabled: boolean }) => {
-    if (isSmallOrMediumScreen()) return null;
+    if (isSmallOrMediumScreen || isDisabled) return null;
     return (
       <Button
         className="absolute right-2 top-1/2 translate-y-1/2 opacity-20 hover:opacity-100"
@@ -56,7 +66,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   };
 
   const renderPrevButton = ({ isDisabled }: { isDisabled: boolean }) => {
-    if (isSmallOrMediumScreen()) return null;
+    if (isSmallOrMediumScreen || isDisabled) return null;
     return (
       <Button
         className="absolute left-2 top-1/2 translate-y-1/2 opacity-20 hover:opacity-100"

@@ -3,68 +3,29 @@ import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
 import { Button } from '@/shared/ui';
 import { Card } from '@/entities/card';
 import Image from 'next/image';
+import { BannerSection } from '@/widgets/banner-section';
+import { ProductCategory } from '@/widgets/product-category';
 
 export default function Debug() {
-  const images = [
-    'kross3.png',
-    '/kross3.png',
-    '/kross3.png',
-    'kross3.png',
-    '/kross3.png',
-    '/kross3.png',
-    'kross3.png',
-    '/kross3.png',
-    '/kross3.png',
-    'kross3.png',
-    '/kross3.png',
-    '/kross3.png',
-  ];
-  const alts = [
-    'Alt 1',
-    'Alt 2',
-    'Alt 3',
-    'Alt 1',
-    'Alt 2',
-    'Alt 3',
-    'Alt 1',
-    'Alt 2',
-    'Alt 3',
-    'Alt 1',
-    'Alt 2',
-    'Alt 3',
-  ];
+  const images = ['boots2.jpg', 'boots2.jpg', '/boots3.jpg'];
+  const alts = ['Кроссовки женские Athlex Ice', 'Alt 2', 'Alt 3'];
   const title = [
-    'Title1',
-    'Title2',
+    'Кроссовки женские Athlex Ice',
+    'Кроссовки женские Kappa Authentic Run Mesh',
     'Title3',
-    'Title4',
-    'Title5',
-    'Title6',
-    'Title7',
-    'Title8',
-    'Title9',
-    'Title10',
-    'Title11',
-    'Title12',
   ];
-  const description = [
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-    'Кроссовки',
-  ];
-  const imagess = ['/Banner1.jpg', '/Banner2.jpg', '/Banner3.jpg'];
+  const description = ['Кроссовки', 'Кроссовки', 'Кроссовки'];
+
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 3 },
+  };
 
   return (
     <div>
+      <BannerSection />
+      <div className="flex-column flex justify-center"></div>
       <div className="mx-4 my-4 flex items-center gap-12">
         <Button variant={'primary'} size={'small'}>
           Debug test 2

@@ -13,7 +13,7 @@ export const RegistrationWindow = () => {
             className="absolute inset-0 h-full w-full object-cover opacity-50"
           />
 
-          <div className="hidden lg:relative lg:block lg:p-12">
+          <div className="relative block p-12">
             <h2 className="text-2xl font-bold tracking-wider text-white sm:text-3xl md:text-4xl">
               ВХОД ИЛИ РЕГИСТРАЦИЯ
             </h2>
@@ -22,7 +22,11 @@ export const RegistrationWindow = () => {
 
         <main className="flex items-center justify-center px-8 pb-6 lg:col-span-7 lg:px-14 xl:col-span-6">
           <div className="max-w-xl lg:max-w-3xl">
-            <form action="#" className="mt-5 grid grid-cols-6 gap-6">
+            <form
+              className="mt-5 grid grid-cols-6 gap-6"
+              action="#"
+              method="post"
+            >
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="FirstName"
@@ -31,7 +35,7 @@ export const RegistrationWindow = () => {
                   Имя
                 </label>
                 <Input
-                  className="mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
+                  className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="FirstName"
                   name="first_name"
                   type="text"
@@ -46,7 +50,7 @@ export const RegistrationWindow = () => {
                   Фамилия
                 </label>
                 <Input
-                  className="mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
+                  className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="LastName"
                   name="last_name"
                   type="text"
@@ -61,7 +65,7 @@ export const RegistrationWindow = () => {
                   Электронная почта
                 </label>
                 <Input
-                  className="mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
+                  className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="Email"
                   name="email"
                   type="email"
@@ -76,7 +80,7 @@ export const RegistrationWindow = () => {
                   Пароль
                 </label>
                 <Input
-                  className="mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
+                  className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="Password"
                   name="password"
                   type="password"
@@ -91,7 +95,7 @@ export const RegistrationWindow = () => {
                   Подтверждение пароля
                 </label>
                 <Input
-                  className="mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
+                  className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="PasswordConfirmation"
                   name="password_confirmation"
                   type="password"

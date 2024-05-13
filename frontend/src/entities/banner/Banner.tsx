@@ -21,7 +21,7 @@ export const Banner: React.FC<BannerProps> = ({ imageUrl, link, alt }) => {
         </Link>
       )}
       <img
-        className="lg:h-banner h-56 w-full object-cover sm:h-auto md:h-80"
+        className="h-56 w-full object-cover sm:h-auto md:h-80 lg:h-banner"
         src={imageUrl}
         alt={alt || 'Изображение баннера'}
       />

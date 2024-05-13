@@ -2,14 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { paths } from '@/shared/routing';
 
-export const Logo = () => {
+interface LogoProps {
+  width?: number;
+  height?: number;
+}
+
+export const Logo: React.FC<LogoProps> = ({ width = 64, height = 64 }) => {
   return (
     <Link href={paths.home}>
       <Image
-        alt="Ostori Shop"
+        alt="Logo Ostori Shop"
         src={'/logo_debug.png'}
-        width={'64'}
-        height={'64'}
+        width={width}
+        height={height}
         priority
       ></Image>
     </Link>

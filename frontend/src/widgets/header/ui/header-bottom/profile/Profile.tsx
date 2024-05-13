@@ -1,7 +1,7 @@
 'use client';
 import { Icon, Modal } from '@/shared/ui';
 import { openModal } from '@/shared/ui';
-import { RegistrationWindow } from '@/widgets/auth';
+import { LoginWindow, RegistrationWindow } from '@/widgets/auth';
 
 export const Profile = () => {
   return (
@@ -11,8 +11,8 @@ export const Profile = () => {
     >
       <Icon icon={'profile'} color="black" />
       <span className="text-sm">Профиль</span>
-      <Modal className="cursor-auto" id={'auth'}>
-        <RegistrationWindow />
+      <Modal className="cursor-auto shadow-none" id={'auth'}>
+        <LoginWindow />
       </Modal>
     </div>
   );

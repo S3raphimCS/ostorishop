@@ -15,7 +15,7 @@ export const Currency = () => {
       >
         RUB
       </Button>
-      <Modal className="bg-base-100 text-base-content" id="currency">
+      <Modal className="bg-white text-base-content" id="currency">
         <h1 className="mb-4 text-2xl">Валюта</h1>
         <Select
           className="text-base-content"

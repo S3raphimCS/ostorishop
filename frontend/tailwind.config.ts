@@ -34,6 +34,7 @@ const config: Config = {
           neutral: '#D4A373',
           'base-100': '#fdfeff',
           'base-content': '#161616',
+          tdark: '#374151',
         },
       },
       'light',
