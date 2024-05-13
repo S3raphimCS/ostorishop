@@ -13,7 +13,7 @@ export const HeaderBottom = () => {
       <div className="navbar-center">
         <Search />
       </div>
-      <div className="navbar-end mx-2 flex items-center gap-6">
+      <div className="navbar-end mx-2 flex hidden items-center gap-6 md:flex">
         <Cart />
         <Wishlist />
         <Profile />

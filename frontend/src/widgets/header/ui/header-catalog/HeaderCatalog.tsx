@@ -2,7 +2,7 @@ import { Nav } from './nav';
 
 export const HeaderCatalog = () => {
   return (
-    <div className="flex h-12 items-center">
+    <div className="flex hidden h-12 items-center sm:hidden md:flex">
       <Nav />
     </div>
   );

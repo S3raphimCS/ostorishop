@@ -35,7 +35,14 @@ export const Carousel: React.FC<CarouselProps> = ({
 }) => {
   const classes = combineClasses(className);
 
+  const isSmallOrMediumScreen = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 768;
+    }
+  };
+
   const renderNextButton = ({ isDisabled }: { isDisabled: boolean }) => {
+    if (isSmallOrMediumScreen()) return null;
     return (
       <Button
         className="absolute right-2 top-1/2 translate-y-1/2 opacity-20 hover:opacity-100"
@@ -49,6 +56,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   };
 
   const renderPrevButton = ({ isDisabled }: { isDisabled: boolean }) => {
+    if (isSmallOrMediumScreen()) return null;
     return (
       <Button
         className="absolute left-2 top-1/2 translate-y-1/2 opacity-20 hover:opacity-100"

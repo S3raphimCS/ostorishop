@@ -1,9 +1,10 @@
-import { Button } from '@/shared/ui';
+'use client';
+import { Button, Loading } from '@/shared/ui';
 import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="flex h-screen w-screen items-center bg-gray-100">
+    <div className="flex h-screen w-screen items-center bg-gray-100 sm:mt-14 md:mt-0">
       <div className="container flex flex-col items-center justify-center px-5 text-gray-700 md:flex-row">
         <div className="max-w-md">
           <div className="font-dark text-5xl font-bold">404</div>
@@ -21,7 +22,15 @@ export default function NotFound() {
           </Link>
         </div>
         <div className="max-w-lg">
-          <img width={220} height={220} src="/NotFound.png" />
+          <img
+            width={160}
+            height={160}
+            src="/NotFound.png"
+            alt="NotFound"
+            onLoad={() => {
+              return <Loading form="spinner" color="accent" size="md" />;
+            }}
+          />
         </div>
       </div>
     </div>

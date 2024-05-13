@@ -74,7 +74,7 @@ const ICON_TYPES: Record<IconTypes, IconType> = {
 export const Icon: React.FC<IconProps> = ({
   icon,
   size = 24,
-  color = 'black',
+  color = '',
   className = '',
 }) => {
   const IconComponent = ICON_TYPES[icon];

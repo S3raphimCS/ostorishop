@@ -25,12 +25,12 @@ export const Modal: React.FC<ModalProps> = ({ className, id, children }) => {
           <form method="dialog">
             <div className="flex justify-end">
               <Button
-                className="absolute z-[1] mx-4 my-4"
+                className="absolute z-[1] mx-4 my-3"
                 variant={'ghost'}
                 size={'small'}
                 circle
               >
-                <Icon color="white" icon={'close'} />
+                <Icon className="text-secondary" icon={'close'} />
               </Button>
             </div>
           </form>

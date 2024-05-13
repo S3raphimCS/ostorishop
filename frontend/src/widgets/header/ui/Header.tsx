@@ -1,6 +1,7 @@
 import { HeaderTop } from './header-top';
 import { HeaderCatalog } from './header-catalog';
 import { HeaderBottom } from './header-bottom';
+import { MobileHeader } from './mobile-header';
 
 export const Header = () => {
   return (
@@ -8,6 +9,9 @@ export const Header = () => {
       <HeaderTop />
       <HeaderBottom />
       <HeaderCatalog />
+      <div className="sm:hidden">
+        <MobileHeader />
+      </div>
     </header>
   );
 };

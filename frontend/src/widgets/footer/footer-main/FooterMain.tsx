@@ -20,7 +20,7 @@ export const FooterMain = () => {
         <ListItem className="text-2xl" href="#">
           8 800 555 35 35
         </ListItem>
-        <div className="flex flex-row gap-2">
+        <div className="flex justify-center gap-2 sm:justify-center md:justify-start lg:justify-start">
           <Button className="px-2" variant={'secondary'}>
             <Icon icon={'telegram'} size={30} color="white" />
           </Button>

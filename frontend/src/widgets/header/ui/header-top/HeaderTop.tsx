@@ -4,10 +4,12 @@ import { Promotion } from './promotion';
 
 export const HeaderTop = () => {
   return (
-    <div className="flex items-center justify-between bg-accent text-white">
-      <Location />
-      <Promotion />
-      <Currency />
+    <div className="bg-accent">
+      <div className="mx-2 flex h-8 items-center justify-between text-base-100 ">
+        <Location />
+        <Promotion />
+        <Currency />
+      </div>
     </div>
   );
 };
