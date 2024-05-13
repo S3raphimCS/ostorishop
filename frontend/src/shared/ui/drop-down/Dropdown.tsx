@@ -10,6 +10,7 @@ export interface DropdownProps {
 }
 
 const BASE_CLASSES = 'transition duration-300 hover:text-accent ';
+const TIMEOUT_DELAY = 80;
 
 export const Dropdown: React.FC<DropdownProps> = ({
   className,
@@ -19,13 +20,17 @@ export const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const classes = combineClasses(className, BASE_CLASSES);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  let timeoutId: NodeJS.Timeout;
 
   const handleMouseEnter = () => {
     setIsOpen(true);
+    clearTimeout(timeoutId);
   };
 
   const handleMouseLeave = () => {
-    setIsOpen(false);
+    timeoutId = setTimeout(() => {
+      setIsOpen(false);
+    }, TIMEOUT_DELAY);
   };
 
   return (
