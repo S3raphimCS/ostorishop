@@ -2,7 +2,13 @@ import { paths } from '@/shared/routing';
 import { Button, Input } from '@/shared/ui';
 import Link from 'next/link';
 
-export const RegistrationWindow = () => {
+interface RegistrationWindowProps {
+  onShowLogin: () => void;
+}
+
+export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
+  onShowLogin,
+}) => {
   return (
     <section className="bg-white">
       <div>
@@ -142,9 +148,12 @@ export const RegistrationWindow = () => {
                 </Button>
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   У вас уже есть аккаунт?{' '}
-                  <Link className="text-gray-700 underline" href={'#'}>
+                  <span
+                    className="text-gray-700 underline"
+                    onClick={onShowLogin}
+                  >
                     Авторизоваться
-                  </Link>
+                  </span>
                   .
                 </p>
               </div>
