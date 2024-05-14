@@ -11,3 +11,21 @@
     scroll-behavior: smooth;
 }
 
+/* Doesn't work in some browsers : https://caniuse.com/?search=-webkit-scrollbar */
+::-webkit-scrollbar {
+    width: 11px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 2px solid #e1e1e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

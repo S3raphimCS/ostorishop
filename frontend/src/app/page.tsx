@@ -1,7 +1,7 @@
+import { mainPageBanners } from '@/widgets/banner-section/lib/config';
 import { BannerSection } from '@/widgets/banner-section';
 import { ProductCategory } from '@/widgets/product-category';
-import { Carousel } from '@/shared/ui';
-import { Card } from '@/entities/card';
+import { Card } from '@/entities/ui/card';
 import { CarouselNoSSR } from '@/shared/ui/';
 
 const images = ['boots2.jpg', 'boots2.jpg', '/boots3.jpg'];
@@ -18,10 +18,11 @@ const responsive = {
   568: { items: 2 },
   1024: { items: 3 },
 };
+
 export default function Home() {
   return (
     <main>
-      <BannerSection />
+      <BannerSection banners={mainPageBanners} />
       <div className="flex-column flex justify-center">
         <ProductCategory title={'Подобрано для вас'}>
           <CarouselNoSSR responsive={responsive} id={'dd'}>

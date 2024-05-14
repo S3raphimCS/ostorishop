@@ -10,10 +10,6 @@ export const items = [
         path: paths.categoryPath(paths.men, paths.clothing),
         submenu: [
           {
-            text: 'Платья',
-            path: paths.categoryPath(paths.men, paths.dresses),
-          },
-          {
             text: 'Куртки',
             path: paths.categoryPath(paths.men, paths.jackets),
           },
@@ -45,7 +41,10 @@ export const items = [
         submenu: [
           { text: 'Сумки', path: paths.categoryPath(paths.men, paths.bags) },
           { text: 'Ремни', path: paths.categoryPath(paths.men, paths.belts) },
-          { text: 'Шапки', path: paths.categoryPath(paths.men, paths.hats) },
+          {
+            text: 'Головные уборы',
+            path: paths.categoryPath(paths.men, paths.hats),
+          },
         ],
       },
     ],
@@ -100,7 +99,10 @@ export const items = [
         submenu: [
           { text: 'Сумки', path: paths.categoryPath(paths.women, paths.bags) },
           { text: 'Ремни', path: paths.categoryPath(paths.women, paths.belts) },
-          { text: 'Шапки', path: paths.categoryPath(paths.women, paths.hats) },
+          {
+            text: 'Головные уборы',
+            path: paths.categoryPath(paths.women, paths.hats),
+          },
         ],
       },
     ],
@@ -149,7 +151,10 @@ export const items = [
         submenu: [
           { text: 'Сумки', path: paths.categoryPath(paths.kids, paths.bags) },
           { text: 'Ремни', path: paths.categoryPath(paths.kids, paths.belts) },
-          { text: 'Шапки', path: paths.categoryPath(paths.kids, paths.hats) },
+          {
+            text: 'Головные уборы',
+            path: paths.categoryPath(paths.kids, paths.hats),
+          },
         ],
       },
     ],

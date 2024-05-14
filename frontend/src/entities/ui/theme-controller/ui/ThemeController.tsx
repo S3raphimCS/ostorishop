@@ -1,6 +1,6 @@
 'use client';
 import { Icon } from '@/shared/ui';
-import { Theme, useTheme } from '@/entities/theme-controller';
+import { Theme, useTheme } from '@/entities/ui/theme-controller';
 
 export const ThemeController = () => {
   const { theme, toggleTheme } = useTheme();

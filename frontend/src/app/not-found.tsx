@@ -25,7 +25,7 @@ export default function NotFound() {
           <img
             width={160}
             height={160}
-            src="/NotFound.png"
+            src="/not-found/NotFoundPerson.png"
             alt="NotFound"
             onLoad={() => {
               return <Loading form="spinner" color="accent" size="md" />;

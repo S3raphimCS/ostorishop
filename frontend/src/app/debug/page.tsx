@@ -1,7 +1,7 @@
 'use client';
 import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
 import { Button } from '@/shared/ui';
-import { Card } from '@/entities/card';
+import { Card } from '@/entities/ui/card';
 import Image from 'next/image';
 import { BannerSection } from '@/widgets/banner-section';
 import { ProductCategory } from '@/widgets/product-category';

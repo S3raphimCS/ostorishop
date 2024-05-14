@@ -1,1 +1,1 @@
-export { BannerSection } from './BannerSection';
+export { BannerSection } from './ui/BannerSection';

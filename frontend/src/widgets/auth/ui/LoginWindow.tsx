@@ -1,5 +1,5 @@
 import { Button, Input } from '@/shared/ui';
-import { Logo } from '@/entities/logo';
+import { Logo } from '@/entities/ui/logo';
 
 interface LoginWindowProps {
   onShowRegistration: () => void;

@@ -1,4 +1,4 @@
-import { Logo } from '@/entities/logo';
+import { Logo } from '@/entities/ui/logo';
 
 export const FooterTop = () => {
   return (

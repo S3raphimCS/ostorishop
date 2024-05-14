@@ -1,4 +1,4 @@
-import { Logo } from '@/entities/logo';
+import { Logo } from '@/entities/ui/logo';
 import { Profile } from './profile';
 import { Search } from './search';
 import { Cart } from './cart';

@@ -1,7 +1,7 @@
 import { Button } from '@/shared/ui';
 import Link from 'next/link';
 
-interface BannerProps {
+export interface BannerProps {
   imageUrl: string;
   link?: string;
   alt?: string;
