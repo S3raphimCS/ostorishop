@@ -13,14 +13,14 @@ export const LoginWindow = () => {
         </div>
         <div className="w-full rounded-lg border border-gray-700 bg-base-100 shadow sm:max-w-md md:mt-0 xl:p-0">
           <div className="space-y-4 p-6 sm:p-8 md:space-y-6">
-            <h1 className="text-tdark text-xl font-bold leading-tight tracking-tight md:text-2xl">
+            <h1 className="text-xl font-bold leading-tight tracking-tight text-neutral-content md:text-2xl">
               Войти в свой аккаунт
             </h1>
             <form className="space-y-4 md:space-y-6" method="post" action="#">
               <div>
                 <label
                   htmlFor="email"
-                  className="text-tdark mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium text-neutral-content"
                 >
                   Ваша электронная почта
                 </label>
@@ -28,7 +28,7 @@ export const LoginWindow = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="text-tdark input input-sm input-accent block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 sm:text-sm"
+                  className="input input-sm input-accent block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-neutral-content sm:text-sm"
                   placeholder="name@company.com"
                   required
                 />
@@ -36,7 +36,7 @@ export const LoginWindow = () => {
               <div>
                 <label
                   htmlFor="password"
-                  className="text-tdark mb-2 block text-sm font-medium"
+                  className="mb-2 block text-sm font-medium text-neutral-content"
                 >
                   Пароль
                 </label>
@@ -45,7 +45,7 @@ export const LoginWindow = () => {
                   name="password"
                   id="password"
                   placeholder="••••••••"
-                  className="text-tdark input input-sm input-accent block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 sm:text-sm"
+                  className="input input-sm input-accent block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-neutral-content sm:text-sm"
                   required
                 />
               </div>
@@ -60,7 +60,7 @@ export const LoginWindow = () => {
                     />
                   </div>
                   <div className="ml-2 text-sm">
-                    <label htmlFor="remember" className="text-tdark">
+                    <label htmlFor="remember" className="text-neutral-content">
                       Запомнить меня
                     </label>
                   </div>
@@ -79,7 +79,7 @@ export const LoginWindow = () => {
               >
                 Войти
               </Button>
-              <p className="text-tdark text-sm font-light">
+              <p className="text-sm font-light text-neutral-content">
                 У вас еще нет учетной записи?{' '}
                 <Link
                   href="#"

@@ -9,7 +9,7 @@ export interface DropdownProps {
   children?: ReactNode;
 }
 
-const BASE_CLASSES = 'transition duration-300 hover:text-accent ';
+const BASE_CLASSES = 'transition duration-300';
 const TIMEOUT_DELAY = 80;
 
 export const Dropdown: React.FC<DropdownProps> = ({

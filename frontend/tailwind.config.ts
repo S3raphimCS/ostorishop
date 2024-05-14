@@ -28,17 +28,15 @@ const config: Config = {
       {
         sunrise: {
           primary: '#d5f2e3',
-          'primary-content': '',
+          'primary-content': '#FF4040',
           secondary: '#FF4040',
           accent: '#C1121F',
           neutral: '#D4A373',
+          'neutral-content': '#374151',
           'base-100': '#fdfeff',
           'base-content': '#161616',
-          tdark: '#374151',
         },
       },
-      'light',
-      'dark',
     ],
   },
 };
