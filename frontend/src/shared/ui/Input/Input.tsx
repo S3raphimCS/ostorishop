@@ -25,7 +25,7 @@ export const Input: React.FC<InputProps> = ({ className, ...props }) => {
   return (
     <input
       {...props}
-      className={combineClasses('grow', className)}
+      className={combineClasses('', className)}
       placeholder={props.placeholder}
       type={props.type}
     />

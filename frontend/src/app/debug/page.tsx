@@ -1,30 +1,75 @@
 'use client';
 import { Carousel, Dropdown, Loading, ProgressBar } from '@/shared/ui';
 import { Button } from '@/shared/ui';
-import { Card } from '@/entities/ui/card';
+import { Card, CardProps } from '@/entities/ui/card';
 import Image from 'next/image';
 import { BannerSection } from '@/widgets/banner-section';
 import { ProductCategory } from '@/widgets/product-category';
+import { ProductGrid } from '@/widgets/product-grid';
+import { ProductFilters } from '@/widgets/product-filters';
 
 export default function Debug() {
-  const images = ['boots2.jpg', 'boots2.jpg', '/boots3.jpg'];
-  const alts = ['Кроссовки женские Athlex Ice', 'Alt 2', 'Alt 3'];
-  const title = [
-    'Кроссовки женские Athlex Ice',
-    'Кроссовки женские Kappa Authentic Run Mesh',
-    'Title3',
+  const mockProducts: CardProps[] = [
+    {
+      title: 'Jacket 1',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 1',
+      price: 100,
+      rating: 4.5,
+      reviewsCount: 10,
+    },
+    {
+      title: 'Jacket 2',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 2',
+      price: 150,
+      rating: 4.0,
+      reviewsCount: 5,
+    },
+    {
+      title: 'Jacket 2',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 2',
+      price: 150,
+      rating: 4.0,
+      reviewsCount: 5,
+    },
+    {
+      title: 'Jacket 2',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 2',
+      price: 150,
+      rating: 4.0,
+      reviewsCount: 5,
+    },
+    {
+      title: 'Jacket 2',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 2',
+      price: 150,
+      rating: 4.0,
+      reviewsCount: 5,
+    },
+    {
+      title: 'Jacket 2',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 2',
+      price: 150,
+      rating: 4.0,
+      reviewsCount: 5,
+    },
+    {
+      title: 'Jacket 2',
+      imageUrl: '/categories-grid/men/clothing/jacket.jpg',
+      alt: 'Jacket 2',
+      price: 150,
+      rating: 4.0,
+      reviewsCount: 5,
+    },
   ];
-  const description = ['Кроссовки', 'Кроссовки', 'Кроссовки'];
-
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
-  };
 
   return (
     <div>
-      <BannerSection />
       <div className="flex-column flex justify-center"></div>
       <div className="mx-4 my-4 flex items-center gap-12">
         <Button variant={'primary'} size={'small'}>
@@ -59,6 +104,14 @@ export default function Debug() {
         <ProgressBar value={65} color="primary" />
         <ProgressBar value={10} color="secondary" />
         <ProgressBar value={32} color="error" />
+      </div>
+      <div className="flex justify-between">
+        <ProductFilters />
+        <div className="flex-1 p-4">
+          <ProductCategory title={'Куртки'}>
+            <ProductGrid products={mockProducts} />
+          </ProductCategory>
+        </div>
       </div>
     </div>
   );

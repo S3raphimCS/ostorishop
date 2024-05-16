@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { items } from './config';
+import { NavigationItems } from './config';
 import { Dropdown } from '@/shared/ui';
 import { CatalogNavigation } from '@/widgets/catalog-navigation';
 
@@ -24,7 +24,7 @@ export const Nav = () => {
 
   return (
     <nav className="flex">
-      {items.map((item, index) => (
+      {NavigationItems.map((item, index) => (
         <div
           key={index}
           onMouseEnter={() => handleMouseEnter(index)}

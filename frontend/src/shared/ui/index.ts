@@ -1,6 +1,5 @@
 export { Button } from './buttons/Button';
 export { Carousel } from './carousel/Carousel';
-// Временное решение Hydration Error
 export { CarouselNoSSR } from './carousel/CarouselNoSSR';
 export { Dropdown } from './drop-down/Dropdown';
 export type { DropdownProps } from './drop-down/Dropdown';
@@ -13,6 +12,7 @@ export { Modal } from './modal/ui/Modal';
 export { Loading } from './loading/Loading';
 export { ProgressBar } from './progress-bar/ProgressBar';
 export { Range } from './range/Range';
+export type { RangeProps } from './range/Range';
 export { Rating } from './rating/Rating';
 export { Select } from './select/Select';
 

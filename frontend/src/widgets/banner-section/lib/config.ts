@@ -10,17 +10,17 @@ export const menPageBanners = [
 
 export const mainPageBanners = [
   {
-    imageUrl: 'banners/main-page/Banner1.jpg',
+    imageUrl: '/banners/main-page/Banner1.jpg',
     link: paths.promo('news1'),
     alt: 'Первый баннер',
   },
   {
-    imageUrl: 'banners/main-page/Banner2.jpg',
+    imageUrl: '/banners/main-page/Banner2.jpg',
     link: paths.promo('news1'),
     alt: 'Второй баннер',
   },
   {
-    imageUrl: 'banners/main-page/Banner3.jpg',
+    imageUrl: '/banners/main-page/Banner3.jpg',
     link: paths.promo('news1'),
     alt: 'Третий баннер',
   },

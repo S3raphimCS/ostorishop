@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Button, Rating, Icon } from '@/shared/ui';
 import { Price } from '@/entities/ui/price';
 import { CardPlate, CardPlateProps } from '@/entities/ui/card';
@@ -29,14 +30,20 @@ export const Card: React.FC<CardProps> = ({
   const discountPrice = discountPlate ? discountPlate.discountPrice : undefined;
 
   return (
-    <div className="card card-compact w-full shadow-xl hover:border-4 hover:border-accent sm:w-80 md:w-96">
+    <div className="card card-compact w-full shadow-xl hover:border-4 hover:border-accent ">
       <figure>
-        <img className="m-auto box-border block p-0" src={imageUrl} alt={alt} />
+        <Image
+          src={imageUrl}
+          alt={alt}
+          width={300}
+          height={200}
+          layout="responsive"
+        />
       </figure>
       {showHeart && (
         <div className="card-actions absolute right-0 p-4 text-gray-400">
           <Button circle size={'small'} variant={'ghost'}>
-            <Icon icon="heart-outline" />
+            <Icon size={'1.5em'} icon="heart-outline" />
           </Button>
         </div>
       )}

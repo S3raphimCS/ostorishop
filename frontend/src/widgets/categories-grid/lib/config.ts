@@ -52,7 +52,7 @@ export const womenCategoryImages: Record<string, CategoryImage> = {
     alt: 'Куртки',
   },
   tShirts: {
-    imageUrl: 'kross3.png',
+    imageUrl: '/kross3.png',
     alt: 'Футболки',
   },
   jeans: {
@@ -75,7 +75,7 @@ export const kidsCategoryImages: Record<string, CategoryImage> = {
     alt: 'Куртки',
   },
   tShirts: {
-    imageUrl: 'kross3.png',
+    imageUrl: '/kross3.png',
     alt: 'Футболки',
   },
   jeans: {
