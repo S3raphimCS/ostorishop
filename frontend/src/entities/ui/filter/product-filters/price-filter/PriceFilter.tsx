@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, FocusEvent } from 'react';
 import { Range } from '@/shared/ui';
 import { Filter } from '../../Filter';
 import { Input } from '@/shared/ui';
@@ -13,28 +13,44 @@ export const PriceFilter: React.FC<PriceFilterProps> = ({
   minPrice,
   maxPrice,
 }) => {
-  const [minValue, setMinPrice] = useState(minPrice);
-  const [maxValue, setMaxPrice] = useState(maxPrice);
+  const [minValue, setMinPrice] = useState<string | number>(minPrice);
+  const [maxValue, setMaxPrice] = useState<string | number>(maxPrice);
 
   const handleMinPriceChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const newMinPrice = parseInt(e.target.value);
-    if (
-      !isNaN(newMinPrice) &&
-      newMinPrice <= maxPrice &&
-      newMinPrice >= minPrice
-    ) {
-      setMinPrice(newMinPrice);
-    }
+    const value = e.target.value;
+    const parsedValue = parseInt(value);
+    setMinPrice(isNaN(parsedValue) ? '' : parsedValue);
   };
 
   const handleMaxPriceChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const newMaxPrice = parseInt(e.target.value);
-    if (
-      !isNaN(newMaxPrice) &&
-      newMaxPrice >= minPrice &&
-      newMaxPrice <= maxPrice
-    ) {
-      setMaxPrice(newMaxPrice);
+    const value = e.target.value;
+    const parsedValue = parseInt(value);
+    setMaxPrice(isNaN(parsedValue) ? '' : parsedValue);
+  };
+
+  const handleMinPriceBlur = (e: FocusEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value);
+    const min = Number(minValue);
+    const max = Number(maxValue);
+    if (isNaN(value) || value < minPrice) {
+      setMinPrice(minPrice);
+    } else if (value > max) {
+      setMinPrice(max);
+    } else {
+      setMinPrice(value);
+    }
+  };
+
+  const handleMaxPriceBlur = (e: FocusEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value);
+    const min = Number(minValue);
+    const max = Number(maxValue);
+    if (isNaN(value) || value > maxPrice) {
+      setMaxPrice(maxPrice);
+    } else if (value < min) {
+      setMaxPrice(min);
+    } else {
+      setMaxPrice(value);
     }
   };
 
@@ -53,16 +69,18 @@ export const PriceFilter: React.FC<PriceFilterProps> = ({
         <Input
           type="text"
           inputMode="numeric"
-          value={minValue}
+          value={minValue === '' ? '' : minValue}
           onChange={handleMinPriceChange}
+          onBlur={handleMinPriceBlur}
           className="input-sm input-accent w-1/3 rounded border p-1"
         />
         <span>До:</span>
         <Input
           type="text"
           inputMode="numeric"
-          value={maxValue}
+          value={maxValue === '' ? '' : maxValue}
           onChange={handleMaxPriceChange}
+          onBlur={handleMaxPriceBlur}
           className="input-sm input-accent w-1/3 rounded border p-1"
         />
       </div>

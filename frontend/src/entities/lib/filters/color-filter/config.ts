@@ -1,0 +1,16 @@
+export const availableColors = [
+  { color: 'white', label: 'Белый' },
+  { color: 'black', label: 'Черный' },
+  { color: 'beige', label: 'Бежевый' },
+  { color: 'olive', label: 'Оливковый' },
+  { color: 'red', label: 'Красный' },
+  { color: 'orange', label: 'Оранжевый' },
+  { color: 'yellow', label: 'Желтый' },
+  { color: 'green', label: 'Зеленый' },
+  { color: 'blue', label: 'Синий' },
+  { color: 'indigo', label: 'Индиго' },
+  { color: 'purple', label: 'Фиолетовый' },
+  { color: 'pink', label: 'Розовый' },
+  { color: 'gray', label: 'Серый' },
+  { color: 'brown', label: 'Коричневый' },
+];
