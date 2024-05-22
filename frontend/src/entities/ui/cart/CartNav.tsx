@@ -2,7 +2,7 @@ import { Icon } from '@/shared/ui';
 import Link from 'next/link';
 import { paths } from '@/shared/routing';
 
-export const Cart = () => {
+export const CartNav = () => {
   return (
     <Link className="flex flex-col items-center" href={paths.wishlist}>
       <Icon icon={'cart'} color="black" />

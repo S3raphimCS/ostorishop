@@ -8,7 +8,7 @@ import {
   ResetPasswordWindow,
 } from '@/widgets/auth';
 
-export const Profile = () => {
+export const ProfileNav = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showResetPassword, setShowResetPassword] = useState(false);
 
