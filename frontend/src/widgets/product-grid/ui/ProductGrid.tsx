@@ -1,5 +1,7 @@
 import { Card, CardProps } from '@/entities/ui/card';
 import { combineClasses } from '@/shared/lib/style-worker';
+import { paths } from '@/shared/routing';
+import Link from 'next/link';
 
 interface ProductGridProps {
   className?: string;
@@ -17,7 +19,9 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   return (
     <div className={classes}>
       {products.map((product, index) => (
-        <Card key={index} {...product} />
+        <Link href={paths.productSlug}>
+          <Card key={index} {...product} />
+        </Link>
       ))}
     </div>
   );

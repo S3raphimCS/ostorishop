@@ -10,7 +10,7 @@ export const menPageBanners = [
 
 export const mainPageBanners = [
   {
-    imageUrl: '/banners/main-page/Banner1.jpg',
+    imageUrl: '/banners/main-page/Banner4.png',
     link: paths.promo('news1'),
     alt: 'Первый баннер',
   },

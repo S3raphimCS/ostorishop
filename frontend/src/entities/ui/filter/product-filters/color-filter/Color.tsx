@@ -1,35 +1,35 @@
 import { combineClasses } from '@/shared/lib/style-worker';
 export type ColorVariant =
-  | 'white'
-  | 'black'
-  | 'red'
-  | 'orange'
-  | 'yellow'
-  | 'green'
-  | 'blue'
-  | 'indigo'
-  | 'purple'
-  | 'pink'
-  | 'gray'
-  | 'brown'
-  | 'beige'
-  | 'olive';
+  | 'Белый'
+  | 'Чёрный'
+  | 'Красный'
+  | 'Оранжевый'
+  | 'Жёлтый'
+  | 'Зелёный'
+  | 'Синий'
+  | 'Индиго'
+  | 'Фиолетовый'
+  | 'Розовый'
+  | 'Серый'
+  | 'Коричневый'
+  | 'Бежевый'
+  | 'Оливковый';
 
 const COLOR_VARIANTS: Record<ColorVariant, string[]> = {
-  white: ['bg-gray-100'],
-  black: ['bg-black'],
-  red: ['bg-red-500'],
-  orange: ['bg-orange-500'],
-  yellow: ['bg-yellow-500'],
-  green: ['bg-green-500'],
-  blue: ['bg-blue-500'],
-  indigo: ['bg-indigo-500'],
-  purple: ['bg-purple-500'],
-  pink: ['bg-pink-500'],
-  gray: ['bg-gray-500'],
-  brown: ['bg-yellow-800'],
-  beige: ['bg-yellow-200'],
-  olive: ['bg-lime-700'],
+  Белый: ['bg-gray-100'],
+  Чёрный: ['bg-black'],
+  Красный: ['bg-red-500'],
+  Оранжевый: ['bg-orange-500'],
+  Жёлтый: ['bg-yellow-500'],
+  Зелёный: ['bg-green-500'],
+  Синий: ['bg-blue-500'],
+  Индиго: ['bg-indigo-500'],
+  Фиолетовый: ['bg-purple-500'],
+  Розовый: ['bg-pink-500'],
+  Серый: ['bg-gray-500'],
+  Коричневый: ['bg-yellow-800'],
+  Бежевый: ['bg-yellow-200'],
+  Оливковый: ['bg-lime-700'],
 };
 
 interface ColorProps {

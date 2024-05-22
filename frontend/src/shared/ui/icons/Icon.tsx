@@ -19,9 +19,15 @@ import { FiYoutube } from 'react-icons/fi';
 import { FaInstagram } from 'react-icons/fa6';
 import { SlSocialVkontakte } from 'react-icons/sl';
 import { IoIosCloseCircle, IoLogoWhatsapp } from 'react-icons/io';
-import { RiAccountCircleFill } from 'react-icons/ri';
+import {
+  RiAccountCircleFill,
+  RiArrowDropDownLine,
+  RiArrowDropUpLine,
+} from 'react-icons/ri';
 
 export type IconTypes =
+  | 'dropdown'
+  | 'dropup'
   | 'close'
   | 'heart-outline'
   | 'heart'
@@ -50,6 +56,8 @@ interface IconProps {
 }
 
 const ICON_TYPES: Record<IconTypes, IconType> = {
+  dropdown: RiArrowDropDownLine,
+  dropup: RiArrowDropUpLine,
   close: IoIosCloseCircle,
   heart: FaHeart,
   'heart-outline': FaRegHeart,

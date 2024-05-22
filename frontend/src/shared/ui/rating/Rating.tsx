@@ -1,16 +1,18 @@
 import { Icon } from '@/shared/ui';
 import { combineClasses } from '@/shared/lib/style-worker';
 
-const BASE_CLASSES = 'grid mt-4 w-full rounded-lg';
+const BASE_CLASSES = 'grid w-full rounded-lg';
 
 export const Rating = ({
   className,
   rating,
   reviewsCount,
+  label,
 }: {
   className?: string;
   rating: number;
-  reviewsCount: number;
+  reviewsCount?: number | null;
+  label?: string;
 }) => {
   const MAX_RATING = 5;
 
@@ -43,7 +45,12 @@ export const Rating = ({
             </span>
           ))}
         </div>
-        <span className="text-md ml-2 text-gray-400">{reviewsCount}</span>
+        {reviewsCount !== null && (
+          <span className="text-md ml-2 text-gray-400">{reviewsCount}</span>
+        )}
+        {label !== null && (
+          <span className="text-md ml-1 text-gray-400">{label}</span>
+        )}
       </div>
     </div>
   );
