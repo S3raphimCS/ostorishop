@@ -33,12 +33,17 @@ const COLOR_VARIANTS: Record<ColorVariant, string[]> = {
 };
 
 interface ColorProps {
+  className?: string;
   color: ColorVariant;
 }
 
 const BASE_CLASSES = 'h-4 w-4 rounded-full';
 
-export const Color: React.FC<ColorProps> = ({ color }) => {
-  const classes = combineClasses(BASE_CLASSES, ...COLOR_VARIANTS[color]);
+export const Color: React.FC<ColorProps> = ({ className, color }) => {
+  const classes = combineClasses(
+    BASE_CLASSES,
+    ...COLOR_VARIANTS[color],
+    className
+  );
   return <div className={classes}></div>;
 };

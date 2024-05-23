@@ -31,5 +31,5 @@ export const paths = {
     [category, ...subcategories].join(''),
 
   promo: (id: Id): string => `/promo/${id}`,
-  productSlug: '/products/',
+  productSlug: '/product/',
 };
