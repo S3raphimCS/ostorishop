@@ -3,7 +3,7 @@ import {
   womenCategoryImages,
   kidsCategoryImages,
 } from '@/widgets/categories-grid/lib/config';
-import { items } from '@/widgets/header/ui/header-catalog/nav/config';
+import { NavigationItems } from '@/widgets/header/ui/header-catalog/nav/config';
 
 const getCategoryImages = (categoryType: string) => {
   switch (categoryType) {
@@ -20,9 +20,9 @@ const getCategoryImages = (categoryType: string) => {
 
 export const getSubmenu = (mainMenuText: string, submenuText: string) => {
   return (
-    items
-      .find((item) => item.text === mainMenuText)
-      ?.submenu?.find((subitem) => subitem.text === submenuText)?.submenu || []
+    NavigationItems.find((item) => item.text === mainMenuText)?.submenu?.find(
+      (subitem) => subitem.text === submenuText
+    )?.submenu || []
   );
 };
 

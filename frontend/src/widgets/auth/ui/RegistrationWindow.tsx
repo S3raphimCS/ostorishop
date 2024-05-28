@@ -75,6 +75,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   id="Email"
                   name="email"
                   type="email"
+                  placeholder="name@company.com"
                 />
               </div>
 
@@ -90,6 +91,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   id="Password"
                   name="password"
                   type="password"
+                  placeholder="••••••••"
                 />
               </div>
 
@@ -105,6 +107,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   id="PasswordConfirmation"
                   name="password_confirmation"
                   type="password"
+                  placeholder="••••••••"
                 />
               </div>
 

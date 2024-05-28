@@ -1,6 +1,6 @@
 import { paths } from '@/shared/routing';
 
-export const items = [
+export const NavigationItems = [
   {
     text: 'Мужчинам',
     path: paths.men,
@@ -11,14 +11,20 @@ export const items = [
         submenu: [
           {
             text: 'Куртки',
-            path: paths.categoryPath(paths.men, paths.jackets),
+            path: paths.categoryPath(paths.men, paths.clothing, paths.jackets),
           },
           {
             text: 'Футболки',
-            path: paths.categoryPath(paths.men, paths.tShirts),
+            path: paths.categoryPath(paths.men, paths.clothing, paths.tShirts),
           },
-          { text: 'Джинсы', path: paths.categoryPath(paths.men, paths.jeans) },
-          { text: 'Шорты', path: paths.categoryPath(paths.men, paths.shorts) },
+          {
+            text: 'Джинсы',
+            path: paths.categoryPath(paths.men, paths.clothing, paths.jeans),
+          },
+          {
+            text: 'Шорты',
+            path: paths.categoryPath(paths.men, paths.clothing, paths.shorts),
+          },
         ],
       },
       {
@@ -27,11 +33,11 @@ export const items = [
         submenu: [
           {
             text: 'Кроссовки',
-            path: paths.categoryPath(paths.men, paths.sneakers),
+            path: paths.categoryPath(paths.men, paths.shoes, paths.sneakers),
           },
           {
             text: 'Сандалии',
-            path: paths.categoryPath(paths.men, paths.sandals),
+            path: paths.categoryPath(paths.men, paths.shoes, paths.sandals),
           },
         ],
       },
@@ -39,11 +45,17 @@ export const items = [
         text: 'Аксессуары',
         path: paths.categoryPath(paths.men, paths.accessories),
         submenu: [
-          { text: 'Сумки', path: paths.categoryPath(paths.men, paths.bags) },
-          { text: 'Ремни', path: paths.categoryPath(paths.men, paths.belts) },
+          {
+            text: 'Сумки',
+            path: paths.categoryPath(paths.men, paths.accessories, paths.bags),
+          },
+          {
+            text: 'Ремни',
+            path: paths.categoryPath(paths.men, paths.accessories, paths.belts),
+          },
           {
             text: 'Головные уборы',
-            path: paths.categoryPath(paths.men, paths.hats),
+            path: paths.categoryPath(paths.men, paths.accessories, paths.hats),
           },
         ],
       },
@@ -59,23 +71,35 @@ export const items = [
         submenu: [
           {
             text: 'Платья',
-            path: paths.categoryPath(paths.women, paths.dresses),
+            path: paths.categoryPath(
+              paths.women,
+              paths.clothing,
+              paths.dresses
+            ),
           },
           {
             text: 'Куртки',
-            path: paths.categoryPath(paths.women, paths.jackets),
+            path: paths.categoryPath(
+              paths.women,
+              paths.clothing,
+              paths.jackets
+            ),
           },
           {
             text: 'Футболки',
-            path: paths.categoryPath(paths.women, paths.tShirts),
+            path: paths.categoryPath(
+              paths.women,
+              paths.clothing,
+              paths.tShirts
+            ),
           },
           {
             text: 'Джинсы',
-            path: paths.categoryPath(paths.women, paths.jeans),
+            path: paths.categoryPath(paths.women, paths.clothing, paths.jeans),
           },
           {
             text: 'Шорты',
-            path: paths.categoryPath(paths.women, paths.shorts),
+            path: paths.categoryPath(paths.women, paths.clothing, paths.shorts),
           },
         ],
       },
@@ -85,11 +109,11 @@ export const items = [
         submenu: [
           {
             text: 'Кроссовки',
-            path: paths.categoryPath(paths.women, paths.sneakers),
+            path: paths.categoryPath(paths.women, paths.shoes, paths.sneakers),
           },
           {
             text: 'Сандалии',
-            path: paths.categoryPath(paths.women, paths.sandals),
+            path: paths.categoryPath(paths.women, paths.shoes, paths.sandals),
           },
         ],
       },
@@ -97,11 +121,29 @@ export const items = [
         text: 'Аксессуары',
         path: paths.categoryPath(paths.women, paths.accessories),
         submenu: [
-          { text: 'Сумки', path: paths.categoryPath(paths.women, paths.bags) },
-          { text: 'Ремни', path: paths.categoryPath(paths.women, paths.belts) },
+          {
+            text: 'Сумки',
+            path: paths.categoryPath(
+              paths.women,
+              paths.accessories,
+              paths.bags
+            ),
+          },
+          {
+            text: 'Ремни',
+            path: paths.categoryPath(
+              paths.women,
+              paths.accessories,
+              paths.belts
+            ),
+          },
           {
             text: 'Головные уборы',
-            path: paths.categoryPath(paths.women, paths.hats),
+            path: paths.categoryPath(
+              paths.women,
+              paths.accessories,
+              paths.hats
+            ),
           },
         ],
       },
@@ -117,18 +159,24 @@ export const items = [
         submenu: [
           {
             text: 'Платья',
-            path: paths.categoryPath(paths.kids, paths.dresses),
+            path: paths.categoryPath(paths.kids, paths.clothing, paths.dresses),
           },
           {
             text: 'Куртки',
-            path: paths.categoryPath(paths.kids, paths.jackets),
+            path: paths.categoryPath(paths.kids, paths.clothing, paths.jackets),
           },
           {
             text: 'Футболки',
-            path: paths.categoryPath(paths.kids, paths.tShirts),
+            path: paths.categoryPath(paths.kids, paths.clothing, paths.tShirts),
           },
-          { text: 'Джинсы', path: paths.categoryPath(paths.kids, paths.jeans) },
-          { text: 'Шорты', path: paths.categoryPath(paths.kids, paths.shorts) },
+          {
+            text: 'Джинсы',
+            path: paths.categoryPath(paths.kids, paths.clothing, paths.jeans),
+          },
+          {
+            text: 'Шорты',
+            path: paths.categoryPath(paths.kids, paths.clothing, paths.shorts),
+          },
         ],
       },
       {
@@ -137,11 +185,11 @@ export const items = [
         submenu: [
           {
             text: 'Кроссовки',
-            path: paths.categoryPath(paths.kids, paths.sneakers),
+            path: paths.categoryPath(paths.kids, paths.shoes, paths.sneakers),
           },
           {
             text: 'Сандалии',
-            path: paths.categoryPath(paths.kids, paths.sandals),
+            path: paths.categoryPath(paths.kids, paths.shoes, paths.sandals),
           },
         ],
       },
@@ -149,11 +197,21 @@ export const items = [
         text: 'Аксессуары',
         path: paths.categoryPath(paths.kids, paths.accessories),
         submenu: [
-          { text: 'Сумки', path: paths.categoryPath(paths.kids, paths.bags) },
-          { text: 'Ремни', path: paths.categoryPath(paths.kids, paths.belts) },
+          {
+            text: 'Сумки',
+            path: paths.categoryPath(paths.kids, paths.accessories, paths.bags),
+          },
+          {
+            text: 'Ремни',
+            path: paths.categoryPath(
+              paths.kids,
+              paths.accessories,
+              paths.belts
+            ),
+          },
           {
             text: 'Головные уборы',
-            path: paths.categoryPath(paths.kids, paths.hats),
+            path: paths.categoryPath(paths.kids, paths.accessories, paths.hats),
           },
         ],
       },

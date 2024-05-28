@@ -12,7 +12,7 @@ export const CategoriesGrid: React.FC<CategoriesGridProps> = ({
   items,
 }) => {
   return (
-    <ProductCategory title={title}>
+    <ProductCategory className="w-11/12" title={title}>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {items.map((item, index) => (
           <Link href={item.href} key={index}>

@@ -1,8 +1,8 @@
 import { Logo } from '@/entities/ui/logo';
-import { Profile } from './profile';
-import { Search } from './search';
-import { Cart } from './cart';
-import { Wishlist } from './wishlist';
+import { ProfileNav } from '@/entities/ui/profile';
+import { CartNav } from '@/entities/ui/cart';
+import { Search } from '@/entities/ui/search';
+import { WishlistNav } from '@/entities/ui/wishlist';
 
 export const HeaderBottom = () => {
   return (
@@ -14,9 +14,9 @@ export const HeaderBottom = () => {
         <Search />
       </div>
       <div className="navbar-end mx-2 flex hidden items-center gap-6 md:flex">
-        <Cart />
-        <Wishlist />
-        <Profile />
+        <CartNav />
+        <WishlistNav />
+        <ProfileNav />
       </div>
     </div>
   );

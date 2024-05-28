@@ -7,7 +7,7 @@ interface ProductCategoryProps {
   readonly className?: string;
 }
 
-const BASE_CLASSES = 'mb-4 w-11/12 rounded-lg border border-gray-200 p-4';
+const BASE_CLASSES = 'mb-4 rounded-lg border border-gray-200 p-4';
 
 export const ProductCategory: FC<ProductCategoryProps> = ({
   title,

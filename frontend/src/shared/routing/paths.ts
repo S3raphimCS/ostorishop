@@ -27,8 +27,9 @@ export const paths = {
   termsAndConditions: '/help/terms-and-conditions',
   privacyPolicy: '/help/privacy-policy',
 
-  categoryPath: (category: string, subcategory: string) =>
-    `${category}${subcategory}`,
+  categoryPath: (category: string, ...subcategories: string[]): string =>
+    [category, ...subcategories].join(''),
 
   promo: (id: Id): string => `/promo/${id}`,
+  productSlug: '/product/',
 };

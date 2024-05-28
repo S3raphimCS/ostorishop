@@ -6,7 +6,7 @@ interface PriceProps {
   price: number;
 }
 
-const BASE_CLASSES = 'text-accent';
+const BASE_CLASSES = '';
 
 export const Price: React.FC<PriceProps> = ({ price, className }) => {
   //   const convertedPrices = currencies.map((currency) => {

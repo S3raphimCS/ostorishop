@@ -4,7 +4,7 @@ import { ProductCategory } from '@/widgets/product-category';
 import { Card } from '@/entities/ui/card';
 import { CarouselNoSSR } from '@/shared/ui/';
 
-const images = ['boots2.jpg', 'boots2.jpg', '/boots3.jpg'];
+const images = ['/boots2.jpg', '/boots2.jpg', '/boots3.jpg'];
 const alts = ['Кроссовки женские Athlex Ice', 'Alt 2', 'Alt 3'];
 const title = [
   'Кроссовки женские Athlex Ice',
@@ -24,7 +24,7 @@ export default function Home() {
     <main>
       <BannerSection banners={mainPageBanners} />
       <div className="flex-column flex justify-center">
-        <ProductCategory title={'Подобрано для вас'}>
+        <ProductCategory className="w-11/12" title={'Подобрано для вас'}>
           <CarouselNoSSR responsive={responsive} id={'dd'}>
             {images.map((imageUrl, index) => (
               <Card
