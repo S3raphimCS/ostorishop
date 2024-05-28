@@ -22,7 +22,7 @@ class CustomUserManager(UserManager):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('first_name', 'СуперПользователь')
-        extra_fields.setdefault('avatar', 'images/users/blank.jpg')
+        extra_fields.setdefault('avatar', 'users/blank.jpg')
         assert extra_fields['is_staff']
         assert extra_fields['is_superuser']
         assert extra_fields['first_name']

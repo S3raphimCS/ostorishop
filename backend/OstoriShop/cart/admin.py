@@ -18,7 +18,7 @@ class FavoriteProductAdmin(admin.ModelAdmin):
 class CartProductAdmin(admin.ModelAdmin):
     fieldsets = (
         ("Пользователь", {"fields": ('user',)}),
-        ("Товар", {"fields": ("product", "count",)}),
+        ("Товар", {"fields": ("product", "color", "size", "count",)}),
     )
     list_display = ("user", "product", 'count')
     list_per_page = 15

@@ -17,11 +17,21 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         return token
 
+    class Meta:
+        ref_name = "Token_obtain_pair"
+
 
 class CustomUserSerializer(serializers.ModelSerializer):
     avatar = serializers.CharField(read_only=True)
     email = serializers.EmailField()
+    is_email_verified = serializers.BooleanField()
+
+    def update(self, instance, validated_data):
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+        return instance
 
     class Meta:
         model = get_user_model()
-        fields = ('id', 'email', 'first_name', 'last_name', 'avatar')
+        fields = ('id', 'email', 'first_name', 'last_name', 'avatar', 'is_email_verified')

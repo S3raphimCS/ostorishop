@@ -5,9 +5,44 @@ from django_ckeditor_5.fields import CKEditor5Field
 from slugify import slugify
 
 
-class Category(models.Model):
-    """Категория товара"""
+class Color(models.Model):
+    color = models.CharField(
+        _("Название цвета"),
+        max_length=30
+    )
+    icon = models.ImageField(
+        _("Иконка"),
+        upload_to="colors/",
+        blank=True, null=True
+    )
 
+    class Meta:
+        verbose_name = "Цвет"
+        verbose_name_plural = "Цвета"
+
+    def __str__(self):
+        return self.color
+
+
+class Size(models.Model):
+    title = models.CharField(
+        _("Название размера"),
+        max_length=5
+    )
+    size = models.CharField(
+        _("Диапазон соответствующих размеров"),
+        max_length=12
+    )
+
+    class Meta:
+        verbose_name = "Размер"
+        verbose_name_plural = "Размеры"
+
+    def __str__(self):
+        return f"{self.title} ({self.size})"
+
+
+class Category(models.Model):
     name = models.CharField(
         _("Название"),
         max_length=256
@@ -48,11 +83,19 @@ class Product(models.Model):
         blank=True,
         related_query_name='categories'
     )
-    image = models.ImageField(
-        _("Фотография"),
-        default="products/blank_product.png",
-        upload_to="products/",
-        blank=True, null=True
+    colors = models.ManyToManyField(
+        Color,
+        related_name="colors",
+        verbose_name=_("Цвета"),
+        blank=True,
+        related_query_name="colors"
+    )
+    sizes = models.ManyToManyField(
+        Size,
+        related_name="sizes",
+        verbose_name=_("Размеры"),
+        blank=True,
+        related_query_name='sizes'
     )
     article = models.CharField(
         _("Артикул"),
@@ -84,6 +127,7 @@ class Product(models.Model):
         default=0
     )
     slug = models.SlugField(
+        unique=True,
         blank=True, null=True,
     )
     available = models.BooleanField(
@@ -95,15 +139,34 @@ class Product(models.Model):
             self.slug = slugify(self.name)
         return super(Product, self).save(*args, **kwargs)
 
-    def get_categories(self):
-        return ', '.join([str(p.name) for p in self.categories.all()])
-
     def __str__(self):
         return f"{self.name}"
 
     class Meta:
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(
+        Product,
+        verbose_name=_("Товар"),
+        related_name='images',
+        on_delete=models.CASCADE
+    )
+    image = models.ImageField(
+        _("Фотография"),
+        default="products/blank_product.png",
+        upload_to="products/",
+        blank=True, null=True
+    )
+
+    class Meta:
+        verbose_name = "Фотография товара"
+        verbose_name_plural = "Фотографии товаров"
+
+    def __str__(self):
+        return self.image.name
 
 
 class ProductComment(models.Model):
@@ -126,6 +189,9 @@ class ProductComment(models.Model):
         _("Прошло модерацию"),
         default=False,
     )
+
+    def comments(self):
+        return ProductComment.objects.filter(product=self)
 
     def __str__(self):
         return f"Отзыв пользователя {self.user} к товару {self.product_name}"

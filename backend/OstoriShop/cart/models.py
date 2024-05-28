@@ -1,8 +1,10 @@
 from django.db import models
-from shop.models import Product
+from shop.models import Product, Size, Color
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from django.core.validators import MinValueValidator
+
+User = get_user_model()
 
 
 class CartProduct(models.Model):
@@ -14,7 +16,7 @@ class CartProduct(models.Model):
         verbose_name=_("Товар"),
     )
     user = models.ForeignKey(
-        to=get_user_model(),
+        to=User,
         on_delete=models.CASCADE,
         verbose_name=_("Пользователь"),
         related_name="cart_items",
@@ -24,6 +26,16 @@ class CartProduct(models.Model):
         blank=True,
         default=0,
         validators=[MinValueValidator(0)],
+    )
+    size = models.ForeignKey(
+        to=Size,
+        on_delete=models.CASCADE,
+        verbose_name=_("Размер"),
+    )
+    color = models.ForeignKey(
+        to=Color,
+        on_delete=models.CASCADE,
+        verbose_name=_("Цвет"),
     )
 
     class Meta:

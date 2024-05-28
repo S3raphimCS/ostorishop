@@ -1,0 +1,16 @@
+Сообщение от {{ feedback.fio }}
+
+На тему: "{{ theme }}"
+
+Сообщение пользователя:
+{{ feedback.message|truncatewords:50 }}
+{% if file_absolute_url %}
+
+Был приложен файл - {{ file_absolute_url }}
+
+{% endif %}
+Email пользователя для обратной связи
+{{ feedback.email }}
+
+Если текст сообщения не полный, можете ознакомиться с ним по ссылке:
+{{ absolute_url }}

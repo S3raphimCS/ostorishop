@@ -11,15 +11,18 @@ from .yasg import urlpatterns as docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('api/auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # path('auth/', include('djoser.urls')),
     # path('auth/', include('djoser.urls.jwt')),
     # path('auth/', include('djoser.urls.authtoken')),
     path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
-    path('products/', include('shop.urls'), name='products'),
-    path('cart/', include('cart.urls.cart_urls'), name='cart'),
-    path('favorite/', include('cart.urls.favorite_urls'), name='favorite')
+    path('api/products/', include('shop.urls'), name='products'),
+    path('api/cart/', include('cart.urls.cart_urls'), name='cart'),
+    path('api/favorite/', include('cart.urls.favorite_urls'), name='favorite'),
+    path('api/utils/', include('utils.urls'), name="utils"),
+    path("api/auth/", include("authentication.urls"), name='auth'),
+    path('api/order/', include("orders.urls"), name='orders')
 ]
 
 urlpatterns += docs_urls
