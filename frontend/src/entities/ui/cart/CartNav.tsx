@@ -43,6 +43,70 @@ export const CartNav: React.FC = () => {
         { name: 'Размер', value: 'L' },
       ],
     },
+    {
+      id: 2,
+      name: 'Товар 2',
+      path: 'product-2',
+      variant: {
+        image: {
+          alt: 'Product 2',
+        },
+      },
+      price: 2000,
+      quantity: 2,
+      options: [
+        { name: 'Цвет', value: 'Синий' },
+        { name: 'Размер', value: 'L' },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Товар 2',
+      path: 'product-2',
+      variant: {
+        image: {
+          alt: 'Product 2',
+        },
+      },
+      price: 2000,
+      quantity: 2,
+      options: [
+        { name: 'Цвет', value: 'Синий' },
+        { name: 'Размер', value: 'L' },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Товар 2',
+      path: 'product-2',
+      variant: {
+        image: {
+          alt: 'Product 2',
+        },
+      },
+      price: 2000,
+      quantity: 2,
+      options: [
+        { name: 'Цвет', value: 'Синий' },
+        { name: 'Размер', value: 'L' },
+      ],
+    },
+    {
+      id: 2,
+      name: 'Товар 2',
+      path: 'product-2',
+      variant: {
+        image: {
+          alt: 'Product 2',
+        },
+      },
+      price: 2000,
+      quantity: 2,
+      options: [
+        { name: 'Цвет', value: 'Синий' },
+        { name: 'Размер', value: 'L' },
+      ],
+    },
   ];
 
   return (

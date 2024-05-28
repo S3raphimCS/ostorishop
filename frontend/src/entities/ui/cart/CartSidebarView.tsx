@@ -31,22 +31,24 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
             <Icon icon="close" color="black" />
           </button>
         </div>
-        <div className="p-4">
-          {items.length === 0 ? (
-            <p className="text-gray-500">Ваша корзина пуста</p>
-          ) : (
-            <ul>
-              {items.map((item) => (
-                <CartItem
-                  key={item.id}
-                  item={item}
-                  closeSidebarIfPresent={onClose}
-                />
-              ))}
-            </ul>
-          )}
+        <div className="flex h-full flex-col">
+          <div className="flex-1 overflow-y-auto p-4 pb-16">
+            {items.length === 0 ? (
+              <p className="text-gray-500">Ваша корзина пуста</p>
+            ) : (
+              <ul>
+                {items.map((item) => (
+                  <CartItem
+                    key={item.id}
+                    item={item}
+                    closeSidebarIfPresent={onClose}
+                  />
+                ))}
+              </ul>
+            )}
+          </div>
+          <CartSummary totalItems={4} />
         </div>
-        <CartSummary totalItems={0} />
       </div>
     </div>
   );
