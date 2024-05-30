@@ -9,7 +9,7 @@ export const CartSummary: React.FC<{ totalItems: number }> = ({
       <ul className="pb-2">
         <li className="flex justify-between py-1">
           <span>Доставка</span>
-          <span className="font-bold tracking-wide">FREE</span>
+          <span className="font-bold tracking-wide">Бесплатно</span>
         </li>
       </ul>
       <div className="mb-2 flex justify-between border-t border-gray-400 py-3 font-bold">

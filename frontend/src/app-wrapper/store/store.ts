@@ -10,33 +10,24 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import rootReducer from './rootReducer';
 
-// const rootRecucer = combineReducers({
-//     Здесь все reducer
-// })
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['cart'],
+};
 
-// const persistConfig = {
-//     key: 'root',
-//     storage,
-//     Вайтлист для сохранения нужной части данных приложения в сессионном localstorage
-//     whitelist: ['cart'],
-// }
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
 
-// const persistedReducer = persistReducer(persistConfig, rootRecucer)
-
-// const store = configureStore({
-//     reducer: persistedReducer,
-//     middleware: (getDefaultMiddleware) =>
-//         getDefaultMiddleware({
-//             serializableCheck: {
-//                 ignoredActions: [
-//                     FLUSH,
-//                     REHYDRATE,
-//                     PAUSE,
-//                     PERSIST,
-//                     PURGE,
-//                     REGISTER,
-//                 ],
-//             },
-//         }),
-// })
+export const persistor = persistStore(store);
+export default store;

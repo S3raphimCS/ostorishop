@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Button, Icon, Rating } from '@/shared/ui';
 import { CardPlate, CardPlateVariant } from '@/entities/ui/card';
 import { Product } from '@/entities/model';
@@ -8,6 +9,7 @@ import {
   Color,
   ColorVariant,
 } from '@/entities/ui/filter/product-filters/color-filter/Color';
+import { addToCart } from '@/entities/ui/cart';
 
 interface ProductDetailsProps {
   product: Product;
@@ -15,9 +17,34 @@ interface ProductDetailsProps {
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
+  const dispatch = useDispatch();
 
   const handleSizeClick = (size: string) => {
     setSelectedSize(size);
+  };
+
+  const handleAddToCart = () => {
+    if (selectedSize) {
+      dispatch(
+        addToCart({
+          id: product.id,
+          name: product.name,
+          path: product.path,
+          price: product.price,
+          quantity: 1,
+          variant: {
+            image: {
+              url: product.images[0],
+              alt: product.name,
+            },
+          },
+          options: [
+            { name: 'Цвет', value: product.color as string },
+            { name: 'Размер', value: selectedSize as string },
+          ],
+        })
+      );
+    }
   };
 
   const discountPlate = product.cardPlates?.find(
@@ -98,6 +125,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           variant="accent"
           className="text-base-100"
           disabled={!selectedSize}
+          onClick={handleAddToCart}
         >
           Добавить в корзину
         </Button>

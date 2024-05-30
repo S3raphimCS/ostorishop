@@ -1,8 +1,8 @@
-// import { combineReducers } from '@reduxjs/toolkit';
-// import menuReducer from '@/shared/ui/drop-down/model/menuSlice';
+import { combineReducers } from '@reduxjs/toolkit';
+import { cartReducer } from '@/entities/ui/cart';
 
-// const rootReducer = combineReducers({
-//   menu: menuReducer,
-// });
+const rootReducer = combineReducers({
+  cart: cartReducer,
+});
 
-// export default rootReducer;
+export default rootReducer;

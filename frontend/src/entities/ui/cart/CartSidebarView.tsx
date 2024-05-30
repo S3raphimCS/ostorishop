@@ -1,19 +1,22 @@
 'use client';
+import { useSelector } from 'react-redux';
 import { Button, Icon } from '@/shared/ui';
 import { CartItem, CartItemProps } from './CartItem';
 import { CartSummary } from './CartSummary';
+import { RootState } from '@/app-wrapper/types';
+import Image from 'next/image';
 
 interface CartSidebarProps {
   isOpen: boolean;
   onClose: () => void;
-  items: CartItemProps['item'][];
 }
 
 export const CartSidebarView: React.FC<CartSidebarProps> = ({
   isOpen,
   onClose,
-  items,
 }) => {
+  const items = useSelector((state: RootState) => state.cart.items);
+
   return (
     <div
       className={`fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity ${
@@ -34,10 +37,19 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
         <div className="flex h-full flex-col">
           <div className="flex-1 overflow-y-auto p-4 pb-16">
             {items.length === 0 ? (
-              <p className="text-gray-500">Ваша корзина пуста</p>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={'/empty_cart.png'}
+                  className="rounded-lg object-cover"
+                  width={200}
+                  height={200}
+                  alt={'Пустая корзина'}
+                />
+                <p className="flex justify-center">Ваша корзина пуста</p>
+              </div>
             ) : (
               <ul>
-                {items.map((item) => (
+                {items.map((item: CartItemProps['item']) => (
                   <CartItem
                     key={item.id}
                     item={item}
@@ -47,7 +59,13 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
               </ul>
             )}
           </div>
-          <CartSummary totalItems={4} />
+          <CartSummary
+            totalItems={items.reduce(
+              (sum: number, item: CartItemProps['item']) =>
+                sum + item.price * item.quantity,
+              0
+            )}
+          />
         </div>
       </div>
     </div>

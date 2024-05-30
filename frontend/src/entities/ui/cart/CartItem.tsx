@@ -1,3 +1,4 @@
+import { useDispatch } from 'react-redux';
 import { combineClasses } from '@/shared/lib/style-worker';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,6 +10,7 @@ import {
 } from '../filter/product-filters/color-filter/Color';
 import { Size, SizeVariant } from '../filter/product-filters/size-filter/Size';
 import { Icon } from '@/shared/ui';
+import { removeFromCart, updateQuantity } from './model/cartSlice';
 
 interface ItemOption {
   name: string;
@@ -33,9 +35,6 @@ export interface CartItemProps {
   variant?: 'default' | 'display';
   removing?: boolean;
   closeSidebarIfPresent?: () => void;
-  handleRemove?: () => void;
-  handleChange?: (value: number) => void;
-  increaseQuantity?: (value: number) => void;
   rest?: React.HTMLAttributes<HTMLLIElement>;
 }
 
@@ -46,11 +45,9 @@ export const CartItem: React.FC<CartItemProps> = ({
   variant = 'default',
   removing = false,
   closeSidebarIfPresent,
-  handleRemove,
-  handleChange,
-  increaseQuantity,
   ...rest
 }) => {
+  const dispatch = useDispatch();
   const {
     id,
     name,
@@ -60,6 +57,20 @@ export const CartItem: React.FC<CartItemProps> = ({
     quantity,
     options,
   } = item;
+
+  const handleRemove = () => {
+    dispatch(removeFromCart({ id, options }));
+  };
+
+  const increaseQuantity = () => {
+    dispatch(updateQuantity({ id, options, quantity: quantity + 1 }));
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      dispatch(updateQuantity({ id, options, quantity: quantity - 1 }));
+    }
+  };
 
   return (
     <li
@@ -77,8 +88,8 @@ export const CartItem: React.FC<CartItemProps> = ({
               className="rounded-lg object-cover"
               width={64}
               height={64}
-              src={itemVariant.image?.url || placeholderImg}
-              alt={itemVariant.image?.alt || 'Product Image'}
+              src={itemVariant?.image?.url || placeholderImg}
+              alt={itemVariant?.image?.alt || 'Product Image'}
             />
           </Link>
           <button
@@ -130,14 +141,14 @@ export const CartItem: React.FC<CartItemProps> = ({
               <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-accent px-1">
                 <button
                   className="rounded px-2 py-1"
-                  onClick={() => increaseQuantity && increaseQuantity(-1)}
+                  onClick={decreaseQuantity}
                 >
                   -
                 </button>
                 <span className="px-3">{quantity}</span>
                 <button
                   className="rounded px-2 py-1"
-                  onClick={() => increaseQuantity && increaseQuantity(1)}
+                  onClick={increaseQuantity}
                 >
                   +
                 </button>

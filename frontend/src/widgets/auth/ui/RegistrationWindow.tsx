@@ -11,14 +11,13 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
 }) => {
   return (
     <section className="bg-white">
-      <div>
-        <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+      <div className="mx-auto flex flex-col justify-center lg:py-0">
+        <section className="relative mx-0 flex bg-gray-900 py-0">
           <img
             alt=""
             src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
             className="absolute inset-0 h-full w-full object-cover opacity-50"
           />
-
           <div className="relative block p-12">
             <h2 className="text-2xl font-bold tracking-wider text-white sm:text-3xl md:text-4xl">
               ВХОД ИЛИ РЕГИСТРАЦИЯ
@@ -125,6 +124,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   </span>
                 </label>
               </div>
+
               <div className="col-span-6">
                 <p className="text-sm text-gray-500">
                   Создавая учетную запись, вы соглашаетесь с нашими{' '}
@@ -152,7 +152,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   У вас уже есть аккаунт?{' '}
                   <span
-                    className="text-gray-700 underline"
+                    className="cursor-pointer text-gray-700 underline"
                     onClick={onShowLogin}
                   >
                     Авторизоваться

@@ -1,3 +1,4 @@
+export { BreadСrumb } from './breadcrumb/BreadСrumb';
 export { Button } from './buttons/Button';
 export { Carousel } from './carousel/Carousel';
 export { CarouselNoSSR } from './carousel/CarouselNoSSR';

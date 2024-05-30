@@ -24,6 +24,7 @@ import {
   RiArrowDropDownLine,
   RiArrowDropUpLine,
 } from 'react-icons/ri';
+import { IoHome } from 'react-icons/io5';
 
 export type IconTypes =
   | 'dropdown'
@@ -35,6 +36,7 @@ export type IconTypes =
   | 'star'
   | 'half-star'
   | 'profile'
+  | 'home'
   | 'search'
   | 'cart'
   | 'location'
@@ -65,6 +67,7 @@ const ICON_TYPES: Record<IconTypes, IconType> = {
   star: FaStar,
   'half-star': FaStarHalfAlt,
   profile: RiAccountCircleFill,
+  home: IoHome,
   search: FaSearch,
   cart: FaShoppingBag,
   location: FaMapMarkerAlt,
