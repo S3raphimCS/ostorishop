@@ -27,7 +27,15 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", 'set_me_in_prod')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost"
+    "localhost",
+    "185.71.76.0/27",
+    "185.71.77.0/27",
+    "77.75.153.0/25",
+    "77.75.156.11",
+    "77.75.156.35",
+    "77.75.154.128/25",
+    "2a02:5180::/32",
+    "https://api.yookassa.ru/v3/"
 ]
 
 # Application definition
@@ -79,6 +87,9 @@ MIDDLEWARE = [
 # }
 
 REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'authentication.auth_methods.JWTCookieAuthentication',
@@ -140,7 +151,7 @@ CORS_ALLOW_METHODS = (
     "POST",
     "PUT",
 )
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', "https://api.yookassa.ru/v3/"]
 
 ROOT_URLCONF = 'config.urls'
 
@@ -335,3 +346,7 @@ PASSWORD_RESET_TIMEOUT = SecondTo.ONE_HOUR * 24
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
 SITE_NAME = "Ostori Shop"
+
+# Yookassa settings
+YOOKASSA_ACCOUNT_ID = os.environ.get("YOOKASSA_ACCOUNT_ID", None)
+YOOKASSA_SECRET_KEY = os.environ.get("YOOKASSA_SECRET_KEY", None)

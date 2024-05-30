@@ -4,16 +4,21 @@ from django.utils.translation import gettext_lazy as _
 from cart.models import CartProduct
 from orders.models.discount import Discount
 from shop.models import Product, Size, Color
+from django.core.validators import MinValueValidator
 
 User = get_user_model()
 
 
 class Order(models.Model):
+    PENDING = "pending"
+    CANCELED = "canceled"
     PROCESSING = "processing"
     IN_DELIVERY = "delivery"
     DELIVERED = 'delivered'
 
     STATUS_CHOICES = (
+        (CANCELED, "Отменен"),
+        (PENDING, "Ожидает оплаты"),
         (PROCESSING, "В обработке"),
         (IN_DELIVERY, "Доставляется"),
         (DELIVERED, "Доставлен")
@@ -24,10 +29,10 @@ class Order(models.Model):
         verbose_name=_("Пользователь"),
         on_delete=models.CASCADE
     )
-    order_items = models.ManyToManyField(
-        CartProduct,
-        verbose_name=_("Товары")
-    )
+    # order_items = models.ManyToManyField(
+    #     CartProduct,
+    #     verbose_name=_("Товары")
+    # )
     created_at = models.DateTimeField(
         _("Создан"),
         auto_now_add=True,
@@ -47,7 +52,7 @@ class Order(models.Model):
         _("Статус заказа"),
         max_length=15,
         choices=STATUS_CHOICES,
-        default=PROCESSING
+        default=PENDING
     )
     total_price = models.DecimalField(
         _("Стоимость"),
@@ -55,11 +60,15 @@ class Order(models.Model):
         decimal_places=2,
         max_digits=11
     )
+    payment_code = models.UUIDField(
+        _("Код платежа"),
+        null=True
+    )
     idempotence_key = models.UUIDField(
         _("Ключ идемпотентности"),
         unique=True
     )
-    City = models.CharField(
+    city = models.CharField(
         _("Город"),
         max_length=30,
         default="Хабаровск"
@@ -106,7 +115,9 @@ class OrderItem(models.Model):
     order = models.ForeignKey(
         to=Order,
         on_delete=models.CASCADE,
-        verbose_name=_("Заказ")
+        verbose_name=_("Заказ"),
+        related_name="order_items",
+        null=True
     )
     product = models.ForeignKey(
         to=Product,
@@ -122,7 +133,8 @@ class OrderItem(models.Model):
     count = models.PositiveIntegerField(
         _("Количество"),
         blank=True,
-        default=0
+        default=0,
+        validators=[MinValueValidator(1)]
     )
     size = models.ForeignKey(
         to=Size,
@@ -132,7 +144,7 @@ class OrderItem(models.Model):
     color = models.ForeignKey(
         to=Color,
         on_delete=models.CASCADE,
-        verbose_name=_("Цвет")
+        verbose_name=_("Цвет"),
     )
 
     class Meta:
@@ -140,4 +152,4 @@ class OrderItem(models.Model):
         verbose_name_plural = _("Товары в заказах")
 
     def __str__(self):
-        return f"Товар {self.product.name} в заказе №{self.id} пользователя {self.user.email}"
+        return f"{self.product.name} в заказе №{self.order.id} пользователя {self.user.email}"
