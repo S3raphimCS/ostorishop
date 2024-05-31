@@ -1,14 +1,19 @@
+interface ItemOption {
+  name: string;
+  value: string;
+}
+
 interface CartItem {
   id: number;
   name: string;
-  price: number;
-  quantity: number;
-  size: string;
+  path: string;
   variant: {
     image?: {
       url: string;
       alt?: string;
     };
   };
-  options?: { name: string; value: string }[];
+  price: number;
+  quantity: number;
+  options?: ItemOption[];
 }

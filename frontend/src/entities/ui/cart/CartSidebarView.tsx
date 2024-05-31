@@ -4,6 +4,7 @@ import { Button, Icon } from '@/shared/ui';
 import { CartItem, CartItemProps } from './CartItem';
 import { CartSummary } from './CartSummary';
 import { RootState } from '@/app-wrapper/types';
+import Image from 'next/image';
 
 interface CartSidebarProps {
   isOpen: boolean;
@@ -36,7 +37,16 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
         <div className="flex h-full flex-col">
           <div className="flex-1 overflow-y-auto p-4 pb-16">
             {items.length === 0 ? (
-              <p className="text-gray-500">Ваша корзина пуста</p>
+              <div className="flex flex-col items-center gap-2">
+                <Image
+                  src={'/empty_cart.png'}
+                  className="rounded-lg object-cover"
+                  width={200}
+                  height={200}
+                  alt={'Пустая корзина'}
+                />
+                <p className="flex justify-center">Ваша корзина пуста</p>
+              </div>
             ) : (
               <ul>
                 {items.map((item: CartItemProps['item']) => (

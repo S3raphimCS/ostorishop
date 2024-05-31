@@ -29,16 +29,19 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         addToCart({
           id: product.id,
           name: product.name,
+          path: product.path,
           price: product.price,
           quantity: 1,
-          size: selectedSize,
           variant: {
             image: {
               url: product.images[0],
               alt: product.name,
             },
           },
-          options: [{ name: 'Цвет', value: product.color as string }],
+          options: [
+            { name: 'Цвет', value: product.color as string },
+            { name: 'Размер', value: selectedSize as string },
+          ],
         })
       );
     }

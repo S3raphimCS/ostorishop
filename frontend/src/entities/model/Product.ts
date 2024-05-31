@@ -3,6 +3,7 @@ import { CardPlateVariant } from '../ui/card';
 export interface Product {
   id: number;
   name: string;
+  path: string;
   manufacturer: string;
   rating: number;
   reviewsCount: number;
