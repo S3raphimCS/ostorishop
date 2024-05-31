@@ -47,7 +47,7 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
               </ul>
             )}
           </div>
-          <CartSummary totalItems={4} />
+          <CartSummary totalItems={20197} />
         </div>
       </div>
     </div>
