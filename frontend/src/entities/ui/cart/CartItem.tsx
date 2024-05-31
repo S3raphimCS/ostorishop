@@ -77,8 +77,8 @@ export const CartItem: React.FC<CartItemProps> = ({
               className="rounded-lg object-cover"
               width={64}
               height={64}
-              src={itemVariant.image?.url || placeholderImg}
-              alt={itemVariant.image?.alt || 'Product Image'}
+              src={itemVariant?.image?.url || placeholderImg}
+              alt={itemVariant?.image?.alt || 'Product Image'}
             />
           </Link>
           <button

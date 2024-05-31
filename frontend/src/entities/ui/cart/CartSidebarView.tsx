@@ -1,19 +1,21 @@
 'use client';
+import { useSelector } from 'react-redux';
 import { Button, Icon } from '@/shared/ui';
 import { CartItem, CartItemProps } from './CartItem';
 import { CartSummary } from './CartSummary';
+import { RootState } from '@/app-wrapper/types';
 
 interface CartSidebarProps {
   isOpen: boolean;
   onClose: () => void;
-  items: CartItemProps['item'][];
 }
 
 export const CartSidebarView: React.FC<CartSidebarProps> = ({
   isOpen,
   onClose,
-  items,
 }) => {
+  const items = useSelector((state: RootState) => state.cart.items);
+
   return (
     <div
       className={`fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity ${
@@ -37,7 +39,7 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
               <p className="text-gray-500">Ваша корзина пуста</p>
             ) : (
               <ul>
-                {items.map((item) => (
+                {items.map((item: CartItemProps['item']) => (
                   <CartItem
                     key={item.id}
                     item={item}
@@ -47,7 +49,13 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
               </ul>
             )}
           </div>
-          <CartSummary totalItems={20197} />
+          <CartSummary
+            totalItems={items.reduce(
+              (sum: number, item: CartItemProps['item']) =>
+                sum + item.price * item.quantity,
+              0
+            )}
+          />
         </div>
       </div>
     </div>
