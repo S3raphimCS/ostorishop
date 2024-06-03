@@ -28,13 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    "185.71.76.0/27",
-    "185.71.77.0/27",
-    "77.75.153.0/25",
+    "185.71.76.0",
+    "185.71.77.0",
+    "77.75.153.0",
     "77.75.156.11",
     "77.75.156.35",
-    "77.75.154.128/25",
-    "2a02:5180::/32",
+    "77.75.154.128",
+    "2a02:5180::",
     "https://api.yookassa.ru/v3/"
 ]
 
@@ -88,11 +88,11 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",
+        'rest_framework.permissions.AllowAny',
     ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'authentication.auth_methods.JWTCookieAuthentication',
+                'authentication.auth_methods.JWTCookieAuthentication',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     "PAGE_SIZE": 15
@@ -125,9 +125,9 @@ SIMPLE_JWT = {
     'JWK_URL': None,
     'LEEWAY': 0,
 
-    'USER_ID_FIELD': 'id',
-    'USER_ID_CLAIM': 'user_id',
-    'USER_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
+    # 'USER_ID_FIELD': 'id',
+    # 'USER_ID_CLAIM': 'user_id',
+    # 'USER_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
 
     'TOKEN_NAME': 'ostorishop_token',
     'AUTH_COOKIE_DOMAIN': None,
