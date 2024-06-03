@@ -13,7 +13,7 @@ import {
 import { paths } from '@/shared/routing';
 
 export interface CardProps {
-  id: string;
+  id?: string;
   title: string;
   imageUrl: string;
   alt: string;
@@ -42,6 +42,7 @@ export const Card: React.FC<CardProps> = ({
 
   const handleFavoriteClick = (event: React.MouseEvent) => {
     event.stopPropagation();
+    if (!id) return;
     if (isFavorite) {
       dispatch(removeFavorite(id));
     } else {

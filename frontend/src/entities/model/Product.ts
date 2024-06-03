@@ -2,7 +2,7 @@ import { CardPlateVariant } from '../ui/card';
 import { Review } from './Review';
 
 export interface Product {
-  id: number | string;
+  id: string;
   name: string;
   manufacturer: string;
   rating: number;

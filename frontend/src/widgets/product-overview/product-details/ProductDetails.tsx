@@ -41,6 +41,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             { name: 'Цвет', value: product.color as string },
             { name: 'Размер', value: selectedSize as string },
           ],
+          path: product.id,
         })
       );
     }

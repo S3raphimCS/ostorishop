@@ -4,7 +4,7 @@ interface ItemOption {
 }
 
 interface CartItem {
-  id: number;
+  id: number | string;
   name: string;
   path: string;
   variant: {

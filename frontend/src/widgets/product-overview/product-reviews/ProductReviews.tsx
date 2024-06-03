@@ -50,10 +50,10 @@ export const ProductReviews: React.FC<ProductReviewsProps> = ({
               key={index}
               user={review.user}
               rating={review.rating}
-              pros={review.pros}
-              cons={review.cons}
+              pros={review.pros || ''}
+              cons={review.cons || ''}
               comment={review.comment}
-              date={review.date}
+              date={review.date || ''}
             />
           ))}
           {reviews.length > 2 && !showAllReviews && (
