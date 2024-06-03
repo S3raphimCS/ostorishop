@@ -10,7 +10,7 @@ import {
 } from '../filter/product-filters/color-filter/Color';
 import { Size, SizeVariant } from '../filter/product-filters/size-filter/Size';
 import { Icon } from '@/shared/ui';
-import { removeFromCart, updateQuantity } from './model/cartSlice';
+import { removeFromCart, updateQuantity } from '@/features/cart';
 
 interface ItemOption {
   name: string;

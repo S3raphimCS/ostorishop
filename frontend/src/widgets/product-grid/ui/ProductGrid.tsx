@@ -19,9 +19,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   return (
     <div className={classes}>
       {products.map((product, index) => (
-        <Link href={paths.productSlug}>
-          <Card key={index} {...product} />
-        </Link>
+        <Card key={index} {...product} />
       ))}
     </div>
   );

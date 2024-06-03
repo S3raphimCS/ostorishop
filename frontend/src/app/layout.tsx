@@ -15,14 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Providers>
-      <html data-theme="sunrise" lang="ru">
+    <html data-theme="sunrise" lang="ru">
+      <Providers>
         <body>
           <Header />
           {children}
           <Footer />
         </body>
-      </html>
-    </Providers>
+      </Providers>
+    </html>
   );
 }

@@ -1,6 +1,10 @@
+'use client';
 import { paths } from '@/shared/routing';
+import { useState } from 'react';
 import { Button, Input } from '@/shared/ui';
 import Link from 'next/link';
+import { UserRegister } from '@/shared/model/Api';
+import { registerUser } from '../api';
 
 interface RegistrationWindowProps {
   onShowLogin: () => void;
@@ -9,6 +13,31 @@ interface RegistrationWindowProps {
 export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
   onShowLogin,
 }) => {
+  const [formData, setFormData] = useState<UserRegister>({
+    first_name: '',
+    last_name: '',
+    email: '',
+    password1: '',
+    password2: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const data = await registerUser(formData);
+      console.log('Registration successful:', data);
+    } catch (error: any) {
+      console.error('Registration error:', error);
+    }
+  };
+
   return (
     <section className="bg-white">
       <div className="mx-auto flex flex-col justify-center lg:py-0">
@@ -31,6 +60,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
               className="mt-5 grid grid-cols-6 gap-6"
               action="#"
               method="post"
+              onSubmit={handleSubmit}
             >
               <div className="col-span-6 sm:col-span-3">
                 <label
@@ -44,6 +74,8 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   id="FirstName"
                   name="first_name"
                   type="text"
+                  value={formData.first_name}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -59,6 +91,8 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   id="LastName"
                   name="last_name"
                   type="text"
+                  value={formData.last_name}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -75,6 +109,8 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                   name="email"
                   type="email"
                   placeholder="name@company.com"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -88,9 +124,11 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                 <Input
                   className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="Password"
-                  name="password"
+                  name="password1"
                   type="password"
                   placeholder="••••••••"
+                  value={formData.password1}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -104,9 +142,11 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                 <Input
                   className="input input-sm input-accent mt-1 w-full rounded-md border-2 border-gray-400 bg-white px-2 text-sm text-gray-700 shadow-sm"
                   id="PasswordConfirmation"
-                  name="password_confirmation"
+                  name="password2"
                   type="password"
                   placeholder="••••••••"
+                  value={formData.password2}
+                  onChange={handleChange}
                 />
               </div>
 
