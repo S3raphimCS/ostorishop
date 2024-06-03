@@ -1,4 +1,15 @@
-# TODO Написать логику на обработку статуса платежа
-#  (pending, waiting_for_capture, succeeded и canceled)
+from yookassa import Payment
+from orders.models.orders import Order
+
+
 def payment_acceptance(response):
-    pass
+    if response["type"] == "notification":
+        object = response["object"]
+        order = Order.objects.get(payment_code=object["id"])
+        match response["event"]:
+            case "payment.succeeded":
+                order.status = Order.PROCESSING
+                order.is_paid = True
+            case "payment.canceled":
+                order.status = Order.CANCELED
+        order.save()

@@ -24,8 +24,8 @@ class CartProduct(models.Model):
     count = models.PositiveIntegerField(
         _("Количество товара"),
         blank=True,
-        default=0,
-        validators=[MinValueValidator(0)],
+        default=1,
+        validators=[MinValueValidator(1)],
     )
     size = models.ForeignKey(
         to=Size,

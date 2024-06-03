@@ -1,0 +1,1 @@
+Статус вашего заказа №{{ order_id }} был изменен с {{ old_order_status }} на {{ new_order_status }}.

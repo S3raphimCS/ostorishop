@@ -1,9 +1,10 @@
 from rest_framework import serializers
 
-from orders.models.orders import Order
+from orders.models.orders import Order, OrderItem
 from orders.models.discount import Discount
 from authentication.serializers.user import CustomUserSerializer
 from cart.serializers import CartProductSerializer
+from shop.serializers import ProductSerializer, SizeSerializer, ColorSerializer
 from shop.serializers import CategoryListSerializer
 from uuid import uuid4
 
@@ -19,10 +20,22 @@ class DiscountSerializer(serializers.ModelSerializer):
         fields = ("title", "discount_amount", "promocode", "product_categories")
 
 
+class OrderItemSerializer(serializers.ModelSerializer):
+    product = ProductSerializer(read_only=True)
+    user = CustomUserSerializer(read_only=True)
+    count = serializers.IntegerField(read_only=True)
+    size = SizeSerializer(read_only=True)
+    color = ColorSerializer(read_only=True)
+
+    class Meta:
+        model = OrderItem
+        fields = ("product", "user", "count", "size", "color")
+
+
 class OrderSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     # user = CustomUserSerializer(read_only=True)
-    order_items = CartProductSerializer(many=True)
+    order_items = OrderItemSerializer(many=True, read_only=True)
     created_at = serializers.DateTimeField(read_only=True)
     is_paid = serializers.BooleanField(read_only=True)
     discount = DiscountSerializer(required=False)
@@ -46,10 +59,11 @@ class OrderSerializer(serializers.ModelSerializer):
         discount = validated_data["discount"] if "discount" in validated_data else None
         price = validated_data["price"]
         idempotence_key = uuid4()
-        order = Order.objects.create(user=user, discount=discount, idempotence_key=idempotence_key, price=price)
-        for product in order_items:
-            product_id = product["id"]
-            order.order_items.add(product_id)
+        order = Order.objects.create(user=user, discount=discount, idempotence_key=idempotence_key, total_price=price,
+                                     city=validated_data["city"], street=validated_data["street"],
+                                     house_number=validated_data["house_number"],
+                                     apartment_number=validated_data["apartment_number"],
+                                     recipient=validated_data["recipient"], postal_code=validated_data["postal_code"])
         return order
 
     class Meta:

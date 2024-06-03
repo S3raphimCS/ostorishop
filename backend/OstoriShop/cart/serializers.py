@@ -14,21 +14,14 @@ class CartProductSerializer(serializers.ModelSerializer):
     size = SizeSerializer(required=True)
     color = ColorSerializer(required=True)
 
-    # product_id = serializers.IntegerField(read_only=True)
-
     def create(self, validated_data: dict):
         product_id = validated_data.pop("product")["id"]
-        # color = Color.objects.filter(color=validated_data["color"]["color"]).first()
-        # size = Size.objects.filter(title=validated_data["size"]["title"]).first()
-        # print(color, size)
         old_object = CartProduct.objects.filter(product_id=product_id, user=validated_data["user"],
                                                 color=validated_data["color"], size=validated_data["size"]).first()
         if old_object:
             old_object.count += validated_data["count"]
             old_object.save()
             return old_object
-        # if not (color or size):
-        #     return ValidationError("Переданы неверные данные")
         validated_data["product"] = Product.objects.filter(id=product_id).first()
         cartProduct = CartProduct(**validated_data)
         cartProduct.save()
@@ -42,8 +35,13 @@ class CartProductSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
         data["user"] = self.context["request"].user
+        product = Product.objects.filter(id=attrs["product"]["id"]).first()
+        if not product:
+            raise ValidationError("Такого продукта не сущетсвует")
         color = Color.objects.filter(color=attrs["color"]["color"]).first()
         size = Size.objects.filter(title=attrs["size"]["title"]).first()
+        if any([color not in product.colors, size not in product.sizes]):
+            return ValidationError("Переданного цвета или размера нет в наличии")
         if color and size:
             data["color"] = color
             data["size"] = size

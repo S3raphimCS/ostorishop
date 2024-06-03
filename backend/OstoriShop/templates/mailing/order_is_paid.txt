@@ -1,0 +1,9 @@
+{% load index %}
+{% load plus_one %}
+Вы успешно оплатили заказ №{{ order_id }} стоимостью {{ total_price }}.
+Статус заказа: {{ order_status }}
+Содержимое заказа:
+{% for n in items_count %}
+{{ n|plus_one }}) {{ order_items|index:n }}, Размер: {{ order_items_sizes|index:n }}, Цвет: {{ order_items_colors|index:n }}, Количество: {{ order_items_count|index:n }} шт.
+{% endfor %}
+Если у вас возникли проблемы или вы ошиблись, вы можете воспользоваться формой обратной связи на сайте.
