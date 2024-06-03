@@ -9,7 +9,7 @@ import {
   Color,
   ColorVariant,
 } from '@/entities/ui/filter/product-filters/color-filter/Color';
-import { addToCart } from '@/entities/ui/cart';
+import { addToCart } from '@/features/cart';
 
 interface ProductDetailsProps {
   product: Product;
@@ -29,7 +29,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         addToCart({
           id: product.id,
           name: product.name,
-          path: product.path,
           price: product.price,
           quantity: 1,
           variant: {

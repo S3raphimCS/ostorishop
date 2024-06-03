@@ -74,7 +74,7 @@ export const Card: React.FC<CardProps> = ({
           </Button>
         </div>
       )}
-      <Link href={paths.productSlug} passHref>
+      <Link href={paths.productSlug + id} passHref>
         <figure>
           <Image
             className="hover:rounded-xl"

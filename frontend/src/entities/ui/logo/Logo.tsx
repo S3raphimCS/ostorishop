@@ -12,7 +12,7 @@ export const Logo: React.FC<LogoProps> = ({ width = 64, height = 64 }) => {
     <Link href={paths.home}>
       <Image
         alt="Logo Ostori Shop"
-        src={'/logo_debug.png'}
+        src={'/logo.png'}
         width={width}
         height={height}
         priority

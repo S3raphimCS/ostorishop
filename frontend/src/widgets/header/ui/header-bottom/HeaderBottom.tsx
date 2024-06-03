@@ -7,8 +7,11 @@ import { WishlistNav } from '@/entities/ui/wishlist';
 export const HeaderBottom = () => {
   return (
     <div className="navbar bg-neutral-100 text-base-content shadow-md">
-      <div className="navbar-start">
-        <Logo />
+      <div className="navbar-start flex items-center">
+        <Logo width={58} height={58} />
+        <div className="ml-2 text-2xl font-bold tracking-wide text-base-content">
+          OstoriShop
+        </div>
       </div>
       <div className="navbar-center">
         <Search />

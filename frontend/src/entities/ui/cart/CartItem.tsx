@@ -38,7 +38,7 @@ export interface CartItemProps {
   rest?: React.HTMLAttributes<HTMLLIElement>;
 }
 
-const placeholderImg = '/logo_debug.png';
+const placeholderImg = '/logo.png';
 
 export const CartItem: React.FC<CartItemProps> = ({
   item,
@@ -82,7 +82,7 @@ export const CartItem: React.FC<CartItemProps> = ({
     >
       <div className="relative flex flex-row space-x-4 py-4">
         <div className="relative h-16 w-16 cursor-pointer">
-          <Link href={paths.productSlug + path}>
+          <Link href={paths.productSlug + id}>
             <Image
               onClick={closeSidebarIfPresent}
               className="rounded-lg object-cover"
