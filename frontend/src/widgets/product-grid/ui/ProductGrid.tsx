@@ -1,7 +1,5 @@
 import { Card, CardProps } from '@/entities/ui/card';
 import { combineClasses } from '@/shared/lib/style-worker';
-import { paths } from '@/shared/routing';
-import Link from 'next/link';
 
 interface ProductGridProps {
   className?: string;

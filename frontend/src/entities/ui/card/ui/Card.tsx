@@ -22,6 +22,7 @@ export interface CardProps {
   price?: number;
   cardPlates?: CardPlateProps[];
   showHeart?: boolean;
+  isProductCart?: boolean;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -34,6 +35,7 @@ export const Card: React.FC<CardProps> = ({
   price,
   cardPlates = [],
   showHeart = true,
+  isProductCart = true,
 }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
@@ -75,43 +77,83 @@ export const Card: React.FC<CardProps> = ({
           </Button>
         </div>
       )}
-      <Link href={paths.productSlug + id} passHref>
-        <figure>
-          <Image
-            className="hover:rounded-xl"
-            src={imageUrl}
-            alt={alt}
-            width={300}
-            height={200}
-            layout="responsive"
-          />
-        </figure>
+      {isProductCart ? (
+        <Link href={paths.productSlug + id} passHref>
+          <figure>
+            <Image
+              className="hover:rounded-xl"
+              src={imageUrl}
+              alt={alt}
+              width={300}
+              height={200}
+              layout="responsive"
+            />
+          </figure>
 
-        {cardPlates && cardPlates.length > 0 && (
-          <div className="ml-2 mt-2 flex gap-2">
-            {cardPlates.map((plate, index) => (
-              <CardPlate key={index} {...plate} />
-            ))}
-          </div>
-        )}
-        <div className="card-body">
-          {price !== undefined && (
-            <div className="flex flex-row gap-6">
-              <Price className="text-3xl font-bold" price={price} />
-              {discountPrice && (
-                <Price
-                  className="text-2xl text-gray-400 line-through decoration-red-500"
-                  price={discountPrice}
-                />
-              )}
+          {cardPlates && cardPlates.length > 0 && (
+            <div className="ml-2 mt-2 flex gap-2">
+              {cardPlates.map((plate, index) => (
+                <CardPlate key={index} {...plate} />
+              ))}
             </div>
           )}
-          <h2 className="card-title">{title}</h2>
-          {rating !== undefined && reviewsCount !== undefined && (
-            <Rating rating={rating} reviewsCount={reviewsCount} />
+          <div className="card-body">
+            {price !== undefined && (
+              <div className="flex flex-row gap-6">
+                <Price className="text-3xl font-bold" price={price} />
+                {discountPrice && (
+                  <Price
+                    className="text-2xl text-gray-400 line-through decoration-red-500"
+                    price={discountPrice}
+                  />
+                )}
+              </div>
+            )}
+            <h2 className="card-title">{title}</h2>
+            {rating !== undefined && reviewsCount !== undefined && (
+              <Rating rating={rating} reviewsCount={reviewsCount} />
+            )}
+          </div>
+        </Link>
+      ) : (
+        <div>
+          <figure>
+            <Image
+              className="hover:rounded-xl"
+              src={imageUrl}
+              alt={alt}
+              width={300}
+              height={200}
+              layout="responsive"
+            />
+          </figure>
+
+          {cardPlates && cardPlates.length > 0 && (
+            <div className="ml-2 mt-2 flex gap-2">
+              {cardPlates.map((plate, index) => (
+                <CardPlate key={index} {...plate} />
+              ))}
+            </div>
           )}
+          <div className="card-body">
+            {price !== undefined && (
+              <div className="flex flex-row gap-6">
+                <Price className="text-3xl font-bold" price={price} />
+                {discountPrice && (
+                  <Price
+                    className="text-2xl text-gray-400 line-through decoration-red-500"
+                    price={discountPrice}
+                  />
+                )}
+              </div>
+            )}
+            <h2 className="card-title">{title}</h2>
+            {rating !== undefined && reviewsCount !== undefined && (
+              <Rating rating={rating} reviewsCount={reviewsCount} />
+            )}
+          </div>
         </div>
-      </Link>
+      )}
     </div>
   );
 };

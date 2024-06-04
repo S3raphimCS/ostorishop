@@ -16,7 +16,12 @@ export const CategoriesGrid: React.FC<CategoriesGridProps> = ({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {items.map((item, index) => (
           <Link href={item.href} key={index}>
-            <Card showHeart={false} key={index} {...item} />
+            <Card
+              isProductCart={false}
+              showHeart={false}
+              key={index}
+              {...item}
+            />
           </Link>
         ))}
       </div>

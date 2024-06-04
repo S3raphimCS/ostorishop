@@ -11,7 +11,21 @@ interface BreadcrumbItem {
 
 const pathNames: { [key: string]: string } = {
   men: 'Мужчинам',
+  women: 'Женщинам',
+  kids: 'Детям',
+  clothing: 'Верхняя одежда',
+  shoes: 'Обувь',
+  accessories: 'Аксессуары',
   jackets: 'Куртки',
+  't-shirts': 'Футболки',
+  jeans: 'Джинсы',
+  shorts: 'Шорты',
+  dresses: 'Платья',
+  sneakers: 'Кроссовки',
+  sandals: 'Сандалии',
+  bags: 'Сумки',
+  belts: 'Ремни',
+  hats: 'Головные уборы',
 };
 
 export const BreadСrumb = () => {
