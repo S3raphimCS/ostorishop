@@ -1,5 +1,3 @@
-import json
-
 from orders.models.discount import Discount, UsedDiscount
 from orders.models.orders import Order, OrderItem
 from rest_framework.viewsets import GenericViewSet, generics
@@ -31,20 +29,19 @@ class OrderViewSet(CreateModelMixin, GenericViewSet):
 
     # TODO Вернуть права доступа
     def get_permissions(self):
-        # permissions = [IsAuthenticated]
-        permissions = []
-        # permissions = [AllowAny]
-        # return [AllowAny()]
+        permissions = [IsAuthenticated]
+        print(self.action)
         if self.action == 'get_order':
             return [OR(IsAuthenticatedAndOwner(), IsAdminUser())]
         elif self.action == 'payment_create':
             return [IsAuthenticatedAndOwner()]
         elif self.action == 'payment_acceptance':
-            print('1')
             return [AllowAny()]
         return [permission() for permission in permissions]
 
     def get_queryset(self):
+        if self.request.user.is_anonymous:
+            return None
         return Order.objects.filter(user=self.request.user)
 
     @swagger_auto_schema(tags=["Orders"], responses={
@@ -53,6 +50,8 @@ class OrderViewSet(CreateModelMixin, GenericViewSet):
     }, operation_summary="Получить все заказы", operation_description=ORDER_LIST_GET_DESC)
     def get(self, request: Request):
         orders = self.get_queryset()
+        if not orders:
+            return Response(status=status.HTTP_204_NO_CONTENT)
         serializer = self.get_serializer(data=orders, many=True)
         serializer.is_valid()
         return Response(serializer.data, status=status.HTTP_200_OK)
@@ -80,7 +79,7 @@ class OrderViewSet(CreateModelMixin, GenericViewSet):
             if request.data["recipient"]["account_id"] == settings.YOOKASSA_ACCOUNT_ID:
                 payment_acceptance.payment_acceptance(request.data)
                 return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response(status=status.HTTP_401_UNAUTHORIZED)
+        return Response(status=status.HTTP_403_FORBIDDEN)
 
     @swagger_auto_schema(tags=["Orders"], responses={
         status.HTTP_400_BAD_REQUEST: error_schema,
