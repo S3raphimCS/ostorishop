@@ -5,6 +5,7 @@ export { CarouselNoSSR } from './carousel/CarouselNoSSR';
 export { Dropdown } from './drop-down/Dropdown';
 export type { DropdownProps } from './drop-down/Dropdown';
 export { DropdownMenu } from './drop-down/DropdownMenu';
+export { Hero } from './hero/Hero';
 export { Icon } from './icons/Icon';
 export { Input } from './input/Input';
 export type { InputProps } from './input/Input';

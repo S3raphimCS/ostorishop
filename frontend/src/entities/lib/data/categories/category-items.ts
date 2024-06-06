@@ -11,3 +11,15 @@ export const menAccessoriesItems = getCategoryItems(
   'Аксессуары',
   'men'
 );
+
+export const womenClothingItems = getCategoryItems(
+  'Женщинам',
+  'Верхняя одежда',
+  'women'
+);
+export const womenShoesItems = getCategoryItems('Женщинам', 'Обувь', 'women');
+export const womenAccessoriesItems = getCategoryItems(
+  'Женщинам',
+  'Аксессуары',
+  'women'
+);

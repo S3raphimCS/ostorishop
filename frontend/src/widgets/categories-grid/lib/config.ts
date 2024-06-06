@@ -44,24 +44,44 @@ export const menCategoryImages: Record<string, CategoryImage> = {
 
 export const womenCategoryImages: Record<string, CategoryImage> = {
   dresses: {
-    imageUrl: '/categories-grid/women/dress.png',
+    imageUrl: '/categories-grid/women/clothing/dress.jpg',
     alt: 'Платья',
   },
   jackets: {
-    imageUrl: '/categories-grid/women/jacket.png',
-    alt: 'Куртки',
+    imageUrl: '/categories-grid/women/clothing/jacket.jpg',
+    alt: 'Женские Куртки',
   },
-  tShirts: {
-    imageUrl: '/kross3.png',
-    alt: 'Футболки',
+  't-shirts': {
+    imageUrl: '/categories-grid/women/clothing/tShirts.jpg',
+    alt: 'Женские Футболки',
   },
   jeans: {
-    imageUrl: '/categories-grid/women/jeans.png',
-    alt: 'Джинсы',
+    imageUrl: '/categories-grid/women/clothing/jeans.jpg',
+    alt: 'Женские Джинсы',
   },
   shorts: {
-    imageUrl: '/categories-grid/women/shorts.png',
-    alt: 'Шорты',
+    imageUrl: '/categories-grid/women/clothing/shorts.jpg',
+    alt: 'Женские Шорты',
+  },
+  sneakers: {
+    imageUrl: '/categories-grid/women/shoes/sneakers.jpg',
+    alt: 'Женские кроссовки',
+  },
+  sandals: {
+    imageUrl: '/categories-grid/women/shoes/sandals.jpg',
+    alt: 'Женские сандалии',
+  },
+  bags: {
+    imageUrl: '/categories-grid/women/accessories/bags.jpg',
+    alt: 'Женские сумки',
+  },
+  belts: {
+    imageUrl: '/categories-grid/women/accessories/belts.jpg',
+    alt: 'Женские ремни',
+  },
+  hats: {
+    imageUrl: '/categories-grid/women/accessories/hats.jpg',
+    alt: 'Женские головные уборы',
   },
 };
 
