@@ -1,1 +1,0 @@
-export { CatalogNavigation } from './CatalogNavigation';

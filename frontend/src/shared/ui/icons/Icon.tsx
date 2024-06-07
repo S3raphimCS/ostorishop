@@ -24,6 +24,7 @@ import {
   RiArrowDropDownLine,
   RiArrowDropUpLine,
 } from 'react-icons/ri';
+import { GrCatalog } from 'react-icons/gr';
 import { IoHome } from 'react-icons/io5';
 
 export type IconTypes =
@@ -32,6 +33,7 @@ export type IconTypes =
   | 'close'
   | 'heart-outline'
   | 'heart'
+  | 'catalog'
   | 'empty-star'
   | 'star'
   | 'half-star'
@@ -62,6 +64,7 @@ const ICON_TYPES: Record<IconTypes, IconType> = {
   dropup: RiArrowDropUpLine,
   close: IoIosCloseCircle,
   heart: FaHeart,
+  catalog: GrCatalog,
   'heart-outline': FaRegHeart,
   'empty-star': FaRegStar,
   star: FaStar,

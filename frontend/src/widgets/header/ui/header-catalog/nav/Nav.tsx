@@ -1,9 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { NavigationItems } from './config';
 import { Dropdown } from '@/shared/ui';
-import { CatalogNavigation } from '@/widgets/catalog-navigation';
+import { CatalogNavigation } from '@/entities/ui/catalog';
 
 const TIMEOUT_DELAY = 800;
 
