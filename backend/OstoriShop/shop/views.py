@@ -1,14 +1,17 @@
-from .serializers import ProductSerializer, ProductListSerializer, ProductSerializer, CategoryListSerializer
-from .models import Category, Product
-from rest_framework.viewsets import GenericViewSet, generics
 from drf_yasg.utils import swagger_auto_schema
+from rest_framework import status
+from rest_framework.decorators import action
+from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
 from rest_framework.request import Request
 from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
-from rest_framework.decorators import action
+from rest_framework.viewsets import GenericViewSet
+
+from docs.shop.descriptions import (PRODUCT_BY_SLUG_GET_DESC,
+                                    PRODUCT_LIST_GET_DESC)
 from docs.utils.schemas import error_schema
-from docs.shop.descriptions import PRODUCT_LIST_GET_DESC, PRODUCT_BY_SLUG_GET_DESC
+
+from .models import Product
+from .serializers import ProductSerializer
 
 
 # TODO Сделать пагинацию, фильтры, сортировку, поиск по полям

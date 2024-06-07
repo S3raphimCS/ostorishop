@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Help, Feedback
+
+from .models import Feedback, Help
 
 
 @admin.register(Help)

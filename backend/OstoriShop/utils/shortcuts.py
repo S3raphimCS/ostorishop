@@ -1,8 +1,7 @@
 from django.template import loader
-
-from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.request import Request
+from rest_framework.response import Response
 
 
 def put_context_to_template(template_name: str, context: dict[str]) -> str:

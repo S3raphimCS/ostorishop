@@ -1,8 +1,9 @@
+from django.contrib.auth import get_user_model
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.core.validators import MinValueValidator, MaxValueValidator
+
 from shop.models import Category
-from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
@@ -39,7 +40,7 @@ class Discount(models.Model):
         return f"{self.title} - {self.promocode}"
 
 
-# TODO Подумать, как реализовать discount поле, чтобы оно сохранялось после удаления промокода из БД
+# Пока не используется
 class UsedDiscount(models.Model):
     discount = models.ForeignKey(
         Discount,

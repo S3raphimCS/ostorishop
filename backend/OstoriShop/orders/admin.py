@@ -1,15 +1,11 @@
 from django.contrib import admin
-from orders.models.discount import Discount, UsedDiscount
+
+from orders.models.discount import Discount
 from orders.models.orders import Order, OrderItem
 
 
 @admin.register(Discount)
 class DiscountAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(UsedDiscount)
-class UsedDiscountAdmin(admin.ModelAdmin):
     pass
 
 

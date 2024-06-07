@@ -1,10 +1,11 @@
+from django.core.exceptions import ValidationError
 from rest_framework import serializers
 
-from .models import CartProduct, FavoriteProduct, Color, Size
-from shop.models import Product
-from shop.serializers import ProductSerializer, SizeSerializer, ColorSerializer
 from authentication.serializers.user import CustomUserSerializer
-from django.core.exceptions import ValidationError
+from shop.models import Product
+from shop.serializers import ColorSerializer, ProductSerializer, SizeSerializer
+
+from .models import CartProduct, Color, FavoriteProduct, Size
 
 
 class CartProductSerializer(serializers.ModelSerializer):
@@ -79,7 +80,6 @@ class FavoriteProductSerializer(serializers.ModelSerializer):
 
 
 class FavoriteProductListSerializer(serializers.ModelSerializer):
-    # user = CustomUserSerializer()
 
     class Meta:
         model = FavoriteProduct

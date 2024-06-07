@@ -1,36 +1,37 @@
-from orders.models.discount import Discount, UsedDiscount
-from orders.models.orders import Order, OrderItem
-from rest_framework.viewsets import GenericViewSet, generics
-from rest_framework.generics import CreateAPIView
+from django.conf import settings
+from django.utils import timezone
 from drf_yasg.utils import swagger_auto_schema
+from rest_framework import status
+from rest_framework.mixins import CreateModelMixin
+from rest_framework.permissions import (OR, AllowAny, IsAdminUser,
+                                        IsAuthenticated)
 from rest_framework.request import Request
 from rest_framework.response import Response
-from rest_framework import status
-from orders.serializers.order import OrderSerializer, DiscountSerializer
-from orders.serializers.payment import CreatePaymentSerializer
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.viewsets import GenericViewSet
+
 from authentication.permissions import IsAuthenticatedAndOwner
-from rest_framework.permissions import IsAdminUser, OR, AllowAny
-from rest_framework.mixins import CreateModelMixin
 from cart.models import CartProduct
 from cart.views import get_total_price
-from docs.orders.descriptions import (ORDER_LIST_GET_DESC, ORDER_DETAIL_GET_DESC, PAYMENT_ACCEPT_POST_DESC,
-                                      PAYMENT_CREATE_POST_DESC, ORDER_CREATE_POST_DESC, CHECK_DISCOUNT_POST_DESC)
+from docs.orders.descriptions import (CHECK_DISCOUNT_POST_DESC,
+                                      ORDER_CREATE_POST_DESC,
+                                      ORDER_DETAIL_GET_DESC,
+                                      ORDER_LIST_GET_DESC,
+                                      PAYMENT_ACCEPT_POST_DESC,
+                                      PAYMENT_CREATE_POST_DESC)
 from docs.orders.schemas import discount_schema, payment_create_schema
 from docs.utils.schemas import error_schema, url_schema
-from django.utils import timezone
-from .services import create_payment
-from .services import payment_acceptance
-from django.conf import settings
+from orders.models.discount import Discount
+from orders.models.orders import Order, OrderItem
+from orders.serializers.order import DiscountSerializer, OrderSerializer
+
+from .services import create_payment, payment_acceptance
 
 
 class OrderViewSet(CreateModelMixin, GenericViewSet):
     serializer_class = OrderSerializer
 
-    # TODO Вернуть права доступа
     def get_permissions(self):
         permissions = [IsAuthenticated]
-        print(self.action)
         if self.action == 'get_order':
             return [OR(IsAuthenticatedAndOwner(), IsAdminUser())]
         elif self.action == 'payment_create':
@@ -75,8 +76,8 @@ class OrderViewSet(CreateModelMixin, GenericViewSet):
     }, operation_description=PAYMENT_ACCEPT_POST_DESC,
                          operation_summary="Получение информации о заказе от API сервиса оплаты")
     def payment_acceptance(self, request: Request):
-        if "recipient" in request.data.keys():
-            if request.data["recipient"]["account_id"] == settings.YOOKASSA_ACCOUNT_ID:
+        if "recipient" in request.data["object"].keys():
+            if request.data["object"]["recipient"]["account_id"] == settings.YOOKASSA_ACCOUNT_ID:
                 payment_acceptance.payment_acceptance(request.data)
                 return Response(status=status.HTTP_204_NO_CONTENT)
         return Response(status=status.HTTP_403_FORBIDDEN)

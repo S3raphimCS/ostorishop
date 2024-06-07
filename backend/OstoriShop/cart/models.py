@@ -1,8 +1,9 @@
-from django.db import models
-from shop.models import Product, Size, Color
 from django.contrib.auth import get_user_model
-from django.utils.translation import gettext_lazy as _
 from django.core.validators import MinValueValidator
+from django.db import models
+from django.utils.translation import gettext_lazy as _
+
+from shop.models import Color, Product, Size
 
 User = get_user_model()
 

@@ -1,9 +1,11 @@
-from yookassa import Configuration, Payment
-from django.conf import settings
 from decimal import Decimal
-from orders.models.orders import Order
+
+from django.conf import settings
 from requests.exceptions import HTTPError
 from rest_framework import status
+from yookassa import Configuration, Payment
+
+from orders.models.orders import Order
 
 
 def get_or_create_payment(validated_data, idempotence_key, return_url):

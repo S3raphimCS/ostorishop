@@ -1,21 +1,27 @@
-from .models import FavoriteProduct, CartProduct
-from shop.models import Product
-from .serializers import CartProductSerializer, FavoriteProductSerializer
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.mixins import UpdateModelMixin
-from django.db.models import Sum
-from rest_framework import status
-from rest_framework.viewsets import GenericViewSet
-from rest_framework.decorators import action
-from drf_yasg.utils import swagger_auto_schema
-from rest_framework.request import Request
 from django.forms.models import model_to_dict
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import status
+from rest_framework.decorators import action
+from rest_framework.mixins import UpdateModelMixin
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.request import Request
+from rest_framework.response import Response
+from rest_framework.viewsets import GenericViewSet
+
+from docs.cart.descriptions import (ADD_PRODUCT_TO_CART_POST_DESC,
+                                    CART_PRODUCT_DELETE_DESC,
+                                    CART_PRODUCT_GET_DESC,
+                                    CART_TOTAL_PRICE_GET_DESC,
+                                    FAVORITE_PRODUCT_DELETE_DESC,
+                                    FAVORITE_PRODUCT_GET_DESC,
+                                    FAVORITE_PRODUCT_POST_DESC,
+                                    UPDATE_CART_PRODUCT_PUT_DESC)
 from docs.cart.schemas import cart_price_schema
-from docs.cart.descriptions import (CART_TOTAL_PRICE_GET_DESC, CART_PRODUCT_DELETE_DESC, CART_PRODUCT_GET_DESC,
-                                    ADD_PRODUCT_TO_CART_POST_DESC, UPDATE_CART_PRODUCT_PUT_DESC,
-                                    FAVORITE_PRODUCT_GET_DESC, FAVORITE_PRODUCT_POST_DESC, FAVORITE_PRODUCT_DELETE_DESC)
 from docs.utils.schemas import error_list_schema, error_schema
+from shop.models import Product
+
+from .models import CartProduct, FavoriteProduct
+from .serializers import CartProductSerializer, FavoriteProductSerializer
 
 
 class CartProductViewSet(UpdateModelMixin, GenericViewSet):

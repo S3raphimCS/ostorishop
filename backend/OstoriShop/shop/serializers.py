@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import Category, Product, ProductComment, ProductImage, Color, Size
+
+from .models import (Category, Color, Product, ProductComment, ProductImage,
+                     Size)
 
 
 class SizeSerializer(serializers.ModelSerializer):

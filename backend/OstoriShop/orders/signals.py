@@ -1,8 +1,8 @@
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
-from utils.mail import Email
 
 from orders.models.orders import Order, OrderItem
+from utils.mail import Email
 
 ORDER_IS_PAID_MAIL_TEMPLATE = 'mailing/order_is_paid.txt'
 NEW_ORDER_TO_ADMIN_MAIL_TEMPLATE = 'mailing/new_order_is_paid.txt'

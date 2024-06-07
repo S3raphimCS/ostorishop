@@ -1,7 +1,9 @@
 from django.urls import path
+
+from .views.auth import (EmailVerifyViewSet, LoginAPI, LogoutAPI,
+                         PasswordChangeAPI, PasswordForgotViewSet, RegisterAPI,
+                         TokenRefreshAPI)
 from .views.user import CustomUserViewSet
-from .views.auth import (LoginAPI, LogoutAPI, RegisterAPI, TokenRefreshAPI, PasswordChangeAPI, PasswordForgotViewSet,
-                         EmailVerifyViewSet)
 
 urlpatterns = [
     path('user/<int:id>', CustomUserViewSet.as_view({"get": "retrieve", "delete": "destroy", "put": "partial_update"})),

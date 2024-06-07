@@ -1,12 +1,12 @@
+from uuid import uuid4
+
 from rest_framework import serializers
 
-from orders.models.orders import Order, OrderItem
-from orders.models.discount import Discount
 from authentication.serializers.user import CustomUserSerializer
-from cart.serializers import CartProductSerializer
-from shop.serializers import ProductSerializer, SizeSerializer, ColorSerializer
-from shop.serializers import CategoryListSerializer
-from uuid import uuid4
+from orders.models.discount import Discount
+from orders.models.orders import Order, OrderItem
+from shop.serializers import (CategoryListSerializer, ColorSerializer,
+                              ProductSerializer, SizeSerializer)
 
 
 class DiscountSerializer(serializers.ModelSerializer):

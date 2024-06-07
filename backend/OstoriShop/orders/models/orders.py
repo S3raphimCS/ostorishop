@@ -1,10 +1,10 @@
-from django.db import models
 from django.contrib.auth import get_user_model
-from django.utils.translation import gettext_lazy as _
-from cart.models import CartProduct
-from orders.models.discount import Discount
-from shop.models import Product, Size, Color
 from django.core.validators import MinValueValidator
+from django.db import models
+from django.utils.translation import gettext_lazy as _
+
+from orders.models.discount import Discount
+from shop.models import Color, Product, Size
 
 User = get_user_model()
 
@@ -29,10 +29,6 @@ class Order(models.Model):
         verbose_name=_("Пользователь"),
         on_delete=models.CASCADE
     )
-    # order_items = models.ManyToManyField(
-    #     CartProduct,
-    #     verbose_name=_("Товары")
-    # )
     created_at = models.DateTimeField(
         _("Создан"),
         auto_now_add=True,
@@ -95,13 +91,6 @@ class Order(models.Model):
         _("Почтовый индекс"),
         default=680031
     )
-
-    # @property
-    # def total_price(self):
-    #     print(self.CartProduct_set)
-    #     return self.CartProduct_set.aggregate(
-    #         total_price=Sum(F("count") * F("cartproduct_product__price"))
-    #     )["total_price"] or Decimal(0)
 
     class Meta:
         verbose_name = "Заказ"

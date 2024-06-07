@@ -1,6 +1,7 @@
 from drf_yasg import openapi
-from docs.utils.schemas import OpenAPISchema, string_schema, int32_schema, url_schema
 
+from docs.utils.schemas import (OpenAPISchema, int32_schema, string_schema,
+                                url_schema)
 
 discount_schema = OpenAPISchema(
     title="Promocode", type_=openapi.TYPE_OBJECT, properties={

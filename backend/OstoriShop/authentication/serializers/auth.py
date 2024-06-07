@@ -4,20 +4,21 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import check_password, make_password
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError as DjangoValidationError
+from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from rest_framework import serializers
-from utils.exceptions import ValidationError
+from rest_framework.exceptions import APIException, NotFound
+from rest_framework_simplejwt.serializers import PasswordField
+from rest_framework_simplejwt.serializers import \
+    TokenObtainPairSerializer as JWTTokenObtainPairSerializer
+from rest_framework_simplejwt.serializers import \
+    TokenObtainSerializer as JWTTokenObtainSerializer
+from rest_framework_simplejwt.serializers import \
+    TokenRefreshSerializer as JWTTokenRefreshSerializer
 from rest_framework_simplejwt.tokens import AccessToken
-from rest_framework_simplejwt.serializers import (
-    TokenRefreshSerializer as JWTTokenRefreshSerializer,
-    TokenObtainSerializer as JWTTokenObtainSerializer,
-    TokenObtainPairSerializer as JWTTokenObtainPairSerializer,
-    PasswordField
-)
-from django.utils.http import urlsafe_base64_encode
+
+from utils.exceptions import ValidationError
 from utils.mail import Email
-from django.utils.encoding import force_bytes
-from rest_framework.exceptions import NotFound, APIException
 from utils.serializers.generic import DynamicFieldsSerializer
 
 User = get_user_model()
@@ -239,5 +240,3 @@ class EmailVerifySerializer(serializers.Serializer):
 def add_token_payload(token: dict, user) -> dict:
     """Функция для будущего развития содержания токена от информации пользователя"""
     return token
-
-# TODO EmailVerify

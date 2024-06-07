@@ -1,12 +1,13 @@
-from rest_framework import serializers
-from utils.shortcuts import build_absolute_url
-from utils.mail import Email
 from smtplib import SMTPException
-from utils.models import Feedback, Help
+
+from rest_framework import serializers
 from rest_framework.request import Request
 
+from utils.mail import Email
+from utils.models import Feedback, Help
+from utils.shortcuts import build_absolute_url
 
-# FIXME Ошибка на build_absolute_url
+
 class FeedbackSerializer(serializers.ModelSerializer):
     theme = serializers.CharField(max_length=50)
 

@@ -1,13 +1,15 @@
-from rest_framework.generics import GenericAPIView, ListAPIView
-from utils.serializers.models import FeedbackSerializer, HelpSerializer
-from .models import Help
 from drf_yasg.utils import swagger_auto_schema
-from rest_framework.request import Request
-from rest_framework.parsers import MultiPartParser
-from docs.utils.descriptions import FEEDBACK_POST_DESC, FAQ_GET_DESC
 from rest_framework import status
-from docs.utils.schemas import string_schema, error_list_schema
+from rest_framework.generics import GenericAPIView, ListAPIView
+from rest_framework.parsers import MultiPartParser
+from rest_framework.request import Request
+
+from docs.utils.descriptions import FAQ_GET_DESC, FEEDBACK_POST_DESC
+from docs.utils.schemas import error_list_schema, string_schema
+from utils.serializers.models import FeedbackSerializer, HelpSerializer
 from utils.shortcuts import if_sent
+
+from .models import Help
 
 
 class FeedbackAPI(GenericAPIView):

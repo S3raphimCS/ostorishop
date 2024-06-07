@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import HelpAPI, FeedbackAPI
+
+from .views import FeedbackAPI, HelpAPI
 
 app_name = "utils"
 

@@ -1,33 +1,37 @@
-from rest_framework.generics import GenericAPIView
-from rest_framework.viewsets import GenericViewSet
-from rest_framework.response import Response
-from rest_framework.request import Request
-from rest_framework.permissions import AllowAny, IsAuthenticated
-from authentication.serializers.auth import (UserRegisterSerializer, TokenObtainPairSerializer, TokenRefreshSerializer,
-                                             EmailVerifySerializer)
-from authentication.permissions import IsNotAuthenticated
-from drf_yasg.utils import swagger_auto_schema
-from authentication.serializers.user import CustomUserSerializer
-from rest_framework_simplejwt.views import (
-    TokenRefreshView as JWTTokenRefreshView
-)
-from rest_framework import status
 from django.conf import settings
-from rest_framework.views import APIView
-from docs.utils.schemas import error_schema, error_list_schema
-from docs.authentication.descriptions import (LOGOUT_GET_DESC, LOGIN_POST_DESC, EMAIL_VERIFY_POST_DESC,
-                                              REGISTER_POST_DESC, TOKEN_REFRESH_DESC, PASSWORD_FORGOT_CONFIRM_POST_DESC,
-                                              PASSWORD_FORGOT_SEND_POST_DESC,
-                                              PASSWORD_CHANGE_PUT_DESC)
-from docs.authentication.schemas import user_schema, password_forgot_schema, email_verify_schema
 from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from authentication.serializers.auth import PasswordChangeSerializer, PasswordForgotEmailSerializer
-from rest_framework.decorators import action
-from utils.shortcuts import if_sent
-from rest_framework.exceptions import NotFound
-from django.utils.http import urlsafe_base64_decode
 from django.core.exceptions import ValidationError as DjangoValidationError
+from django.utils.http import urlsafe_base64_decode
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import status
+from rest_framework.decorators import action
+from rest_framework.exceptions import NotFound
+from rest_framework.generics import GenericAPIView
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.request import Request
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.viewsets import GenericViewSet
+from rest_framework_simplejwt.views import \
+    TokenRefreshView as JWTTokenRefreshView
+
+from authentication.permissions import IsNotAuthenticated
+from authentication.serializers.auth import (EmailVerifySerializer,
+                                             PasswordChangeSerializer,
+                                             PasswordForgotEmailSerializer,
+                                             TokenObtainPairSerializer,
+                                             TokenRefreshSerializer,
+                                             UserRegisterSerializer)
+from authentication.serializers.user import CustomUserSerializer
+from docs.authentication.descriptions import (
+    EMAIL_VERIFY_POST_DESC, LOGIN_POST_DESC, LOGOUT_GET_DESC,
+    PASSWORD_CHANGE_PUT_DESC, PASSWORD_FORGOT_CONFIRM_POST_DESC,
+    PASSWORD_FORGOT_SEND_POST_DESC, REGISTER_POST_DESC, TOKEN_REFRESH_DESC)
+from docs.authentication.schemas import (email_verify_schema,
+                                         password_forgot_schema, user_schema)
+from docs.utils.schemas import error_list_schema, error_schema
+from utils.shortcuts import if_sent
 
 User = get_user_model()
 

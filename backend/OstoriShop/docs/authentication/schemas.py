@@ -1,6 +1,6 @@
 from drf_yasg import openapi
 
-from docs.utils.schemas import OpenAPISchema, string_schema, email_schema
+from docs.utils.schemas import OpenAPISchema, email_schema, string_schema
 
 user_schema = OpenAPISchema(
     title='UserRead', description='Пользователь',

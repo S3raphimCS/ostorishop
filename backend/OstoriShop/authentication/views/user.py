@@ -6,17 +6,20 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
 from rest_framework.decorators import api_view
-from rest_framework.viewsets import GenericViewSet
-from rest_framework.mixins import RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin
-from rest_framework.response import Response
-from rest_framework.request import Request
-from authentication.models import CustomUser
-from authentication.serializers.user import CustomUserSerializer
-from authentication.permissions import IsAuthenticatedAndOwner
+from rest_framework.mixins import (DestroyModelMixin, RetrieveModelMixin,
+                                   UpdateModelMixin)
 from rest_framework.permissions import OR, IsAdminUser
-from docs.authentication.descriptions import USER_GET_DESC, USER_PATCH_DESC, USER_DELETE_DESC
-from docs.utils.schemas import error_schema, error_list_schema
+from rest_framework.request import Request
+from rest_framework.response import Response
+from rest_framework.viewsets import GenericViewSet
+
+from authentication.models import CustomUser
+from authentication.permissions import IsAuthenticatedAndOwner
+from authentication.serializers.user import CustomUserSerializer
+from docs.authentication.descriptions import (USER_DELETE_DESC, USER_GET_DESC,
+                                              USER_PATCH_DESC)
 from docs.authentication.schemas import user_schema
+from docs.utils.schemas import error_list_schema, error_schema
 
 
 class CustomUserViewSet(UpdateModelMixin, DestroyModelMixin, RetrieveModelMixin, GenericViewSet):
@@ -64,7 +67,6 @@ class CustomUserViewSet(UpdateModelMixin, DestroyModelMixin, RetrieveModelMixin,
     def partial_update(self, request, *args, **kwargs):
         return super().partial_update(request, *args, **kwargs)
 
-    # TODO Подумать, нужно ли
     @swagger_auto_schema(tags=["User"], operation_summary="Изменить информацию о пользователе")
     def update(self, request, *args, **kwargs):
         return super().update(request, *args, **kwargs)

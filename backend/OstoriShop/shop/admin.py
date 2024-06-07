@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Category, Product, ProductComment, ProductImage, Size, Color
+
+from .models import (Category, Color, Product, ProductComment, ProductImage,
+                     Size)
 
 
 @admin.register(Color)

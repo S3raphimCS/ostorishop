@@ -1,4 +1,3 @@
-from yookassa import Payment
 from orders.models.orders import Order
 
 
