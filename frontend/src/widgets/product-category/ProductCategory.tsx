@@ -17,7 +17,7 @@ export const ProductCategory: FC<ProductCategoryProps> = ({
   const classes = combineClasses(BASE_CLASSES, className);
   return (
     <div className={classes}>
-      <h2 className="mb-2 text-lg font-semibold">{title}</h2>
+      <h2 className="mb-2 text-xl font-semibold">{title}</h2>
       {children}
     </div>
   );

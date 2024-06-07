@@ -1,2 +1,4 @@
 # Env Template
 NEXT_PUBLIC_BACKEND_SERVER_URL=http://localhost:8000/
+
+NEXT_PUBLIC_API_KEY_EXCHANGERATE="your api key"

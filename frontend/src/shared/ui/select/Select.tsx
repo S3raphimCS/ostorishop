@@ -1,5 +1,3 @@
-'use client';
-import { useState } from 'react';
 import { combineClasses } from '../../lib/style-worker/combineClasses';
 
 type SelectVariant =
@@ -44,8 +42,6 @@ export const Select: React.FC<SelectProps> = ({
   options,
   ...rest
 }) => {
-  const [selected, setSelected] = useState<string | undefined>(undefined);
-
   const restClassName = rest.className ? [rest.className] : [];
 
   const classes = combineClasses(
@@ -56,12 +52,7 @@ export const Select: React.FC<SelectProps> = ({
   );
 
   return (
-    <select
-      {...rest}
-      value={selected}
-      onChange={(e) => setSelected(e.target.value)}
-      className={classes}
-    >
+    <select {...rest} className={classes}>
       {options.map((option, index) => (
         <option key={index} value={option.value}>
           {option.label}

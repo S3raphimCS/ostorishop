@@ -30,11 +30,11 @@ export const Nav = () => {
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
         >
-          <Link className="hover:text-accent" href={item.path}>
+          <div className="hover:text-accent">
             <Dropdown buttonText={item.text}>
               {openIndex === index && <CatalogNavigation items={[item]} />}
             </Dropdown>
-          </Link>
+          </div>
         </div>
       ))}
     </nav>

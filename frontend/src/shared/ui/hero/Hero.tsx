@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({
             {description}
           </p>
         </div>
-        <div className="mt-7 flex flex-1 justify-end text-center lg:ml-3 lg:mt-0">
+        <div className="mt-7 flex flex-1 justify-end text-center sm:justify-center md:justify-end lg:ml-3 lg:mt-0">
           <Image width={400} height={400} src={imageSrc} alt={imageAlt} />
         </div>
       </section>
