@@ -1,8 +1,10 @@
-import os
-from datetime import timedelta
 from pathlib import Path
+from os import getenv
+from dotenv import load_dotenv
 
 from utils.typing import SecondTo
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -35,11 +37,11 @@ ASGI_APPLICATION = 'config.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("POSTGRES_DB", 'root'),
-        'USER': os.environ.get("POSTGRES_USER", 'root'),
-        'PASSWORD': os.environ.get("POSTGRES_PASSWORD", 'root'),
-        'HOST': os.environ.get("POSTGRES_HOST", 'pgdb'),
-        'PORT': os.environ.get("POSTGRES_PORT", '5432'),
+        'NAME': getenv("POSTGRES_DB", 'root'),
+        'USER': getenv("POSTGRES_USER", 'root'),
+        'PASSWORD': getenv("POSTGRES_PASSWORD", 'root'),
+        'HOST': getenv("POSTGRES_HOST", 'pgdb'),
+        'PORT': getenv("POSTGRES_PORT", '5432'),
     }
 }
 
@@ -71,15 +73,15 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Настройки почты
-EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "set_in_prod")
-EMAIL_HOST = os.environ.get("EMAIL_HOST", "set_in_prod")
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "set_in_prod")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "set_in_prod")
-EMAIL_PORT = os.environ.get("EMAIL_PORT", "set_in_prod")
+EMAIL_USE_TLS = getenv("EMAIL_USE_TLS", "set_in_prod")
+EMAIL_HOST = getenv("EMAIL_HOST", "set_in_prod")
+EMAIL_HOST_USER = getenv("EMAIL_HOST_USER", "set_in_prod")
+EMAIL_HOST_PASSWORD = getenv("EMAIL_HOST_PASSWORD", "set_in_prod")
+EMAIL_PORT = getenv("EMAIL_PORT", "set_in_prod")
 
 # Yookassa settings
-YOOKASSA_ACCOUNT_ID = os.environ.get("YOOKASSA_ACCOUNT_ID", None)
-YOOKASSA_SECRET_KEY = os.environ.get("YOOKASSA_SECRET_KEY", None)
+YOOKASSA_ACCOUNT_ID = getenv("YOOKASSA_ACCOUNT_ID", None)
+YOOKASSA_SECRET_KEY = getenv("YOOKASSA_SECRET_KEY", None)
 
 # DRF yasg
 SWAGGER_SETTINGS = {
@@ -90,6 +92,34 @@ SWAGGER_SETTINGS = {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header'
+        }
+    }
+}
+
+# Cache
+REDIS_HOST = getenv("REDIS_HOST")
+REDIS_PORT = getenv("REDIS_PORT")
+CACHE_REDIS_DB = getenv("CACHE_REDIS_DB")
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": f"redis://{REDIS_HOST}:{REDIS_PORT}/{CACHE_REDIS_DB}",
+        "OPTION": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient"
+        },
+        "KEY_PREFIX": "cache"
+    },
+    "test": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+    }
+}
+
+# Channels
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [(REDIS_HOST, REDIS_PORT)]
         }
     }
 }

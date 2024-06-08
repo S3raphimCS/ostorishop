@@ -1,7 +1,7 @@
-import os
+from os import getenv
 from datetime import timedelta
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", 'set_me_in_prod')
+SECRET_KEY = getenv("DJANGO_SECRET_KEY", 'set_me_in_prod')
 
 DEBUG = True
 
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'orders',
 
     'rest_framework',
-    'djoser',
     'django_ckeditor_5',
     'corsheaders',
     'drf_yasg',

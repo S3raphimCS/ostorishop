@@ -1,7 +1,7 @@
-import os
+from os import getenv
 from datetime import timedelta
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", 'set_me_in_prod')
+SECRET_KEY = getenv("DJANGO_SECRET_KEY", 'set_me_in_prod')
 
 DEBUG = False
 
@@ -32,8 +32,12 @@ CORS_ALLOW_METHODS = (
 )
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', "https://api.yookassa.ru/v3/"]
 
+CSRF_COOKIE_SECURE = True
+
 # Application definition
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
