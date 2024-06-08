@@ -3,4 +3,5 @@ export {
   default as cartReducer,
   removeFromCart,
   updateQuantity,
+  selectCartItemCount,
 } from './cartSlice';

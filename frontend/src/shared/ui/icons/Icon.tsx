@@ -25,6 +25,7 @@ import {
   RiArrowDropUpLine,
 } from 'react-icons/ri';
 import { GrCatalog } from 'react-icons/gr';
+import { LuListFilter } from 'react-icons/lu';
 import { IoHome } from 'react-icons/io5';
 
 export type IconTypes =
@@ -34,6 +35,7 @@ export type IconTypes =
   | 'heart-outline'
   | 'heart'
   | 'catalog'
+  | 'filter'
   | 'empty-star'
   | 'star'
   | 'half-star'
@@ -65,6 +67,7 @@ const ICON_TYPES: Record<IconTypes, IconType> = {
   close: IoIosCloseCircle,
   heart: FaHeart,
   catalog: GrCatalog,
+  filter: LuListFilter,
   'heart-outline': FaRegHeart,
   'empty-star': FaRegStar,
   star: FaStar,

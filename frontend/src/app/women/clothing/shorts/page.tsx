@@ -9,7 +9,7 @@ export default function WomenClothingShortsPage() {
       <div className="ml-4">
         <BreadСrumb />
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-col justify-between sm:flex-col md:flex-row">
         <ProductFilters />
         <div className="flex-1 p-4">
           <ProductGrid products={womenShortsProducts} />

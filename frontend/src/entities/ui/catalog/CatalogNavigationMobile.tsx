@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Accordion } from '@/shared/ui';
 
@@ -16,11 +15,12 @@ export interface Category {
 
 interface CatalogNavigationMobileProps {
   items: Category[];
+  onClose: () => void;
 }
 
 export const CatalogNavigationMobile: React.FC<
   CatalogNavigationMobileProps
-> = ({ items }) => {
+> = ({ items, onClose }) => {
   return (
     <div className="absolute left-0 right-0 z-[1] w-[99vw] xl:menu-horizontal lg:min-w-full">
       <div className="bg-base-200 p-4">
@@ -38,6 +38,7 @@ export const CatalogNavigationMobile: React.FC<
                       <Link
                         className="text-lg font-bold text-neutral-content transition duration-200 hover:text-accent"
                         href={item.path}
+                        onClick={onClose}
                       >
                         {item.text}
                       </Link>
@@ -50,6 +51,7 @@ export const CatalogNavigationMobile: React.FC<
                             <Link
                               className="text-neutral-content transition duration-200 hover:text-accent"
                               href={subItem.path}
+                              onClick={onClose}
                             >
                               {subItem.text}
                             </Link>

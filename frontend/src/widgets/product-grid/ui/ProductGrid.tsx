@@ -7,7 +7,7 @@ interface ProductGridProps {
 }
 
 const BASE_CLASSES =
-  'grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
+  'grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
 
 export const ProductGrid: React.FC<ProductGridProps> = ({
   className,
