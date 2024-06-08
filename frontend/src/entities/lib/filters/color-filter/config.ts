@@ -8,6 +8,7 @@ export const availableColors = [
   { color: 'Жёлтый', label: 'Желтый' },
   { color: 'Зелёный', label: 'Зеленый' },
   { color: 'Синий', label: 'Синий' },
+  { color: 'Тёмно-синий', label: 'Тёмно-синий' },
   { color: 'Индиго', label: 'Индиго' },
   { color: 'Фиолетовый', label: 'Фиолетовый' },
   { color: 'Розовый', label: 'Розовый' },

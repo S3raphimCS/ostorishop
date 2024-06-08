@@ -7,6 +7,7 @@ export type ColorVariant =
   | 'Жёлтый'
   | 'Зелёный'
   | 'Синий'
+  | 'Тёмно-синий'
   | 'Индиго'
   | 'Фиолетовый'
   | 'Розовый'
@@ -23,6 +24,7 @@ const COLOR_VARIANTS: Record<ColorVariant, string[]> = {
   Жёлтый: ['bg-yellow-500'],
   Зелёный: ['bg-green-500'],
   Синий: ['bg-blue-500'],
+  'Тёмно-синий': ['bg-blue-800'],
   Индиго: ['bg-indigo-500'],
   Фиолетовый: ['bg-purple-500'],
   Розовый: ['bg-pink-500'],

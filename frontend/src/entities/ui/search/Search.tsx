@@ -19,6 +19,10 @@ export const Search: React.FC = () => {
     }
   }, [searchTerm]);
 
+  const handleProductClick = () => {
+    setSearchTerm('');
+  };
+
   return (
     <div className="relative">
       <InputLabel>
@@ -34,14 +38,15 @@ export const Search: React.FC = () => {
       {searchTerm && filteredProducts.length > 0 && (
         <div className="absolute left-0 right-0 z-10 mt-2 bg-white shadow-lg">
           {filteredProducts.map((product) => (
-            <ProductCardSearch
-              key={product.id}
-              id={product.id}
-              name={product.name}
-              price={product.price}
-              discountPrice={product.discountPrice}
-              image={product.images[0]}
-            />
+            <div key={product.id} onClick={handleProductClick}>
+              <ProductCardSearch
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                discountPrice={product.discountPrice}
+                image={product.images[0]}
+              />
+            </div>
           ))}
         </div>
       )}
