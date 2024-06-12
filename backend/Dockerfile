@@ -5,6 +5,9 @@ LABEL MAINTAINER: Andrew Medvedev hydra1337channel@gmail.com
 ENV PYTHONUNBUFFERED=1
 COPY /requirements.txt /requirements.txt
 
+RUN apk update
+RUN apk add gcc
+
 RUN pip install --upgrade pip && \
     pip install -r /requirements.txt
 

@@ -10,9 +10,35 @@ services:
       - ./backend/OstoriShop:/api 
     ports: 
       - '8000:8000'
+    depends_on:
+      - pgdb
     networks:  
       bridge_net:
         ipv4_address: 172.20.0.10 
+
+  pgdb:
+    image: postgres
+    container_name: pgdb
+    restart: always
+    ports:
+      - '5432:5432'
+    env_file:
+      - backend/.env
+    networks:
+      - bridge_net
+
+  redis:
+    image: "redis:7.0.5-alpine"
+    container_name: redis
+    ports:
+      - '6379:6379'
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    networks:
+      - bridge_net
 
   react-app:
     build:
