@@ -85,13 +85,13 @@ export const menJacketsProducts: CardProps[] = [
 
 export const menTShirtsProducts: CardProps[] = [
   {
-    id: 'classicTShirt',
-    title: 'Модель "Классик"',
+    id: 'zarya',
+    title: 'Футболка "Заря"',
     imageUrl: '/categories-grid/men/clothing/t-shirts/tshirt1.jpg',
     alt: 'T-Shirt 1',
     price: 1999,
     rating: 4.5,
-    reviewsCount: 10,
+    reviewsCount: 2,
     cardPlates: [
       {
         variant: 'popular',
@@ -101,39 +101,39 @@ export const menTShirtsProducts: CardProps[] = [
   },
   {
     id: 'urban',
-    title: 'Модель "Урбан"',
+    title: 'Футболка "Урбан"',
     imageUrl: '/categories-grid/men/clothing/t-shirts/tshirt2.jpg',
     alt: 'T-Shirt 2',
     price: 2499,
     rating: 4.0,
-    reviewsCount: 8,
+    reviewsCount: 2,
   },
   {
-    id: 'sport',
-    title: 'Модель "Спорт"',
+    id: 'lev',
+    title: 'Футболка "Лев"',
     imageUrl: '/categories-grid/men/clothing/t-shirts/tshirt3.jpg',
     alt: 'T-Shirt 3',
     price: 1799,
     rating: 3.5,
-    reviewsCount: 6,
+    reviewsCount: 2,
   },
   {
-    id: 'minimal',
-    title: 'Модель "Минимал"',
+    id: 'tower',
+    title: 'Футболка "Башня"',
     imageUrl: '/categories-grid/men/clothing/t-shirts/tshirt4.jpg',
     alt: 'T-Shirt 4',
     price: 2999,
     rating: 4.2,
-    reviewsCount: 15,
+    reviewsCount: 2,
   },
   {
     id: 'vintageTShirt',
-    title: 'Модель "Винтаж"',
+    title: 'Футболка "Свобода"',
     imageUrl: '/categories-grid/men/clothing/t-shirts/tshirt5.jpg',
     alt: 'T-Shirt 5',
     price: 1899,
     rating: 4.8,
-    reviewsCount: 12,
+    reviewsCount: 2,
   },
 ];
 
@@ -1810,12 +1810,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'classicTShirt',
-    name: 'Модель "Классик"',
+    id: 'zarya',
+    name: 'Футболка "Заря"',
     rating: 4.5,
-    reviewsCount: 10,
+    reviewsCount: 2,
     manufacturer: 'FashionHouse',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['46', '48', '50', '52', '54'],
     price: 1999,
     discountPrice: 1799,
     images: [
@@ -1823,7 +1823,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/t-shirts/tshirt1.jpg',
     ],
     material: 'Хлопок',
-    color: 'Белый',
+    color: 'Коричневый',
     description:
       'Классическая белая футболка, подходящая для повседневной носки.',
     reviews: [
@@ -1847,11 +1847,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'urban',
-    name: 'Модель "Урбан"',
+    name: 'Футболка "Урбан"',
     rating: 4.0,
-    reviewsCount: 8,
+    reviewsCount: 2,
     manufacturer: 'CityWear',
-    sizes: ['M', 'L', 'XL'],
+    sizes: ['46', '48', '50', '52', '54'],
     price: 2499,
     discountPrice: 2299,
     images: [
@@ -1859,7 +1859,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/t-shirts/tshirt2.jpg',
     ],
     material: 'Полиэстер',
-    color: 'Серый',
+    color: 'Чёрный',
     description:
       'Современная городская футболка, идеальная для активного отдыха.',
     reviews: [
@@ -1882,12 +1882,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'sport',
-    name: 'Модель "Спорт"',
+    id: 'lev',
+    name: 'Футболка "Лев"',
     rating: 3.5,
-    reviewsCount: 6,
+    reviewsCount: 2,
     manufacturer: 'SportLife',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['46', '48', '50', '52', '54'],
     price: 1799,
     discountPrice: 1599,
     images: [
@@ -1895,7 +1895,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/t-shirts/tshirt3.jpg',
     ],
     material: 'Синтетика',
-    color: 'Синий',
+    color: 'Чёрный',
     description: 'Спортивная футболка для занятий спортом и активного отдыха.',
     reviews: [
       {
@@ -1917,12 +1917,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'minimal',
-    name: 'Модель "Минимал"',
+    id: 'tower',
+    name: 'Футболка "Башня"',
     rating: 4.2,
-    reviewsCount: 15,
+    reviewsCount: 2,
     manufacturer: 'Minimalist',
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    sizes: ['46', '48', '50', '52', '54'],
     price: 2999,
     discountPrice: 2799,
     images: [
@@ -1930,7 +1930,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/t-shirts/tshirt4.jpg',
     ],
     material: 'Хлопок',
-    color: 'Чёрный',
+    color: 'Бежевый',
     description: 'Минималистичная футболка для стильных людей.',
     reviews: [
       {
@@ -1955,9 +1955,9 @@ export const productDetails: Product[] = [
     id: 'vintageTShirt',
     name: 'Модель "Винтаж"',
     rating: 4.8,
-    reviewsCount: 12,
+    reviewsCount: 2,
     manufacturer: 'RetroWear',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['46', '48', '50', '52', '54'],
     price: 1899,
     discountPrice: 1699,
     images: [
@@ -1965,7 +1965,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/t-shirts/tshirt5.jpg',
     ],
     material: 'Хлопок',
-    color: 'Бежевый',
+    color: 'Чёрный',
     description: 'Винтажная футболка с уникальным дизайном.',
     reviews: [
       {
@@ -1988,11 +1988,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'classicFit',
-    name: 'Модель "Классический Фит"',
+    name: 'Чёрные джинсы Slim ',
     rating: 4.7,
     reviewsCount: 25,
     manufacturer: 'ClassicFashion',
-    sizes: ['28', '30', '32', '34', '36'],
+    sizes: ['28', '30', '32', '34', '36', '38', '40'],
     price: 3999,
     discountPrice: 0,
     images: [

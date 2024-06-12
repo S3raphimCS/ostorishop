@@ -8,6 +8,13 @@ export type { DropdownProps } from './drop-down/Dropdown';
 export { DropdownMenu } from './drop-down/DropdownMenu';
 export { Hero } from './hero/Hero';
 export { Icon } from './icons/Icon';
+export {
+  RussiaFlag,
+  ChinaFlag,
+  USAFlag,
+  BelarusFlag,
+  UnitedKingdomFlag,
+} from './icons/CountryFlags';
 export { Input } from './input/Input';
 export type { InputProps } from './input/Input';
 export { InputLabel } from './input/Input';

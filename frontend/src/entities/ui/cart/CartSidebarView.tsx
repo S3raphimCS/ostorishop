@@ -1,6 +1,6 @@
 'use client';
 import { useSelector } from 'react-redux';
-import { Button, Icon } from '@/shared/ui';
+import { Icon } from '@/shared/ui';
 import { CartItem, CartItemProps } from './CartItem';
 import { CartSummary } from './CartSummary';
 import { RootState } from '@/app-wrapper/types';

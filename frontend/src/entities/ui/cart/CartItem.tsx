@@ -12,7 +12,7 @@ import { Size, SizeVariant } from '../filter/product-filters/size-filter/Size';
 import { Icon } from '@/shared/ui';
 import { removeFromCart, updateQuantity } from '@/features/cart';
 
-interface ItemOption {
+export interface CartItemOption {
   name: string;
   value: string;
 }
@@ -30,11 +30,13 @@ export interface CartItemProps {
     };
     price: number;
     quantity: number;
-    options?: ItemOption[];
+    options?: CartItemOption[];
   };
   variant?: 'default' | 'display';
   removing?: boolean;
   closeSidebarIfPresent?: () => void;
+  onRemove: () => void;
+  onUpdateQuantity: (quantity: number) => void;
   rest?: React.HTMLAttributes<HTMLLIElement>;
 }
 

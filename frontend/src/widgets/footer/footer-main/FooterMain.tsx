@@ -6,19 +6,20 @@ export const FooterMain = () => {
   return (
     <div className="mt-16 grid grid-cols-1 gap-12 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-5">
       <ListSection title="Компания">
-        <ListItem href="#">История фирмы</ListItem>
-        <ListItem href="#">Новости</ListItem>
-        <ListItem href="#">Политика конфиденциальности</ListItem>
-        <ListItem href="#">Персональные данные</ListItem>
-        <ListItem href="#">Правила пользования сайта</ListItem>
+        <ListItem href="/help/privacy-policy">
+          Политика конфиденциальности
+        </ListItem>
+        <ListItem href="/help/cookie-policy">
+          Политика использования файлов cookie
+        </ListItem>
       </ListSection>
       <ListSection title="Помощь">
-        <ListItem href="#">FAQs</ListItem>
-        <ListItem href="#">Обратная связь</ListItem>
+        <ListItem href="/help/faq">FAQs</ListItem>
+        <ListItem href="/help/feedback">Обратная связь</ListItem>
       </ListSection>
       <ListSection title="Контакты">
-        <ListItem className="text-2xl" href="#">
-          8 800 555 35 35
+        <ListItem className="text-xl" href="tel:+7(924)308-55-28">
+          +7 (924) 308-55-28
         </ListItem>
         <div className="flex justify-center gap-2 sm:justify-center md:justify-start lg:justify-start">
           <Button className="px-2" variant={'secondary'}>
