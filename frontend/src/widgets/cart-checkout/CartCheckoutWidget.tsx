@@ -13,6 +13,7 @@ import { Button, Icon, Input } from '@/shared/ui';
 import { YookassaSvg } from '@/shared/ui/icons/Icon';
 import InputMask from 'react-input-mask';
 import { countryCodes, getPhoneMask, getFlagComponent } from './config';
+import { coupons } from '@/entities/lib/coupons/config';
 
 export const CartCheckoutWidget: React.FC = () => {
   const items = useSelector((state: RootState) => state.cart.items);
@@ -21,6 +22,11 @@ export const CartCheckoutWidget: React.FC = () => {
   const [selectedCountryCode, setSelectedCountryCode] = useState(
     countryCodes[0].code
   );
+  const [paymentMethod, setPaymentMethod] = useState<'delivery' | 'card' | ''>(
+    ''
+  );
+  const [promoCode, setPromoCode] = useState<string>('');
+  const [promoResult, setPromoResult] = useState<string>('');
 
   const handleRemove = (
     id: number,
@@ -49,6 +55,19 @@ export const CartCheckoutWidget: React.FC = () => {
   );
 
   const totalItems = useSelector(selectCartItemCount);
+
+  const handlePaymentMethodChange = (value: 'delivery' | 'card') => {
+    setPaymentMethod(value);
+  };
+
+  const handleApplyPromoCode = () => {
+    const appliedCoupon = coupons.find((coupon) => coupon.code === promoCode);
+    if (appliedCoupon) {
+      setPromoResult(`Применен купон ${promoCode}: ${appliedCoupon.bonus}`);
+    } else {
+      setPromoResult('Купон недействителен');
+    }
+  };
 
   return (
     <div className="flex flex-col space-y-4 p-4 md:flex-row md:space-x-4 md:space-y-0">
@@ -94,7 +113,23 @@ export const CartCheckoutWidget: React.FC = () => {
           </div>
           <div className="mt-4">
             <label className="block text-sm">Промокод</label>
-            <Input type="text" className="mt-1 w-full rounded border p-2" />
+            <div className="flex items-center">
+              <Input
+                type="text"
+                value={promoCode}
+                onChange={(e) => setPromoCode(e.target.value)}
+                className="mt-1 w-full rounded border p-1"
+              />
+              <Button
+                className="rounded-none"
+                size="small"
+                onClick={handleApplyPromoCode}
+                variant={'accent'}
+              >
+                Применить
+              </Button>
+            </div>
+            {promoResult && <p className="mt-2 text-sm">{promoResult}</p>}
           </div>
           <div className="mt-4">
             <label className="block text-sm">Адрес</label>
@@ -107,7 +142,8 @@ export const CartCheckoutWidget: React.FC = () => {
                 <Input
                   type="checkbox"
                   name="payment"
-                  value="delivery"
+                  checked={paymentMethod === 'delivery'}
+                  onChange={() => handlePaymentMethodChange('delivery')}
                   className="checkbox mr-2"
                 />
                 <Icon icon={'delivery'} className="mr-2" />
@@ -117,7 +153,8 @@ export const CartCheckoutWidget: React.FC = () => {
                 <Input
                   type="checkbox"
                   name="payment"
-                  value="card"
+                  checked={paymentMethod === 'card'}
+                  onChange={() => handlePaymentMethodChange('card')}
                   className="checkbox mr-2"
                 />
                 <YookassaSvg />
@@ -159,3 +196,5 @@ export const CartCheckoutWidget: React.FC = () => {
     </div>
   );
 };
+
+export default CartCheckoutWidget;

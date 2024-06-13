@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html data-theme="sunrise" lang="ru">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <Providers>
         <body>
           <Header />

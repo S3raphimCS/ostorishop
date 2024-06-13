@@ -1,10 +1,11 @@
 'use client';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Icon } from '@/shared/ui';
 import { CartItem, CartItemProps } from './CartItem';
 import { CartSummary } from './CartSummary';
 import { RootState } from '@/app-wrapper/types';
 import Image from 'next/image';
+import { removeFromCart, updateQuantity } from '@/features/cart';
 
 interface CartSidebarProps {
   isOpen: boolean;
@@ -15,7 +16,24 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
   isOpen,
   onClose,
 }) => {
+  const dispatch = useDispatch();
+
   const items = useSelector((state: RootState) => state.cart.items);
+
+  const handleRemove = (
+    id: number,
+    options?: CartItemProps['item']['options']
+  ) => {
+    dispatch(removeFromCart({ id, options }));
+  };
+
+  const handleUpdateQuantity = (
+    quantity: number,
+    id: number,
+    options?: CartItemProps['item']['options']
+  ) => {
+    dispatch(updateQuantity({ id, options, quantity }));
+  };
 
   return (
     <div
@@ -54,6 +72,10 @@ export const CartSidebarView: React.FC<CartSidebarProps> = ({
                     key={item.id}
                     item={item}
                     closeSidebarIfPresent={onClose}
+                    onRemove={() => handleRemove(item.id, item.options)}
+                    onUpdateQuantity={(quantity) =>
+                      handleUpdateQuantity(quantity, item.id, item.options)
+                    }
                   />
                 ))}
               </ul>

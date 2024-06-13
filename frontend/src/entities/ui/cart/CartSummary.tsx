@@ -1,5 +1,6 @@
 import { Button } from '@/shared/ui';
 import { Price } from '../price';
+import Link from 'next/link';
 
 export const CartSummary: React.FC<{ totalItems: number }> = ({
   totalItems,
@@ -17,9 +18,11 @@ export const CartSummary: React.FC<{ totalItems: number }> = ({
         <Price price={totalItems} />
       </div>
       <div className="flex justify-center">
-        <Button size="wide" variant={'accent'}>
-          Перейти к оформлению
-        </Button>
+        <Link href={'/cart-checkout'}>
+          <Button size="wide" variant={'accent'}>
+            Перейти к оформлению
+          </Button>
+        </Link>
       </div>
     </div>
   );
