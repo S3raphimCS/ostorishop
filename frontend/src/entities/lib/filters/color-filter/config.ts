@@ -1,4 +1,5 @@
 export const availableColors = [
+  { color: 'Мультицвет', label: 'Мультицвет' },
   { color: 'Белый', label: 'Белый' },
   { color: 'Чёрный', label: 'Черный' },
   { color: 'Бежевый', label: 'Бежевый' },

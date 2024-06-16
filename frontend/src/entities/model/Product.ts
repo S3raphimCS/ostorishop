@@ -1,4 +1,5 @@
 import { CardPlateVariant } from '../ui/card';
+import { ColorVariant } from '../ui/filter/product-filters/color-filter/Color';
 import { Review } from './Review';
 
 export interface Product {
@@ -12,7 +13,7 @@ export interface Product {
   discountPrice?: number;
   images: string[];
   material: string;
-  color: string;
+  color: ColorVariant;
   description: string;
   reviews: Review[];
   cardPlates?: { variant: CardPlateVariant; label: string }[];

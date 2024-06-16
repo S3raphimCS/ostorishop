@@ -1,11 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-interface FeedbackPageProps {
-  className?: string;
-}
-
-const FeedbackPage: React.FC<FeedbackPageProps> = ({ className }) => {
+const FeedbackPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +29,7 @@ const FeedbackPage: React.FC<FeedbackPageProps> = ({ className }) => {
   };
 
   return (
-    <div className={`container mx-auto px-4 ${className}`}>
+    <div className={`container mx-auto px-4`}>
       <div className="mx-auto mt-12 max-w-xl rounded-lg bg-white p-8 shadow-md">
         <h2 className="mb-6 text-center text-3xl font-bold">Обратная связь</h2>
         <form onSubmit={handleSubmit}>

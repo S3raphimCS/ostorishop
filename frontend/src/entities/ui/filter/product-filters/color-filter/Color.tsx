@@ -1,5 +1,6 @@
 import { combineClasses } from '@/shared/lib/style-worker';
 export type ColorVariant =
+  | 'Мультицвет'
   | 'Белый'
   | 'Чёрный'
   | 'Красный'
@@ -17,6 +18,9 @@ export type ColorVariant =
   | 'Оливковый';
 
 const COLOR_VARIANTS: Record<ColorVariant, string[]> = {
+  Мультицвет: [
+    'bg-gradient-to-r from-indigo-500 from-30% via-sky-500 via-60% to-emerald-500 to-90%',
+  ],
   Белый: ['bg-gray-100'],
   Чёрный: ['bg-black'],
   Красный: ['bg-red-500'],

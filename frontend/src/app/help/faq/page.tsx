@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface FAQProps {
-  className?: string;
-}
-
-const FAQ: React.FC<FAQProps> = ({ className }) => {
+const FAQ = () => {
   const faqItems = [
     {
       question: 'Какие у вас варианты доставки?',
@@ -40,7 +36,7 @@ const FAQ: React.FC<FAQProps> = ({ className }) => {
 
   return (
     <div
-      className={`relative mt-8 w-full bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10 ${className}`}
+      className={`relative mt-8 w-full bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10`}
     >
       <div className="mx-auto px-5">
         <div className="flex flex-col items-center">
