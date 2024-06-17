@@ -140,12 +140,12 @@ export const menTShirtsProducts: CardProps[] = [
 export const menJeansProducts: CardProps[] = [
   {
     id: 'classicFit',
-    title: 'Модель "Классический Фит"',
+    title: 'Джинсы Slim',
     imageUrl: '/categories-grid/men/clothing/jeans/jeans4.jpg',
     alt: 'Jeans 1',
     price: 3999,
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 2,
     cardPlates: [
       {
         variant: 'popular',
@@ -154,52 +154,52 @@ export const menJeansProducts: CardProps[] = [
     ],
   },
   {
-    id: 'slimFit',
-    title: 'Модель "Слим Фит"',
+    id: 'slimFitJeans',
+    title: 'Джинсы Slim Fit',
     imageUrl: '/categories-grid/men/clothing/jeans/jeans2.jpg',
     alt: 'Jeans 2',
     price: 4499,
     rating: 4.3,
-    reviewsCount: 18,
+    reviewsCount: 2,
   },
   {
     id: 'relaxedFit',
-    title: 'Модель "Релакс Фит"',
+    title: 'Джинсы "Ковбой"',
     imageUrl: '/categories-grid/men/clothing/jeans/jeans6.jpg',
     alt: 'Jeans 3',
     price: 4299,
     rating: 4.5,
-    reviewsCount: 20,
+    reviewsCount: 2,
   },
   {
     id: 'taperedFit',
-    title: 'Модель "Тейперед Фит"',
+    title: 'Джинсы классические',
     imageUrl: '/categories-grid/men/clothing/jeans/jeans1.jpg',
     alt: 'Jeans 4',
     price: 3999,
     rating: 4.6,
-    reviewsCount: 22,
+    reviewsCount: 2,
   },
   {
     id: 'bootcut',
-    title: 'Модель "Буткат"',
+    title: 'Джинсы "Буткат"',
     imageUrl: '/categories-grid/men/clothing/jeans/jeans5.jpg',
     alt: 'Jeans 5',
     price: 4599,
     rating: 4.4,
-    reviewsCount: 17,
+    reviewsCount: 2,
   },
 ];
 
 export const menShortsProducts: CardProps[] = [
   {
     id: 'cargo',
-    title: 'Модель "Карго"',
+    title: 'Шорты "Карго"',
     imageUrl: '/categories-grid/men/clothing/shorts/shorts1.jpg',
     alt: 'Shorts 1',
     price: 2999,
     rating: 4.3,
-    reviewsCount: 14,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -209,51 +209,51 @@ export const menShortsProducts: CardProps[] = [
   },
   {
     id: 'denim',
-    title: 'Модель "Деним"',
+    title: 'Шорты "Деним"',
     imageUrl: '/categories-grid/men/clothing/shorts/shorts2.jpg',
     alt: 'Shorts 2',
     price: 3499,
     rating: 4.6,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
     id: 'chino',
-    title: 'Модель "Чино"',
+    title: 'Шорты "Чино"',
     imageUrl: '/categories-grid/men/clothing/shorts/shorts3.jpg',
     alt: 'Shorts 3',
     price: 3199,
     rating: 4.1,
-    reviewsCount: 9,
+    reviewsCount: 4,
   },
   {
     id: 'sports',
-    title: 'Модель "Спорт"',
+    title: 'Шорты "Спорт"',
     imageUrl: '/categories-grid/men/clothing/shorts/shorts4.jpg',
     alt: 'Shorts 4',
     price: 2799,
     rating: 4.4,
-    reviewsCount: 13,
+    reviewsCount: 4,
   },
   {
-    id: 'swim',
-    title: 'Модель "Свим"',
+    id: 'kras',
+    title: 'Шорты "Крас"',
     imageUrl: '/categories-grid/men/clothing/shorts/shorts5.jpg',
     alt: 'Shorts 5',
     price: 2499,
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
 ];
 
 export const menSneakersProducts: CardProps[] = [
   {
     id: 'classicRun',
-    title: 'Модель "Классик Ран"',
+    title: 'Кроссовки "Классик Ран"',
     imageUrl: '/categories-grid/men/shoes/sneakers/sneaker1.jpg',
     alt: 'Sneaker 1',
     price: 4999,
     rating: 4.7,
-    reviewsCount: 30,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -263,51 +263,60 @@ export const menSneakersProducts: CardProps[] = [
   },
   {
     id: 'urbanTrack',
-    title: 'Модель "Урбан Трек"',
+    title: 'Кроссовки "Урбан Трек"',
     imageUrl: '/categories-grid/men/shoes/sneakers/sneaker2.jpg',
     alt: 'Sneaker 2',
     price: 5499,
     rating: 4.5,
-    reviewsCount: 25,
+    reviewsCount: 4,
   },
   {
     id: 'sportX',
-    title: 'Модель "Спорт X"',
+    title: 'Кроссовки "Спорт X"',
     imageUrl: '/categories-grid/men/shoes/sneakers/sneaker3.jpg',
     alt: 'Sneaker 3',
     price: 3999,
     rating: 4.2,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'minimalRun',
-    title: 'Модель "Минимал Ран"',
+    title: 'Кроссовки "Минимал Ран"',
     imageUrl: '/categories-grid/men/shoes/sneakers/sneaker4.jpg',
     alt: 'Sneaker 4',
     price: 5999,
     rating: 4.8,
-    reviewsCount: 35,
+    reviewsCount: 4,
   },
   {
     id: 'retroWave',
-    title: 'Модель "Ретро Вэйв"',
+    title: 'Кроссовки "Ретро Вэйв"',
     imageUrl: '/categories-grid/men/shoes/sneakers/sneaker5.jpg',
     alt: 'Sneaker 5',
     price: 5299,
     rating: 4.6,
-    reviewsCount: 28,
+    reviewsCount: 4,
   },
 ];
 
 export const menSandalsProducts: CardProps[] = [
   {
     id: 'beachWalk',
-    title: 'Модель "Бич Вок"',
+    title: 'Сандалии "Бич Вок"',
     imageUrl: '/categories-grid/men/shoes/sandals/sandal1.jpg',
     alt: 'Sandal 1',
     price: 2999,
     rating: 4.3,
-    reviewsCount: 15,
+    reviewsCount: 4,
+  },
+  {
+    id: 'urbanStrap',
+    title: 'Сандалии "Урбан Страп"',
+    imageUrl: '/categories-grid/men/shoes/sandals/sandal2.jpg',
+    alt: 'Sandal 2',
+    price: 3499,
+    rating: 4.5,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -316,52 +325,43 @@ export const menSandalsProducts: CardProps[] = [
     ],
   },
   {
-    id: 'urbanStrap',
-    title: 'Модель "Урбан Страп"',
-    imageUrl: '/categories-grid/men/shoes/sandals/sandal2.jpg',
-    alt: 'Sandal 2',
-    price: 3499,
-    rating: 4.5,
-    reviewsCount: 18,
-  },
-  {
     id: 'comfortFlex',
-    title: 'Модель "Комфорт Флекс"',
+    title: 'Сандалии "Комфорт Флекс"',
     imageUrl: '/categories-grid/men/shoes/sandals/sandal3.jpg',
     alt: 'Sandal 3',
     price: 2799,
     rating: 4.2,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
     id: 'sportStrap',
-    title: 'Модель "Спорт Страп"',
+    title: 'Сандалии "Спорт Страп"',
     imageUrl: '/categories-grid/men/shoes/sandals/sandal4.jpg',
     alt: 'Sandal 4',
     price: 3199,
     rating: 4.4,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'ecoWalk',
-    title: 'Модель "Эко Вок"',
+    title: 'Сандалии "Эко Вок"',
     imageUrl: '/categories-grid/men/shoes/sandals/sandal5.jpg',
     alt: 'Sandal 5',
     price: 2999,
     rating: 4.5,
-    reviewsCount: 17,
+    reviewsCount: 4,
   },
 ];
 
 export const menBagsProducts: CardProps[] = [
   {
     id: 'urbanBackpack',
-    title: 'Модель "Урбан Рюкзак"',
+    title: 'Урбан Рюкзак',
     imageUrl: '/categories-grid/men/accessories/bags/bag1.jpg',
     alt: 'Bag 1',
     price: 3999,
     rating: 4.7,
-    reviewsCount: 20,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -371,51 +371,51 @@ export const menBagsProducts: CardProps[] = [
   },
   {
     id: 'leatherSatchel',
-    title: 'Модель "Кожаный Сумка"',
+    title: 'Рюкзак походный',
     imageUrl: '/categories-grid/men/accessories/bags/bag2.jpg',
     alt: 'Bag 2',
     price: 5999,
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
     id: 'sportDuffel',
-    title: 'Модель "Спорт Дюфель"',
+    title: 'Портфель "Дюфель"',
     imageUrl: '/categories-grid/men/accessories/bags/bag3.jpg',
     alt: 'Bag 3',
     price: 4999,
     rating: 4.6,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'canvasMessenger',
-    title: 'Модель "Канвас Мессенджер"',
+    title: 'Рюкзак "Ракушка"',
     imageUrl: '/categories-grid/men/accessories/bags/bag4.jpg',
     alt: 'Bag 4',
     price: 3499,
     rating: 4.4,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
     id: 'travelTote',
-    title: 'Модель "Путешественный Тоте"',
+    title: 'Портфель "Вест"',
     imageUrl: '/categories-grid/men/accessories/bags/bag5.jpg',
     alt: 'Bag 5',
     price: 4599,
     rating: 4.3,
-    reviewsCount: 14,
+    reviewsCount: 4,
   },
 ];
 
 export const menBeltsProducts: CardProps[] = [
   {
     id: 'classicLeather',
-    title: 'Модель "Классический Кожаный"',
+    title: 'Классический кожаный ремень',
     imageUrl: '/categories-grid/men/accessories/belts/belt1.jpg',
     alt: 'Belt 1',
     price: 1999,
     rating: 4.5,
-    reviewsCount: 10,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -425,51 +425,51 @@ export const menBeltsProducts: CardProps[] = [
   },
   {
     id: 'wovenStrap',
-    title: 'Модель "Плетеный Ремень"',
+    title: 'Чёрный кожаный ремень',
     imageUrl: '/categories-grid/men/accessories/belts/belt2.jpg',
     alt: 'Belt 2',
     price: 2499,
     rating: 4.2,
-    reviewsCount: 8,
+    reviewsCount: 4,
   },
   {
     id: 'reversibleBelt',
-    title: 'Модель "Двусторонний Ремень"',
+    title: 'Двусторонний ремень',
     imageUrl: '/categories-grid/men/accessories/belts/belt3.jpg',
     alt: 'Belt 3',
     price: 2299,
     rating: 4.0,
-    reviewsCount: 6,
+    reviewsCount: 4,
   },
   {
     id: 'canvasBuckle',
-    title: 'Модель "Канвас Бакл"',
+    title: 'Ремень "Канвас Бакл"',
     imageUrl: '/categories-grid/men/accessories/belts/belt4.jpg',
     alt: 'Belt 4',
     price: 1799,
     rating: 4.3,
-    reviewsCount: 9,
+    reviewsCount: 4,
   },
   {
     id: 'dressBelt',
-    title: 'Модель "Офисный Ремень"',
+    title: 'Офисный Ремень',
     imageUrl: '/categories-grid/men/accessories/belts/belt5.jpg',
     alt: 'Belt 5',
     price: 2599,
     rating: 4.4,
-    reviewsCount: 11,
+    reviewsCount: 4,
   },
 ];
 
 export const menHatsProducts: CardProps[] = [
   {
     id: 'baseballCap',
-    title: 'Модель "Бейсболка"',
+    title: 'Панама "Леопард"',
     imageUrl: '/categories-grid/men/accessories/hats/hat1.jpg',
     alt: 'Hat 1',
     price: 1499,
     rating: 4.5,
-    reviewsCount: 10,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -479,39 +479,39 @@ export const menHatsProducts: CardProps[] = [
   },
   {
     id: 'fedora',
-    title: 'Модель "Федора"',
+    title: 'Бёсболка "Федора"',
     imageUrl: '/categories-grid/men/accessories/hats/hat2.jpg',
     alt: 'Hat 2',
     price: 2999,
     rating: 4.3,
-    reviewsCount: 8,
+    reviewsCount: 4,
   },
   {
     id: 'beanie',
-    title: 'Модель "Шапка Бини"',
+    title: 'Панама "Буби"',
     imageUrl: '/categories-grid/men/accessories/hats/hat3.jpg',
     alt: 'Hat 3',
-    price: 999,
+    price: 1999,
     rating: 4.7,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
     id: 'panamaHat',
-    title: 'Модель "Панама"',
+    title: 'Бейсболка классическая',
     imageUrl: '/categories-grid/men/accessories/hats/hat4.jpg',
     alt: 'Hat 4',
     price: 1999,
     rating: 4.4,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
     id: 'flatCap',
-    title: 'Модель "Флэт Кэп"',
+    title: 'Панама "Кэп"',
     imageUrl: '/categories-grid/men/accessories/hats/hat5.jpg',
     alt: 'Hat 5',
     price: 1799,
     rating: 4.6,
-    reviewsCount: 14,
+    reviewsCount: 4,
   },
 ];
 
@@ -524,7 +524,7 @@ export const womenDressesProducts: CardProps[] = [
     alt: 'Dress 1',
     price: 12999,
     rating: 4.9,
-    reviewsCount: 45,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'new',
@@ -539,7 +539,7 @@ export const womenDressesProducts: CardProps[] = [
     alt: 'Dress 2',
     price: 8999,
     rating: 4.7,
-    reviewsCount: 38,
+    reviewsCount: 4,
   },
   {
     id: 'maxi-dress',
@@ -548,25 +548,25 @@ export const womenDressesProducts: CardProps[] = [
     alt: 'Dress 3',
     price: 10999,
     rating: 4.8,
-    reviewsCount: 42,
+    reviewsCount: 4,
   },
   {
-    id: 'cocktail-dress',
-    title: 'Коктейльное платье',
+    id: 'mozaika-dress',
+    title: 'Платье "Мозайка"',
     imageUrl: '/categories-grid/women/clothing/dresses/dress4.jpg',
     alt: 'Dress 4',
     price: 9499,
     rating: 4.6,
-    reviewsCount: 36,
+    reviewsCount: 4,
   },
   {
     id: 'casual-dress',
-    title: 'Повседневное платье',
+    title: 'Пёстрое платье',
     imageUrl: '/categories-grid/women/clothing/dresses/dress5.jpg',
     alt: 'Dress 5',
     price: 7999,
     rating: 4.5,
-    reviewsCount: 32,
+    reviewsCount: 4,
   },
   {
     id: 'wedding-dress',
@@ -575,7 +575,7 @@ export const womenDressesProducts: CardProps[] = [
     alt: 'Dress 6',
     price: 25999,
     rating: 4.9,
-    reviewsCount: 50,
+    reviewsCount: 4,
   },
   {
     id: 'print-dress',
@@ -584,7 +584,7 @@ export const womenDressesProducts: CardProps[] = [
     alt: 'Dress 7',
     price: 6999,
     rating: 4.4,
-    reviewsCount: 28,
+    reviewsCount: 4,
   },
   {
     id: 'midi-dress',
@@ -593,19 +593,19 @@ export const womenDressesProducts: CardProps[] = [
     alt: 'Dress 8',
     price: 8499,
     rating: 4.7,
-    reviewsCount: 40,
+    reviewsCount: 4,
   },
 ];
 
 export const womenJacketsProducts: CardProps[] = [
   {
-    id: 'luna',
-    title: 'Модель "Луна"',
+    id: 'lunaJacket',
+    title: 'Куртка "Луна"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket1.jpg',
     alt: 'Jacket 1',
     price: 8499,
     rating: 4.7,
-    reviewsCount: 8,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'new',
@@ -615,78 +615,78 @@ export const womenJacketsProducts: CardProps[] = [
   },
   {
     id: 'venera',
-    title: 'Модель "Венера"',
+    title: 'Куртка "Венера"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket2.jpg',
     alt: 'Jacket 2',
     price: 7499,
     rating: 4.6,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
     id: 'stellar',
-    title: 'Модель "Стереллар"',
+    title: 'Куртка "Стереллар"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket3.jpg',
     alt: 'Jacket 3',
     price: 9999,
     rating: 4.8,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
     id: 'cosmo',
-    title: 'Модель "Космо"',
+    title: 'Куртка "Космо"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket4.jpg',
     alt: 'Jacket 4',
     price: 10999,
     rating: 4.9,
-    reviewsCount: 9,
+    reviewsCount: 4,
   },
   {
     id: 'eclipse',
-    title: 'Модель "Эклипс"',
+    title: 'Куртка "Эклипс"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket5.jpg',
     alt: 'Jacket 5',
     price: 12999,
     rating: 5.0,
-    reviewsCount: 6,
+    reviewsCount: 4,
   },
   {
-    id: 'nova',
-    title: 'Модель "Нова"',
+    id: 'novaJacket',
+    title: 'Куртка "Нова"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket6.jpg',
     alt: 'Jacket 6',
     price: 8999,
     rating: 4.7,
-    reviewsCount: 11,
+    reviewsCount: 4,
   },
   {
-    id: 'aurora',
-    title: 'Модель "Аврора"',
+    id: 'auroraJacket',
+    title: 'Куртка "Аврора"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket7.jpg',
     alt: 'Jacket 7',
     price: 9499,
     rating: 4.8,
-    reviewsCount: 10,
+    reviewsCount: 4,
   },
   {
     id: 'zenith',
-    title: 'Модель "Зенит"',
+    title: 'Куртка "Зенит"',
     imageUrl: '/categories-grid/women/clothing/jackets/jacket8.jpg',
     alt: 'Jacket 8',
     price: 10499,
     rating: 4.9,
-    reviewsCount: 7,
+    reviewsCount: 4,
   },
 ];
 
 export const womenTShirtsProducts: CardProps[] = [
   {
-    id: 'sunny',
-    title: 'Модель "Санни"',
+    id: 'trikotash',
+    title: 'Футболка трикотаж',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt1.jpg',
     alt: 'T-Shirt 1',
-    price: 1999,
+    price: 999,
     rating: 4.6,
-    reviewsCount: 14,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -696,78 +696,78 @@ export const womenTShirtsProducts: CardProps[] = [
   },
   {
     id: 'blossom',
-    title: 'Модель "Блоссом"',
+    title: 'Футболка "Блоссом"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt2.jpg',
     alt: 'T-Shirt 2',
     price: 1599,
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'flora',
-    title: 'Модель "Флора"',
+    title: 'Футболка "Флора"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt3.jpg',
     alt: 'T-Shirt 3',
     price: 2499,
     rating: 4.8,
-    reviewsCount: 22,
+    reviewsCount: 4,
   },
   {
-    id: 'aurora',
-    title: 'Модель "Аврора"',
+    id: 'auroraTShirt',
+    title: 'Футболка "Аврора"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt4.jpg',
     alt: 'T-Shirt 4',
     price: 1799,
     rating: 4.7,
-    reviewsCount: 10,
+    reviewsCount: 4,
   },
   {
-    id: 'luna',
-    title: 'Модель "Луна"',
+    id: 'lunaTShirt',
+    title: 'Футболка "Луна"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt5.jpg',
     alt: 'T-Shirt 5',
     price: 1999,
     rating: 4.6,
-    reviewsCount: 8,
+    reviewsCount: 4,
   },
   {
     id: 'starlight',
-    title: 'Модель "Старлайт"',
+    title: 'Футболка "Старлайт"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt6.jpg',
     alt: 'T-Shirt 6',
     price: 2299,
     rating: 4.9,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
-    id: 'nova',
-    title: 'Модель "Нова"',
+    id: 'novaTShirt',
+    title: 'Футболка "Нова"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt7.jpg',
     alt: 'T-Shirt 7',
     price: 1899,
     rating: 4.5,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
     id: 'daisy',
-    title: 'Модель "Дэйзи"',
+    title: 'Футболка "Дэйзи"',
     imageUrl: '/categories-grid/women/clothing/t-shirts/tshirt8.jpg',
     alt: 'T-Shirt 8',
     price: 1699,
     rating: 4.7,
-    reviewsCount: 9,
+    reviewsCount: 4,
   },
 ];
 
 export const womenJeansProducts: CardProps[] = [
   {
     id: 'classicJeans',
-    title: 'Модель "Классик"',
+    title: 'Джинсы классика',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans1.jpg',
     alt: 'Jeans 1',
     price: 3499,
     rating: 4.8,
-    reviewsCount: 20,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -776,79 +776,79 @@ export const womenJeansProducts: CardProps[] = [
     ],
   },
   {
-    id: 'slimfit',
-    title: 'Модель "Слимфит"',
+    id: 'jeansPlanet',
+    title: 'Джинсы "Планет"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans2.jpg',
     alt: 'Jeans 2',
     price: 2999,
     rating: 4.6,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
     id: 'highwaist',
-    title: 'Модель "Хайвейст"',
+    title: 'Джинсы "Хайвейст"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans3.jpg',
     alt: 'Jeans 3',
     price: 3799,
     rating: 4.9,
-    reviewsCount: 25,
+    reviewsCount: 4,
   },
   {
     id: 'boyfriend',
-    title: 'Модель "Бойфренд"',
+    title: 'Джинсы "Бойфренд"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans4.jpg',
     alt: 'Jeans 4',
     price: 3199,
     rating: 4.7,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'skinny',
-    title: 'Модель "Скинни"',
+    title: 'Джинсы "Скинни"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans5.jpg',
     alt: 'Jeans 5',
     price: 2899,
     rating: 4.5,
-    reviewsCount: 14,
+    reviewsCount: 4,
   },
   {
     id: 'flare',
-    title: 'Модель "Флар"',
+    title: 'Джинсы "Флар"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans6.jpg',
     alt: 'Jeans 6',
     price: 3599,
     rating: 4.8,
-    reviewsCount: 19,
+    reviewsCount: 4,
   },
   {
     id: 'distressed',
-    title: 'Модель "Дистрессед"',
+    title: 'Джинсы "Дистрессед"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans7.jpg',
     alt: 'Jeans 7',
     price: 3299,
     rating: 4.6,
-    reviewsCount: 17,
+    reviewsCount: 4,
   },
   {
     id: 'vintageJeans',
-    title: 'Модель "Винтаж"',
+    title: 'Джинсы "Винтаж"',
     imageUrl: '/categories-grid/women/clothing/jeans/jeans8.jpg',
     alt: 'Jeans 8',
     price: 2999,
     rating: 4.7,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
 ];
 
 export const womenShortsProducts: CardProps[] = [
   {
     id: 'sunny',
-    title: 'Модель "Санни"',
+    title: 'Шорты "Санни"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts1.jpg',
     alt: 'Shorts 1',
     price: 1999,
     rating: 4.7,
-    reviewsCount: 14,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -858,78 +858,78 @@ export const womenShortsProducts: CardProps[] = [
   },
   {
     id: 'beach',
-    title: 'Модель "Бич"',
+    title: 'Шорты "Бич"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts2.jpg',
     alt: 'Shorts 2',
     price: 1599,
     rating: 4.5,
-    reviewsCount: 12,
+    reviewsCount: 4,
   },
   {
-    id: 'city',
-    title: 'Модель "Сити"',
+    id: 'city-shorts',
+    title: 'Шорты "Сити"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts3.jpg',
     alt: 'Shorts 3',
     price: 1799,
     rating: 4.6,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
-    id: 'casual',
-    title: 'Модель "Кэжуал"',
+    id: 'casual-shorts',
+    title: 'Шорты "Кэжуал"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts4.jpg',
     alt: 'Shorts 4',
     price: 1499,
     rating: 4.4,
-    reviewsCount: 10,
+    reviewsCount: 1,
   },
   {
     id: 'sporty',
-    title: 'Модель "Спорти"',
+    title: 'Шорты "Спорти"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts5.jpg',
     alt: 'Shorts 5',
     price: 1899,
     rating: 4.8,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'vintageShorts',
-    title: 'Модель "Винтаж"',
+    title: 'Шорты "Винтаж"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts6.jpg',
     alt: 'Shorts 6',
     price: 1699,
     rating: 4.6,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
-    id: 'denim',
-    title: 'Модель "Деним"',
+    id: 'koktailJuice',
+    title: 'Шорты "Тейл"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts7.jpg',
     alt: 'Shorts 7',
     price: 2099,
     rating: 4.7,
-    reviewsCount: 17,
+    reviewsCount: 4,
   },
   {
     id: 'holiday',
-    title: 'Модель "Холидей"',
+    title: 'Шорты "Холидей"',
     imageUrl: '/categories-grid/women/clothing/shorts/shorts8.jpg',
     alt: 'Shorts 8',
     price: 1599,
-    rating: 4.5,
-    reviewsCount: 13,
+    rating: 0,
+    reviewsCount: 0,
   },
 ];
 
 export const womenSneakersProducts: CardProps[] = [
   {
     id: 'flash',
-    title: 'Модель "Флэш"',
+    title: 'Кроссовки "Флэш"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers1.jpg',
     alt: 'Sneakers 1',
     price: 4999,
     rating: 4.8,
-    reviewsCount: 25,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -939,78 +939,78 @@ export const womenSneakersProducts: CardProps[] = [
   },
   {
     id: 'vortex',
-    title: 'Модель "Вортекс"',
+    title: 'Кроссовки "Вортекс"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers2.jpg',
     alt: 'Sneakers 2',
     price: 4799,
     rating: 4.6,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'comet',
-    title: 'Модель "Комета"',
+    title: 'Кроссовки "Комета"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers3.jpg',
     alt: 'Sneakers 3',
     price: 5299,
     rating: 4.7,
-    reviewsCount: 22,
+    reviewsCount: 4,
   },
   {
     id: 'nebula',
-    title: 'Модель "Небула"',
+    title: 'Кроссовки "Небула"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers4.jpg',
     alt: 'Sneakers 4',
     price: 4599,
     rating: 4.5,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'blaze',
-    title: 'Модель "Блейз"',
+    title: 'Кроссовки "Блейз"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers5.jpg',
     alt: 'Sneakers 5',
     price: 4999,
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
   },
   {
     id: 'zenith-sneakers',
-    title: 'Модель "Зенит"',
+    title: 'Кроссовки "Зенит"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers6.jpg',
     alt: 'Sneakers 6',
     price: 4799,
     rating: 4.7,
-    reviewsCount: 27,
+    reviewsCount: 4,
   },
   {
     id: 'nova',
-    title: 'Модель "Нова"',
+    title: 'Кроссовки "Нова"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers7.jpg',
     alt: 'Sneakers 7',
     price: 5099,
     rating: 4.6,
-    reviewsCount: 19,
+    reviewsCount: 4,
   },
   {
     id: 'quantum',
-    title: 'Модель "Квантум"',
+    title: 'Кроссовки "Квантум"',
     imageUrl: '/categories-grid/women/shoes/sneakers/sneakers8.jpg',
     alt: 'Sneakers 8',
     price: 4699,
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
 ];
 
 export const womenSandalsProducts: CardProps[] = [
   {
     id: 'oasis',
-    title: 'Модель "Оазис"',
+    title: 'Сандалии "Оазис"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals1.jpg',
     alt: 'Sandals 1',
     price: 2999,
     rating: 4.7,
-    reviewsCount: 20,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'new',
@@ -1020,66 +1020,66 @@ export const womenSandalsProducts: CardProps[] = [
   },
   {
     id: 'zen',
-    title: 'Модель "Зен"',
+    title: 'Сандалии "Зен"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals2.jpg',
     alt: 'Sandals 2',
     price: 2799,
     rating: 4.6,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
     id: 'breeze',
-    title: 'Модель "Бриз"',
+    title: 'Сандалии "Бриз"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals3.jpg',
     alt: 'Sandals 3',
     price: 3199,
-    rating: 4.8,
-    reviewsCount: 22,
+    rating: 4.7,
+    reviewsCount: 4,
   },
   {
     id: 'dune',
-    title: 'Модель "Дюна"',
+    title: 'Сандалии "Дюна"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals4.jpg',
     alt: 'Sandals 4',
     price: 2699,
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'serene',
-    title: 'Модель "Сирин"',
+    title: 'Сандалии "Сирин"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals5.jpg',
     alt: 'Sandals 5',
     price: 2999,
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 4,
   },
   {
     id: 'union',
-    title: 'Модель "Юнион"',
+    title: 'Сандалии "Юнион"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals6.jpg',
     alt: 'Sandals 6',
     price: 2899,
     rating: 4.6,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'ocean',
-    title: 'Модель "Оушен"',
+    title: 'Сандалии "Оушен"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals7.jpg',
     alt: 'Sandals 7',
     price: 3099,
     rating: 4.7,
-    reviewsCount: 21,
+    reviewsCount: 4,
   },
   {
     id: 'mirage',
-    title: 'Модель "Мираж"',
+    title: 'Сандалии "Мираж"',
     imageUrl: '/categories-grid/women/shoes/sandals/sandals8.jpg',
     alt: 'Sandals 8',
     price: 2799,
     rating: 4.5,
-    reviewsCount: 17,
+    reviewsCount: 4,
   },
 ];
 
@@ -1091,7 +1091,7 @@ export const womenBagsProducts: CardProps[] = [
     alt: 'Bag 1',
     price: 4999,
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -1101,48 +1101,48 @@ export const womenBagsProducts: CardProps[] = [
   },
   {
     id: 'city-backpack',
-    title: 'Городской рюкзак',
+    title: 'Сумка-тоут "Глейз"',
     imageUrl: '/categories-grid/women/accessories/bags/bag2.jpg',
     alt: 'Bag 2',
     price: 3499,
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 4,
   },
   {
     id: 'evening-clutch',
-    title: 'Вечерний клатч',
+    title: 'Рюкзак повседневный',
     imageUrl: '/categories-grid/women/accessories/bags/bag3.jpg',
     alt: 'Bag 3',
     price: 2599,
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'leather-shoulder',
-    title: 'Кожаная сумка через плечо',
+    title: 'Кожаная сумка',
     imageUrl: '/categories-grid/women/accessories/bags/bag4.jpg',
     alt: 'Bag 4',
     price: 5999,
     rating: 4.9,
-    reviewsCount: 32,
+    reviewsCount: 4,
   },
   {
     id: 'minimalist-crossbody',
-    title: 'Минималистичная сумка через плечо',
+    title: 'Походный рюкзак',
     imageUrl: '/categories-grid/women/accessories/bags/bag5.jpg',
     alt: 'Bag 5',
     price: 3799,
     rating: 4.6,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'weekend-duffle',
-    title: 'Дорожная сумка',
+    title: 'Cумка "Викенд"',
     imageUrl: '/categories-grid/women/accessories/bags/bag6.jpg',
     alt: 'Bag 6',
     price: 4499,
     rating: 4.7,
-    reviewsCount: 22,
+    reviewsCount: 4,
   },
   {
     id: 'vintage-satchel',
@@ -1151,16 +1151,16 @@ export const womenBagsProducts: CardProps[] = [
     alt: 'Bag 7',
     price: 4299,
     rating: 4.8,
-    reviewsCount: 28,
+    reviewsCount: 4,
   },
   {
     id: 'canvas-shopper',
-    title: 'Холщовая сумка-шоппер',
+    title: 'Сумка "Шопз"',
     imageUrl: '/categories-grid/women/accessories/bags/bag8.jpg',
     alt: 'Bag 8',
     price: 2999,
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
 ];
 
@@ -1172,7 +1172,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 1',
     price: 2999,
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -1187,7 +1187,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 2',
     price: 2499,
     rating: 4.6,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'slim-waist',
@@ -1196,7 +1196,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 3',
     price: 1999,
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'boho-belt',
@@ -1205,7 +1205,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 4',
     price: 3499,
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
   },
   {
     id: 'wide-buckle',
@@ -1214,7 +1214,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 5',
     price: 2799,
     rating: 4.7,
-    reviewsCount: 26,
+    reviewsCount: 4,
   },
   {
     id: 'casual-belt',
@@ -1223,7 +1223,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 6',
     price: 1799,
     rating: 4.4,
-    reviewsCount: 15,
+    reviewsCount: 4,
   },
   {
     id: 'ornate-belt',
@@ -1232,7 +1232,7 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 7',
     price: 3999,
     rating: 4.9,
-    reviewsCount: 32,
+    reviewsCount: 4,
   },
   {
     id: 'fashion-belt',
@@ -1241,19 +1241,19 @@ export const womenBeltsProducts: CardProps[] = [
     alt: 'Belt 8',
     price: 3299,
     rating: 4.6,
-    reviewsCount: 22,
+    reviewsCount: 4,
   },
 ];
 
 export const womenHatsProducts: CardProps[] = [
   {
     id: 'wide-brim-hat',
-    title: 'Широкополая шляпа',
+    title: 'Бейсболка "IA"',
     imageUrl: '/categories-grid/women/accessories/hats/hat1.jpg',
     alt: 'Hat 1',
     price: 3499,
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
     cardPlates: [
       {
         variant: 'popular',
@@ -1263,66 +1263,66 @@ export const womenHatsProducts: CardProps[] = [
   },
   {
     id: 'fedora-hat',
-    title: 'Федора',
+    title: 'Панама Федора',
     imageUrl: '/categories-grid/women/accessories/hats/hat2.jpg',
     alt: 'Hat 2',
     price: 2999,
     rating: 4.6,
-    reviewsCount: 25,
+    reviewsCount: 4,
   },
   {
     id: 'beanie-hat',
-    title: 'Шапка-бини',
+    title: 'Бейсболка классическая',
     imageUrl: '/categories-grid/women/accessories/hats/hat3.jpg',
     alt: 'Hat 3',
     price: 1999,
     rating: 4.5,
-    reviewsCount: 20,
+    reviewsCount: 4,
   },
   {
     id: 'bucket-hat',
-    title: 'Бакет',
+    title: 'Панама "Бакет"',
     imageUrl: '/categories-grid/women/accessories/hats/hat4.jpg',
     alt: 'Hat 4',
     price: 2599,
     rating: 4.7,
-    reviewsCount: 28,
+    reviewsCount: 4,
   },
   {
     id: 'sun-hat',
-    title: 'Солнечная шляпа',
+    title: 'Пёстрая кепи',
     imageUrl: '/categories-grid/women/accessories/hats/hat5.jpg',
     alt: 'Hat 5',
     price: 2399,
     rating: 4.5,
-    reviewsCount: 22,
+    reviewsCount: 4,
   },
   {
     id: 'baseball-cap',
-    title: 'Бейсболка',
+    title: 'Бейсболка осенняя',
     imageUrl: '/categories-grid/women/accessories/hats/hat6.jpg',
     alt: 'Hat 6',
     price: 1799,
     rating: 4.3,
-    reviewsCount: 18,
+    reviewsCount: 4,
   },
   {
     id: 'newsboy-cap',
-    title: 'Гаврош',
+    title: 'Панама "Гаврош"',
     imageUrl: '/categories-grid/women/accessories/hats/hat7.jpg',
     alt: 'Hat 7',
     price: 2999,
     rating: 4.6,
-    reviewsCount: 26,
+    reviewsCount: 4,
   },
   {
     id: 'beret-cap',
-    title: 'Берет',
+    title: 'Бейсболка "Шишка"',
     imageUrl: '/categories-grid/women/accessories/hats/hat8.jpg',
     alt: 'Hat 8',
     price: 2199,
     rating: 4.4,
-    reviewsCount: 23,
+    reviewsCount: 4,
   },
 ];
 
@@ -1988,11 +1988,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'classicFit',
-    name: 'Чёрные джинсы Slim ',
+    name: 'Джинсы Slim ',
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 2,
     manufacturer: 'ClassicFashion',
-    sizes: ['28', '30', '32', '34', '36', '38', '40'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3999,
     discountPrice: 0,
     images: [
@@ -2024,12 +2024,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'slimFit',
-    name: 'Модель "Слим Фит"',
+    id: 'slimFitJeans',
+    name: 'Джинсы Slim Fit',
     rating: 4.3,
-    reviewsCount: 18,
+    reviewsCount: 2,
     manufacturer: 'SlimFashion',
-    sizes: ['28', '30', '32', '34', '36'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 4499,
     discountPrice: 0,
     images: [
@@ -2062,11 +2062,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'relaxedFit',
-    name: 'Модель "Релакс Фит"',
+    name: 'Джинсы "Ковбой"',
     rating: 4.5,
-    reviewsCount: 20,
+    reviewsCount: 2,
     manufacturer: 'RelaxFashion',
-    sizes: ['28', '30', '32', '34', '36'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 4299,
     discountPrice: 0,
     images: [
@@ -2099,11 +2099,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'taperedFit',
-    name: 'Модель "Тейперед Фит"',
+    name: 'Джинсы классические',
     rating: 4.6,
-    reviewsCount: 22,
+    reviewsCount: 2,
     manufacturer: 'TaperedFashion',
-    sizes: ['28', '30', '32', '34', '36'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3999,
     discountPrice: 0,
     images: [
@@ -2136,11 +2136,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'bootcut',
-    name: 'Модель "Буткат"',
+    name: 'Джинсы "Буткат"',
     rating: 4.4,
-    reviewsCount: 17,
+    reviewsCount: 2,
     manufacturer: 'BootcutFashion',
-    sizes: ['28', '30', '32', '34', '36'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 4599,
     discountPrice: 0,
     images: [
@@ -2173,11 +2173,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'cargo',
-    name: 'Модель "Карго"',
+    name: 'Шорты "Карго"',
     rating: 4.3,
-    reviewsCount: 14,
+    reviewsCount: 4,
     manufacturer: 'CargoCo',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2999,
     discountPrice: 2799,
     images: [
@@ -2186,10 +2186,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/shorts/shorts1.jpg',
       '/categories-grid/men/clothing/shorts/shorts1.jpg',
     ],
-    material: 'Хлопок',
-    color: 'Бежевый',
+    material: 'Деним',
+    color: 'Синий',
     description:
-      'Comfortable cargo shorts with multiple pockets, ideal for outdoor activities.',
+      'Удобные шорты-карго с множеством карманов идеально подходят для активного отдыха.',
     reviews: [
       {
         user: 'Алексей Иванов',
@@ -2227,11 +2227,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'denim',
-    name: 'Модель "Деним"',
+    name: 'Шорты "Тейл"',
     rating: 4.6,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'DenimMakers',
-    sizes: ['30', '32', '34', '36', '38'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3499,
     discountPrice: 3299,
     images: [
@@ -2241,8 +2241,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/shorts/shorts2.jpg',
     ],
     material: 'Деним',
-    color: 'Синий',
-    description: 'Classic denim shorts, perfect for casual summer outings.',
+    color: 'Тёмно-синий',
+    description:
+      'Классические джинсовые шорты идеально подходят для повседневных летних прогулок.',
     reviews: [
       {
         user: 'Владимир Смирнов',
@@ -2282,9 +2283,9 @@ export const productDetails: Product[] = [
     id: 'chino',
     name: 'Модель "Чино"',
     rating: 4.1,
-    reviewsCount: 9,
+    reviewsCount: 4,
     manufacturer: 'ChinoStyle',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3199,
     discountPrice: 2999,
     images: [
@@ -2293,10 +2294,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/shorts/shorts3.jpg',
       '/categories-grid/men/clothing/shorts/shorts3.jpg',
     ],
-    material: 'Хлопок',
-    color: 'Хаки',
+    material: 'Деним',
+    color: 'Синий',
     description:
-      'Stylish chino shorts, perfect for both casual and semi-formal occasions.',
+      'Стильные шорты-чиносы подойдут как для повседневного, так и для полуофициального случая.',
     reviews: [
       {
         user: 'Максим Орлов',
@@ -2334,11 +2335,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sports',
-    name: 'Модель "Спорт"',
+    name: 'Шорты "Спорт"',
     rating: 4.4,
-    reviewsCount: 13,
+    reviewsCount: 4,
     manufacturer: 'Sportify',
-    sizes: ['M', 'L', 'XL', 'XXL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2799,
     discountPrice: 2599,
     images: [
@@ -2347,10 +2348,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/shorts/shorts4.jpg',
       '/categories-grid/men/clothing/shorts/shorts4.jpg',
     ],
-    material: 'Полиэстер',
-    color: 'Черный',
+    material: 'Хлопок',
+    color: 'Бежевый',
     description:
-      'Lightweight sports shorts, ideal for gym and outdoor activities.',
+      'Легкие спортивные шорты, идеально подходящие для занятий в тренажерном зале и активного отдыха.',
     reviews: [
       {
         user: 'Евгений Соколов',
@@ -2387,12 +2388,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'swim',
-    name: 'Модель "Свим"',
+    id: 'kras',
+    name: 'Шорты "Крас"',
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'SwimWear',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2499,
     discountPrice: 2299,
     images: [
@@ -2401,9 +2402,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/clothing/shorts/shorts5.jpg',
       '/categories-grid/men/clothing/shorts/shorts5.jpg',
     ],
-    material: 'Полиэстер',
-    color: 'Синий',
-    description: 'Comfortable swim shorts, perfect for beach and pool.',
+    material: 'Хлопок',
+    color: 'Коричневый',
+    description:
+      'Удобные шорты для плавания, идеально подходящие для пляжа и бассейна.',
     reviews: [
       {
         user: 'Иван Кузнецов',
@@ -2441,9 +2443,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'classicRun',
-    name: 'Модель "Классик Ран"',
+    name: 'Кроссовки "Классик Ран"',
     rating: 4.7,
-    reviewsCount: 30,
+    reviewsCount: 4,
     manufacturer: 'RunMaster',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 4999,
@@ -2455,9 +2457,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sneakers/sneaker1.jpg',
     ],
     material: 'Синтетика',
-    color: 'Белый',
+    color: 'Коричневый',
     description:
-      'Classic running sneakers designed for comfort and durability.',
+      'Классические кроссовки для бега, созданные для комфорта и долговечности.',
     reviews: [
       {
         user: 'Сергей Петров',
@@ -2495,9 +2497,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'urbanTrack',
-    name: 'Модель "Урбан Трек"',
+    name: 'Кроссовки "Урбан Трек"',
     rating: 4.5,
-    reviewsCount: 25,
+    reviewsCount: 4,
     manufacturer: 'UrbanFoot',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 5499,
@@ -2508,9 +2510,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sneakers/sneaker2.jpg',
       '/categories-grid/men/shoes/sneakers/sneaker2.jpg',
     ],
-    material: 'Замша',
-    color: 'Черный',
-    description: 'Stylish urban sneakers perfect for city life.',
+    material: 'Кожа',
+    color: 'Бежевый',
+    description:
+      'Стильные городские кроссовки идеально подходят для городской жизни.',
     reviews: [
       {
         user: 'Алексей Николаев',
@@ -2548,9 +2551,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sportX',
-    name: 'Модель "Спорт X"',
+    name: 'Кроссовки "Спорт X"',
     rating: 4.2,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'SportEx',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 3999,
@@ -2562,9 +2565,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sneakers/sneaker3.jpg',
     ],
     material: 'Кожа',
-    color: 'Серый',
+    color: 'Коричневый',
     description:
-      'High-performance sports sneakers for all your training needs.',
+      'Высокопроизводительные спортивные кроссовки для всех ваших тренировок.',
     reviews: [
       {
         user: 'Егор Смирнов',
@@ -2602,9 +2605,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'minimalRun',
-    name: 'Модель "Минимал Ран"',
+    name: 'Кроссовки "Минимал Ран"',
     rating: 4.8,
-    reviewsCount: 35,
+    reviewsCount: 4,
     manufacturer: 'MinRun',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 5999,
@@ -2616,8 +2619,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sneakers/sneaker4.jpg',
     ],
     material: 'Синтетика',
-    color: 'Красный',
-    description: 'Minimalistic running shoes designed for maximum performance.',
+    color: 'Белый',
+    description:
+      'Минималистичные кроссовки, созданные для максимальной производительности.',
     reviews: [
       {
         user: 'Роман Лебедев',
@@ -2655,9 +2659,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'retroWave',
-    name: 'Модель "Ретро Вэйв"',
+    name: 'Кроссовки "Ретро Вэйв"',
     rating: 4.6,
-    reviewsCount: 28,
+    reviewsCount: 4,
     manufacturer: 'RetroSneak',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 5299,
@@ -2669,9 +2673,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sneakers/sneaker5.jpg',
     ],
     material: 'Кожа',
-    color: 'Синий',
+    color: 'Серый',
     description:
-      'Retro-style sneakers that combine classic looks with modern comfort.',
+      'Кроссовки в стиле ретро, ​​сочетающие классический внешний вид с современным комфортом.',
     reviews: [
       {
         user: 'Константин Беляев',
@@ -2709,9 +2713,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'beachWalk',
-    name: 'Модель "Бич Вок"',
+    name: 'Сандалии "Бич Вок"',
     rating: 4.3,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'BeachMaster',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 2999,
@@ -2723,9 +2727,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sandals/sandal1.jpg',
     ],
     material: 'Резина',
-    color: 'Черный',
+    color: 'Чёрный',
     description:
-      'Comfortable sandals designed for beach walks and casual outings.',
+      'Удобные сандалии, предназначенные для прогулок по пляжу и повседневных прогулок.',
     reviews: [
       {
         user: 'Андрей Смирнов',
@@ -2763,9 +2767,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'urbanStrap',
-    name: 'Модель "Урбан Страп"',
+    name: 'Сандалии "Урбан Страп"',
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'UrbanFoot',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 3499,
@@ -2778,7 +2782,7 @@ export const productDetails: Product[] = [
     material: 'Кожа',
     color: 'Коричневый',
     description:
-      'Stylish and comfortable urban sandals with adjustable straps.',
+      'Стильные и удобные городские босоножки с регулируемыми ремешками.',
     reviews: [
       {
         user: 'Игорь Николаев',
@@ -2816,9 +2820,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'comfortFlex',
-    name: 'Модель "Комфорт Флекс"',
+    name: 'Сандалии "Комфорт Флекс"',
     rating: 4.2,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'ComfortZone',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 2799,
@@ -2829,9 +2833,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sandals/sandal3.jpg',
       '/categories-grid/men/shoes/sandals/sandal3.jpg',
     ],
-    material: 'Текстиль',
-    color: 'Серый',
-    description: 'Flexible and lightweight sandals designed for comfort.',
+    material: 'Кожа',
+    color: 'Коричневый',
+    description: 'Гибкие и легкие сандалии, созданные для комфорта.',
     reviews: [
       {
         user: 'Евгений Васильев',
@@ -2869,9 +2873,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sportStrap',
-    name: 'Модель "Спорт Страп"',
+    name: 'Сандалии "Спорт Страп"',
     rating: 4.4,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'SportWear',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 3199,
@@ -2881,9 +2885,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/shoes/sandals/sandal4.jpg',
       '/categories-grid/men/shoes/sandals/sandal4.jpg',
     ],
-    material: 'Синтетика',
-    color: 'Серый/Черный',
-    description: 'Sporty sandals with secure straps for outdoor activities.',
+    material: 'Кожа',
+    color: 'Коричневый',
+    description:
+      'Спортивные сандалии с надежными ремнями для активного отдыха.',
     reviews: [
       {
         user: 'Дмитрий Сидоров',
@@ -2914,9 +2919,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'ecoWalk',
-    name: 'Модель "Эко Вок"',
+    name: 'Сандалии "Эко Вок"',
     rating: 4.5,
-    reviewsCount: 17,
+    reviewsCount: 4,
     manufacturer: 'EcoFriendly',
     sizes: ['40', '41', '42', '43', '44', '45'],
     price: 2999,
@@ -2968,9 +2973,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'urbanBackpack',
-    name: 'Модель "Урбан Рюкзак"',
+    name: 'Урбан портфель',
     rating: 4.7,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'UrbanStyle',
     sizes: ['Один размер'],
     price: 3999,
@@ -2981,8 +2986,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/bags/bag1.jpg',
     ],
     material: 'Нейлон',
-    color: 'Черный',
-    description: 'Stylish and spacious urban backpack for daily use.',
+    color: 'Коричневый',
+    description:
+      'Стильный и вместительный портфель для ежедневного использования.',
     reviews: [
       {
         user: 'Андрей Ковалев',
@@ -3020,9 +3026,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'leatherSatchel',
-    name: 'Модель "Кожаный Сумка"',
+    name: 'Рюкзак походный',
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'LeatherCraft',
     sizes: ['Один размер'],
     price: 5999,
@@ -3032,9 +3038,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/bags/bag2.jpg',
       '/categories-grid/men/accessories/bags/bag2.jpg',
     ],
-    material: 'Натуральная кожа',
+    material: 'Хлопок',
     color: 'Коричневый',
-    description: 'Premium leather satchel bag for sophisticated style.',
+    description: 'Хлопковый рюкзак премиум-класса для изысканного стиля.',
     reviews: [
       {
         user: 'Игорь Николаев',
@@ -3073,9 +3079,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sportDuffel',
-    name: 'Модель "Спорт Дюфель"',
+    name: 'Портфель "Дюфель"',
     rating: 4.6,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'SportGear',
     sizes: ['Один размер'],
     price: 4999,
@@ -3086,9 +3092,10 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/bags/bag3.jpg',
       '/categories-grid/men/accessories/bags/bag3.jpg',
     ],
-    material: 'Полиэстер',
-    color: 'Синий',
-    description: 'Spacious and durable duffel bag for sports and travel.',
+    material: 'Кожа',
+    color: 'Коричневый',
+    description:
+      'Вместительная и прочная спортивная сумка для спорта и путешествий.',
     reviews: [
       {
         user: 'Антон Ковалев',
@@ -3127,9 +3134,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'canvasMessenger',
-    name: 'Модель "Канвас Мессенджер"',
+    name: 'Рюкзак "Ракушка"',
     rating: 4.4,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'CanvasCraft',
     sizes: ['Один размер'],
     price: 3499,
@@ -3140,8 +3147,8 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/bags/bag4.jpg',
     ],
     material: 'Хлопок',
-    color: 'Зеленый',
-    description: 'Casual canvas messenger bag for everyday use.',
+    color: 'Бежевый',
+    description: 'Рюкзак для повседневного использования.',
     reviews: [
       {
         user: 'Евгений Смирнов',
@@ -3171,9 +3178,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'travelTote',
-    name: 'Модель "Путешественный Тоте"',
+    name: 'Портфель "Вест"',
     rating: 4.3,
-    reviewsCount: 14,
+    reviewsCount: 4,
     manufacturer: 'TravelStyle',
     sizes: ['Один размер'],
     price: 4599,
@@ -3183,8 +3190,8 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/bags/bag5.jpg',
       '/categories-grid/men/accessories/bags/bag5.jpg',
     ],
-    material: 'Нейлон',
-    color: 'Серый',
+    material: 'Кожа',
+    color: 'Коричневый',
     description:
       'Просторная сумка для путешествий с удобными ручками и вместительным отделением.',
     reviews: [
@@ -3226,9 +3233,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'classicLeather',
-    name: 'Модель "Классический Кожаный"',
+    name: 'Классический кожаный ремень',
     rating: 4.5,
-    reviewsCount: 10,
+    reviewsCount: 4,
     manufacturer: 'LeatherCraft',
     sizes: ['80', '85', '90', '95', '100'],
     price: 1999,
@@ -3239,7 +3246,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/belts/belt1.jpg',
     ],
     material: 'Натуральная кожа',
-    color: 'Черный',
+    color: 'Коричневый',
     description:
       'Классический кожаный ремень с пряжкой, подходит для делового стиля.',
     reviews: [
@@ -3279,9 +3286,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'wovenStrap',
-    name: 'Модель "Плетеный Ремень"',
+    name: 'Чёрный кожаный ремень',
     rating: 4.2,
-    reviewsCount: 8,
+    reviewsCount: 4,
     manufacturer: 'FashionTrends',
     sizes: ['80', '85', '90', '95', '100'],
     price: 2499,
@@ -3292,8 +3299,8 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/belts/belt2.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Коричневый',
-    description: 'Плетеный ремень для неформального стиля.',
+    color: 'Чёрный',
+    description: 'Стильный чёрный кожаный ремень ',
     reviews: [
       {
         user: 'Александр Иванов',
@@ -3331,9 +3338,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'reversibleBelt',
-    name: 'Модель "Двусторонний Ремень"',
+    name: 'Двусторонний Ремень',
     rating: 4.0,
-    reviewsCount: 6,
+    reviewsCount: 4,
     manufacturer: 'FashionStyle',
     sizes: ['80', '85', '90', '95', '100'],
     price: 2299,
@@ -3344,7 +3351,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/belts/belt3.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Черный/Коричневый',
+    color: 'Чёрный',
     description:
       'Универсальный двусторонний ремень для различных стилей одежды.',
     reviews: [
@@ -3384,9 +3391,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'canvasBuckle',
-    name: 'Модель "Канвас Бакл"',
+    name: 'Ремень "Канвас Бакл"',
     rating: 4.3,
-    reviewsCount: 9,
+    reviewsCount: 4,
     manufacturer: 'CanvasStyle',
     sizes: ['80', '85', '90', '95', '100'],
     price: 1799,
@@ -3396,9 +3403,9 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/belts/belt4.jpg',
       '/categories-grid/men/accessories/belts/belt4.jpg',
     ],
-    material: 'Хлопок',
-    color: 'Зеленый',
-    description: 'Стильный хлопковый ремень с металлической пряжкой.',
+    material: 'Кожа',
+    color: 'Коричневый',
+    description: 'Стильный кожаный ремень с металлической пряжкой.',
     reviews: [
       {
         user: 'Евгений Павлов',
@@ -3428,9 +3435,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'dressBelt',
-    name: 'Модель "Офисный Ремень"',
+    name: 'Офисный Ремень',
     rating: 4.4,
-    reviewsCount: 11,
+    reviewsCount: 4,
     manufacturer: 'BusinessStyle',
     sizes: ['80', '85', '90', '95', '100'],
     price: 2599,
@@ -3441,7 +3448,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/belts/belt5.jpg',
     ],
     material: 'Натуральная кожа',
-    color: 'Черный',
+    color: 'Коричневый',
     description: 'Элегантный ремень для делового стиля, подходит для офиса.',
     reviews: [
       {
@@ -3481,11 +3488,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'baseballCap',
-    name: 'Модель "Бейсболка"',
+    name: 'Панама "Леопард"',
     rating: 4.5,
-    reviewsCount: 10,
+    reviewsCount: 4,
     manufacturer: 'CapStyle',
-    sizes: ['One Size'],
+    sizes: ['50', '52', '54', '56', '58', '60', '62'],
     price: 1499,
     images: [
       '/categories-grid/men/accessories/hats/hat1.jpg',
@@ -3494,7 +3501,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/hats/hat1.jpg',
     ],
     material: 'Хлопок',
-    color: 'Синий',
+    color: 'Жёлтый',
     description: 'Популярная бейсболка для повседневного использования.',
     reviews: [
       {
@@ -3539,7 +3546,7 @@ export const productDetails: Product[] = [
     rating: 4.3,
     reviewsCount: 8,
     manufacturer: 'HatStyle',
-    sizes: ['M', 'L', 'XL'],
+    sizes: ['50', '52', '54', '56', '58', '60', '62'],
     price: 2999,
     images: [
       '/categories-grid/men/accessories/hats/hat2.jpg',
@@ -3548,7 +3555,7 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/hats/hat2.jpg',
     ],
     material: 'Войлок',
-    color: 'Черный',
+    color: 'Бежевый',
     description: 'Элегантная федора для стильного образа.',
     reviews: [
       {
@@ -3589,11 +3596,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'beanie',
-    name: 'Модель "Шапка Бини"',
+    name: 'Панама "Буби"',
     rating: 4.7,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'BeanieStyle',
-    sizes: ['One Size'],
+    sizes: ['50', '52', '54', '56', '58', '60', '62'],
     price: 999,
     images: [
       '/categories-grid/men/accessories/hats/hat3.jpg',
@@ -3641,11 +3648,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'panamaHat',
-    name: 'Модель "Панама"',
+    name: 'Бейсболка классическая',
     rating: 4.4,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'PanamaStyle',
-    sizes: ['M', 'L'],
+    sizes: ['50', '52', '54', '56', '58', '60', '62'],
     price: 1999,
     images: [
       '/categories-grid/men/accessories/hats/hat4.jpg',
@@ -3654,8 +3661,8 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/hats/hat4.jpg',
     ],
     material: 'Солома',
-    color: 'Натуральный',
-    description: 'Легкая и стильная панама для летнего сезона.',
+    color: 'Белый',
+    description: 'Легкая и стильная бейсболка для летнего сезона.',
     reviews: [
       {
         user: 'Сергей Игнатьев',
@@ -3686,11 +3693,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'flatCap',
-    name: 'Модель "Флэт Кэп"',
+    name: 'Панама "Кэп"',
     rating: 4.6,
-    reviewsCount: 14,
+    reviewsCount: 4,
     manufacturer: 'CapStyle',
-    sizes: ['M', 'L', 'XL'],
+    sizes: ['50', '52', '54', '56', '58', '60', '62'],
     price: 1799,
     images: [
       '/categories-grid/men/accessories/hats/hat5.jpg',
@@ -3699,8 +3706,8 @@ export const productDetails: Product[] = [
       '/categories-grid/men/accessories/hats/hat5.jpg',
     ],
     material: 'Хлопок',
-    color: 'Коричневый',
-    description: 'Классическая флэт кэп для стильного образа.',
+    color: 'Серый',
+    description: 'Классическая кэп панама для стильного образа.',
     reviews: [
       {
         user: 'Андрей Семенов',
@@ -3741,9 +3748,9 @@ export const productDetails: Product[] = [
     id: 'wedding-dress',
     name: 'Свадебное платье',
     rating: 4.9,
-    reviewsCount: 50,
+    reviewsCount: 4,
     manufacturer: 'DreamDresses',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 25999,
     images: [
       '/categories-grid/women/clothing/dresses/dress6.jpg',
@@ -3793,9 +3800,9 @@ export const productDetails: Product[] = [
     id: 'print-dress',
     name: 'Платье с принтом',
     rating: 4.4,
-    reviewsCount: 28,
+    reviewsCount: 4,
     manufacturer: 'FashionTrends',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 6999,
     images: [
       '/categories-grid/women/clothing/dresses/dress7.jpg',
@@ -3804,7 +3811,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress7.jpg',
     ],
     material: 'Хлопок',
-    color: 'Мультиколор',
+    color: 'Серый',
     description: 'Стильное платье с ярким принтом для разных мероприятий.',
     reviews: [
       {
@@ -3846,9 +3853,9 @@ export const productDetails: Product[] = [
     id: 'midi-dress',
     name: 'Миди-платье',
     rating: 4.7,
-    reviewsCount: 40,
+    reviewsCount: 4,
     manufacturer: 'FashionDiva',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 8499,
     images: [
       '/categories-grid/women/clothing/dresses/dress8.jpg',
@@ -3856,8 +3863,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress8.jpg',
       '/categories-grid/women/clothing/dresses/dress8.jpg',
     ],
-    material: 'Шифон',
-    color: 'Голубой',
+    material: 'Хлопок',
+    color: 'Серый',
     description: 'Элегантное миди-платье для любого случая.',
     reviews: [
       {
@@ -3899,9 +3906,9 @@ export const productDetails: Product[] = [
     id: 'evening-dress',
     name: 'Вечернее платье',
     rating: 4.9,
-    reviewsCount: 45,
+    reviewsCount: 4,
     manufacturer: 'GlamourStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 12999,
     images: [
       '/categories-grid/women/clothing/dresses/dress1.jpg',
@@ -3909,8 +3916,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress1.jpg',
       '/categories-grid/women/clothing/dresses/dress1.jpg',
     ],
-    material: 'Шелк, сатин',
-    color: 'Черный',
+    material: 'Шёлк, сатин',
+    color: 'Коричневый',
     description: 'Элегантное вечернее платье для особых случаев.',
     reviews: [
       {
@@ -3954,9 +3961,9 @@ export const productDetails: Product[] = [
     id: 'summer-dress',
     name: 'Летнее платье',
     rating: 4.7,
-    reviewsCount: 38,
+    reviewsCount: 4,
     manufacturer: 'SummerChic',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 8999,
     images: [
       '/categories-grid/women/clothing/dresses/dress2.jpg',
@@ -3965,7 +3972,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress2.jpg',
     ],
     material: 'Хлопок, лен',
-    color: 'Разноцветный',
+    color: 'Розовый',
     description: 'Удобное летнее платье для отдыха и прогулок.',
     reviews: [
       {
@@ -4007,9 +4014,9 @@ export const productDetails: Product[] = [
     id: 'maxi-dress',
     name: 'Макси-платье',
     rating: 4.8,
-    reviewsCount: 42,
+    reviewsCount: 4,
     manufacturer: 'FashionElegance',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 10999,
     images: [
       '/categories-grid/women/clothing/dresses/dress3.jpg',
@@ -4018,7 +4025,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress3.jpg',
     ],
     material: 'Шифон, сатин',
-    color: 'Розовый',
+    color: 'Коричневый',
     description: 'Элегантное макси-платье для особых случаев.',
     reviews: [
       {
@@ -4058,12 +4065,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'cocktail-dress',
-    name: 'Коктейльное платье',
+    id: 'mozaika-dress',
+    name: 'Платье "Мозайка"',
     rating: 4.6,
-    reviewsCount: 36,
+    reviewsCount: 4,
     manufacturer: 'ChicStyle',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 9499,
     images: [
       '/categories-grid/women/clothing/dresses/dress4.jpg',
@@ -4072,7 +4079,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress4.jpg',
     ],
     material: 'Шифон, кружево',
-    color: 'Бордовый',
+    color: 'Мультицвет',
     description: 'Элегантное коктейльное платье для особых мероприятий.',
     reviews: [
       {
@@ -4114,11 +4121,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'casual-dress',
-    name: 'Повседневное платье',
+    name: 'Пёстрое платье',
     rating: 4.5,
-    reviewsCount: 32,
+    reviewsCount: 4,
     manufacturer: 'EverydayChic',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 7999,
     images: [
       '/categories-grid/women/clothing/dresses/dress5.jpg',
@@ -4127,7 +4134,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/dresses/dress5.jpg',
     ],
     material: 'Хлопок, эластан',
-    color: 'Синий',
+    color: 'Мультицвет',
     description:
       'Комфортное повседневное платье для каждодневного использования.',
     reviews: [
@@ -4166,12 +4173,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'luna',
-    name: 'Модель "Луна"',
+    id: 'lunaJacket',
+    name: 'Куртка "Луна"',
     rating: 4.7,
-    reviewsCount: 8,
+    reviewsCount: 4,
     manufacturer: 'StylishLook',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 8499,
     images: [
       '/categories-grid/women/clothing/jackets/jacket1.jpg',
@@ -4180,7 +4187,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket1.jpg',
     ],
     material: 'Нейлон',
-    color: 'Черный',
+    color: 'Коричневый',
     description: 'Стильная куртка "Луна" для повседневного использования.',
     reviews: [
       {
@@ -4219,11 +4226,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'venera',
-    name: 'Модель "Венера"',
+    name: 'Куртка "Венера"',
     rating: 4.6,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'FashionStyle',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 7499,
     images: [
       '/categories-grid/women/clothing/jackets/jacket2.jpg',
@@ -4232,7 +4239,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket2.jpg',
     ],
     material: 'Кожа, текстиль',
-    color: 'Бежевый',
+    color: 'Коричневый',
     description:
       'Универсальная куртка "Венера" для стильных повседневных образов.',
     reviews: [
@@ -4273,11 +4280,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'stellar',
-    name: 'Модель "Стереллар"',
+    name: 'Куртка "Стереллар"',
     rating: 4.8,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'GlamourWear',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 9999,
     images: [
       '/categories-grid/women/clothing/jackets/jacket3.jpg',
@@ -4286,7 +4293,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket3.jpg',
     ],
     material: 'Полиэстер, хлопок',
-    color: 'Серебристый',
+    color: 'Чёрный',
     description: 'Гламурная куртка "Стереллар" для особых выходов.',
     reviews: [
       {
@@ -4327,11 +4334,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'cosmo',
-    name: 'Модель "Космо"',
+    name: 'Куртка "Космо"',
     rating: 4.9,
-    reviewsCount: 9,
+    reviewsCount: 4,
     manufacturer: 'ElegantChoice',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 10999,
     images: [
       '/categories-grid/women/clothing/jackets/jacket4.jpg',
@@ -4339,9 +4346,9 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket4.jpg',
       '/categories-grid/women/clothing/jackets/jacket4.jpg',
     ],
-    material: 'Кашемир, шерсть',
-    color: 'Серый',
-    description: 'Роскошная куртка "Космо" из кашемира и шерсти.',
+    material: 'Полиэстер, нейлон',
+    color: 'Розовый',
+    description: 'Роскошная куртка "Космо" из полиэстра и нейлона.',
     reviews: [
       {
         user: 'Анна Смирнова',
@@ -4356,11 +4363,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'eclipse',
-    name: 'Модель "Эклипс"',
+    name: 'Куртка "Эклипс"',
     rating: 5.0,
-    reviewsCount: 6,
+    reviewsCount: 4,
     manufacturer: 'FashionStyle',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 12999,
     images: [
       '/categories-grid/women/clothing/jackets/jacket5.jpg',
@@ -4368,8 +4375,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket5.jpg',
       '/categories-grid/women/clothing/jackets/jacket5.jpg',
     ],
-    material: 'Кожа',
-    color: 'Черный',
+    material: 'Полиэстер, нейлон',
+    color: 'Белый',
     description: 'Элегантная куртка "Эклипс" для особых случаев.',
     reviews: [
       {
@@ -4408,12 +4415,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'nova',
-    name: 'Модель "Нова"',
+    id: 'novaJacket',
+    name: 'Куртка "Нова"',
     rating: 4.7,
-    reviewsCount: 11,
+    reviewsCount: 4,
     manufacturer: 'GlamourWear',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 8999,
     images: [
       '/categories-grid/women/clothing/jackets/jacket6.jpg',
@@ -4461,12 +4468,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'aurora',
-    name: 'Модель "Аврора"',
+    id: 'auroraJacket',
+    name: 'Куртка "Аврора"',
     rating: 4.8,
-    reviewsCount: 10,
+    reviewsCount: 4,
     manufacturer: 'ChicStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 9499,
     images: [
       '/categories-grid/women/clothing/jackets/jacket7.jpg',
@@ -4474,8 +4481,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket7.jpg',
       '/categories-grid/women/clothing/jackets/jacket7.jpg',
     ],
-    material: 'Шерсть, кашемир',
-    color: 'Бежевый',
+    material: 'Полиэстер, нейлон',
+    color: 'Чёрный',
     description: 'Элегантная куртка "Аврора" для женственных образов.',
     reviews: [
       {
@@ -4514,11 +4521,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'zenith',
-    name: 'Модель "Зенит"',
+    name: 'Куртка "Зенит"',
     rating: 4.9,
-    reviewsCount: 7,
+    reviewsCount: 4,
     manufacturer: 'ElegantChoice',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 10499,
     images: [
       '/categories-grid/women/clothing/jackets/jacket8.jpg',
@@ -4526,8 +4533,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jackets/jacket8.jpg',
       '/categories-grid/women/clothing/jackets/jacket8.jpg',
     ],
-    material: 'Шерсть, полиэстер',
-    color: 'Серый',
+    material: 'Полиэстер, нейлон',
+    color: 'Бежевый',
     description: 'Строгая куртка "Зенит" для деловых образов.',
     reviews: [
       {
@@ -4541,13 +4548,13 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'sunny',
-    name: 'Модель "Санни"',
+    id: 'trikotash',
+    name: 'Футболка трикотаж',
     rating: 4.6,
-    reviewsCount: 14,
+    reviewsCount: 4,
     manufacturer: 'CasualComfort',
-    sizes: ['XS', 'S', 'M', 'L'],
-    price: 1999,
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
+    price: 999,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt1.jpg',
       '/categories-grid/women/clothing/t-shirts/tshirt1.jpg',
@@ -4555,8 +4562,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt1.jpg',
     ],
     material: 'Хлопок',
-    color: 'Белый',
-    description: 'Комфортная футболка "Санни" для повседневного ношения.',
+    color: 'Фиолетовый',
+    description: 'Комфортная футболка для повседневного ношения.',
     reviews: [
       {
         user: 'Анна Иванова',
@@ -4597,11 +4604,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'blossom',
-    name: 'Модель "Блоссом"',
+    name: 'Футболка "Блоссом"',
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'FashionStyle',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 1599,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt2.jpg',
@@ -4610,7 +4617,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt2.jpg',
     ],
     material: 'Хлопок, эластан',
-    color: 'Розовый',
+    color: 'Мультицвет',
     description: 'Нежная футболка "Блоссом" для романтических образов.',
     reviews: [
       {
@@ -4650,11 +4657,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'flora',
-    name: 'Модель "Флора"',
+    name: 'Футболка "Флора"',
     rating: 4.8,
-    reviewsCount: 22,
+    reviewsCount: 4,
     manufacturer: 'GlamourWear',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 2499,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt3.jpg',
@@ -4663,7 +4670,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt3.jpg',
     ],
     material: 'Хлопок, полиэстер',
-    color: 'Голубой',
+    color: 'Мультицвет',
     description: 'Стильная футболка "Флора" с интересным принтом.',
     reviews: [
       {
@@ -4702,12 +4709,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'aurora',
-    name: 'Модель "Аврора"',
+    id: 'auroraTShirt',
+    name: 'Футболка "Аврора"',
     rating: 4.7,
-    reviewsCount: 10,
+    reviewsCount: 4,
     manufacturer: 'ChicStyle',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 1799,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt4.jpg',
@@ -4716,7 +4723,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt4.jpg',
     ],
     material: 'Хлопок, эластан',
-    color: 'Серый',
+    color: 'Белый',
     description: 'Универсальная футболка "Аврора" для разных образов.',
     reviews: [
       {
@@ -4730,12 +4737,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'luna',
-    name: 'Модель "Луна"',
+    id: 'lunaTShirt',
+    name: 'Футболка "Луна"',
     rating: 4.6,
-    reviewsCount: 8,
+    reviewsCount: 4,
     manufacturer: 'CasualComfort',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 1999,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt5.jpg',
@@ -4744,7 +4751,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt5.jpg',
     ],
     material: 'Хлопок',
-    color: 'Черный',
+    color: 'Мультицвет',
     description: 'Классическая черная футболка "Луна" для стильных образов.',
     reviews: [
       {
@@ -4786,11 +4793,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'starlight',
-    name: 'Модель "Старлайт"',
+    name: 'Футболка "Старлайт"',
     rating: 4.9,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'GlamourWear',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 2299,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt6.jpg',
@@ -4799,7 +4806,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt6.jpg',
     ],
     material: 'Хлопок, модал',
-    color: 'Синий',
+    color: 'Мультицвет',
     description: 'Футболка "Старлайт" с модным дизайном для ярких образов.',
     reviews: [
       {
@@ -4838,12 +4845,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'nova',
-    name: 'Модель "Нова"',
+    id: 'novaTShirt',
+    name: 'Футболка "Нова"',
     rating: 4.5,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'ChicStyle',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 1899,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt7.jpg',
@@ -4852,7 +4859,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt7.jpg',
     ],
     material: 'Хлопок, эластан',
-    color: 'Бежевый',
+    color: 'Мультицвет',
     description: 'Комфортная футболка "Нова" для повседневного ношения.',
     reviews: [
       {
@@ -4893,11 +4900,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'daisy',
-    name: 'Модель "Дэйзи"',
+    name: 'Футболка "Дэйзи"',
     rating: 4.7,
-    reviewsCount: 9,
+    reviewsCount: 4,
     manufacturer: 'ElegantChoice',
-    sizes: ['XS', 'S', 'M', 'L'],
+    sizes: ['40', '42', '44', '46', '48', '50', '52'],
     price: 1699,
     images: [
       '/categories-grid/women/clothing/t-shirts/tshirt8.jpg',
@@ -4906,7 +4913,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/t-shirts/tshirt8.jpg',
     ],
     material: 'Хлопок, модал',
-    color: 'Белый',
+    color: 'Мультицвет',
     description:
       'Утонченная футболка "Дэйзи" для нежных и женственных образов.',
     reviews: [
@@ -4922,11 +4929,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'classicJeans',
-    name: 'Модель "Классик"',
+    name: 'Джинсы "Классик"',
     rating: 4.8,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'DenimStyle',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3499,
     images: [
       '/categories-grid/women/clothing/jeans/jeans1.jpg',
@@ -4974,12 +4981,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'slimfit',
-    name: 'Модель "Слимфит"',
+    id: 'jeansPlanet',
+    name: 'Джинсы "Планет"',
     rating: 4.6,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'FashionFit',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2999,
     images: [
       '/categories-grid/women/clothing/jeans/jeans2.jpg',
@@ -4988,7 +4995,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jeans/jeans2.jpg',
     ],
     material: 'Деним, эластан',
-    color: 'Темно-синий',
+    color: 'Мультицвет',
     description:
       'Современные джинсы "Слимфит" от FashionFit с подчеркнутыми линиями.',
     reviews: [
@@ -5029,11 +5036,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'highwaist',
-    name: 'Модель "Хайвейст"',
+    name: 'Джинсы "Хайвейст"',
     rating: 4.9,
-    reviewsCount: 25,
+    reviewsCount: 4,
     manufacturer: 'ElegantDenim',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3799,
     images: [
       '/categories-grid/women/clothing/jeans/jeans3.jpg',
@@ -5042,7 +5049,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jeans/jeans3.jpg',
     ],
     material: 'Деним, эластан',
-    color: 'Черный',
+    color: 'Синий',
     description:
       'Джинсы "Хайвейст" от ElegantDenim с высокой талией для комфортного ношения.',
     reviews: [
@@ -5081,12 +5088,65 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'skinny',
-    name: 'Модель "Скинни"',
+    id: 'boyfriend',
+    name: 'Джинсы "Бойфренд"',
     rating: 4.5,
-    reviewsCount: 14,
+    reviewsCount: 4,
     manufacturer: 'SlimShape',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
+    price: 3199,
+    images: [
+      '/categories-grid/women/clothing/jeans/jeans4.jpg',
+      '/categories-grid/women/clothing/jeans/jeans4.jpg',
+      '/categories-grid/women/clothing/jeans/jeans4.jpg',
+      '/categories-grid/women/clothing/jeans/jeans4.jpg',
+    ],
+    material: 'Деним, эластан',
+    color: 'Чёрный',
+    description: 'Джинсы бойфренд от SlimShape для стройных и модных образов.',
+    reviews: [
+      {
+        user: 'Анна Иванова',
+        rating: 4.6,
+        pros: 'Отлично сидят',
+        cons: 'Цена',
+        comment: 'Джинсы очень хорошо сидят, подходят на каждый день.',
+        date: '2024-05-08',
+      },
+      {
+        user: 'Екатерина Петрова',
+        rating: 4.4,
+        pros: 'Удобная ткань',
+        cons: 'Цена',
+        comment: 'Хорошие джинсы, но цена немного высока для такой модели.',
+        date: '2024-04-25',
+      },
+      {
+        user: 'Маргарита Смирнова',
+        rating: 4.5,
+        pros: 'Качественный материал',
+        cons: 'Цвет',
+        comment:
+          'Джинсы отличного качества, но цвет немного темнее, чем на фото.',
+        date: '2024-03-18',
+      },
+      {
+        user: 'Ольга Николаева',
+        rating: 4.5,
+        pros: 'Стильный дизайн',
+        cons: 'Цена',
+        comment: 'Отличные джинсы, стильный и современный дизайн.',
+        date: '2024-02-10',
+      },
+    ],
+  },
+  {
+    id: 'skinny',
+    name: 'Джинсы "Скинни"',
+    rating: 4.5,
+    reviewsCount: 4,
+    manufacturer: 'SlimShape',
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2899,
     images: [
       '/categories-grid/women/clothing/jeans/jeans5.jpg',
@@ -5095,7 +5155,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jeans/jeans5.jpg',
     ],
     material: 'Деним, эластан',
-    color: 'Черный',
+    color: 'Синий',
     description:
       'Классические джинсы "Скинни" от SlimShape для стройных и модных образов.',
     reviews: [
@@ -5136,11 +5196,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'flare',
-    name: 'Модель "Флар"',
+    name: 'Джинсы "Флар"',
     rating: 4.8,
-    reviewsCount: 19,
+    reviewsCount: 4,
     manufacturer: 'RetroStyle',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3599,
     images: [
       '/categories-grid/women/clothing/jeans/jeans6.jpg',
@@ -5149,7 +5209,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jeans/jeans6.jpg',
     ],
     material: 'Деним, эластан',
-    color: 'Синий',
+    color: 'Чёрный',
     description:
       'Джинсы "Флар" от RetroStyle для ретро образов и ярких акцентов.',
     reviews: [
@@ -5189,11 +5249,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'distressed',
-    name: 'Модель "Дистрессед"',
+    name: 'Джинсы "Дистрессед"',
     rating: 4.6,
-    reviewsCount: 17,
+    reviewsCount: 4,
     manufacturer: 'CasualDenim',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 3299,
     images: [
       '/categories-grid/women/clothing/jeans/jeans7.jpg',
@@ -5202,7 +5262,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jeans/jeans7.jpg',
     ],
     material: 'Деним, эластан',
-    color: 'Светло-серый',
+    color: 'Серый',
     description:
       'Джинсы "Дистрессед" от CasualDenim с эффектом потертости для стильных образов.',
     reviews: [
@@ -5242,11 +5302,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'vintageJeans',
-    name: 'Модель "Винтаж"',
+    name: 'Джинсы "Винтаж"',
     rating: 4.7,
-    reviewsCount: 12,
+    reviewsCount: 1,
     manufacturer: 'VintageVibes',
-    sizes: ['24', '25', '26', '27', '28', '29', '30'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2999,
     images: [
       '/categories-grid/women/clothing/jeans/jeans8.jpg',
@@ -5255,7 +5315,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/jeans/jeans8.jpg',
     ],
     material: 'Деним, эластан',
-    color: 'Светло-голубой',
+    color: 'Синий',
     description:
       'Джинсы "Винтаж" от VintageVibes с эффектом потертости и старинной посадкой.',
     reviews: [
@@ -5271,11 +5331,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sunny',
-    name: 'Модель "Санни"',
+    name: 'Шорты "Санни"',
     rating: 4.7,
-    reviewsCount: 14,
+    reviewsCount: 4,
     manufacturer: 'SunnyStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1999,
     images: [
       '/categories-grid/women/clothing/shorts/shorts1.jpg',
@@ -5284,7 +5344,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts1.jpg',
     ],
     material: 'Хлопок, полиэстер',
-    color: 'Розовый',
+    color: 'Коричневый',
     description:
       'Стильные женские шорты "Санни" от SunnyStyle для летнего отдыха и повседневного использования.',
     reviews: [
@@ -5326,11 +5386,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'beach',
-    name: 'Модель "Бич"',
+    name: 'Шорты "Бич"',
     rating: 4.5,
-    reviewsCount: 12,
+    reviewsCount: 4,
     manufacturer: 'BeachTime',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1599,
     images: [
       '/categories-grid/women/clothing/shorts/shorts2.jpg',
@@ -5339,7 +5399,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts2.jpg',
     ],
     material: 'Хлопок, эластан',
-    color: 'Синий',
+    color: 'Бежевый',
     description:
       'Женские шорты "Бич" от BeachTime для активного отдыха на пляже и не только.',
     reviews: [
@@ -5378,12 +5438,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'city',
-    name: 'Модель "Сити"',
+    id: 'city-shorts',
+    name: 'Шорты "Сити"',
     rating: 4.6,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'UrbanChic',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1799,
     images: [
       '/categories-grid/women/clothing/shorts/shorts3.jpg',
@@ -5392,7 +5452,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts3.jpg',
     ],
     material: 'Полиэстер, эластан',
-    color: 'Черный',
+    color: 'Бежевый',
     description:
       'Женские шорты "Сити" от UrbanChic для городских прогулок и легких образов.',
     reviews: [
@@ -5433,12 +5493,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'casual',
-    name: 'Модель "Кэжуал"',
+    id: 'casual-shorts',
+    name: 'Шорты "Кэжуал"',
     rating: 4.4,
-    reviewsCount: 10,
+    reviewsCount: 1,
     manufacturer: 'CasualComfort',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1499,
     images: [
       '/categories-grid/women/clothing/shorts/shorts4.jpg',
@@ -5447,7 +5507,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts4.jpg',
     ],
     material: 'Хлопок, полиэстер',
-    color: 'Светло-серый',
+    color: 'Оранжевый',
     description:
       'Комфортные женские шорты "Кэжуал" от CasualComfort для повседневной носки.',
     reviews: [
@@ -5464,11 +5524,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sporty',
-    name: 'Модель "Спорти"',
+    name: 'Шорты "Спорти"',
     rating: 4.8,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'SportyStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1899,
     images: [
       '/categories-grid/women/clothing/shorts/shorts5.jpg',
@@ -5477,7 +5537,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts5.jpg',
     ],
     material: 'Спортивный текстиль',
-    color: 'Черный',
+    color: 'Бежевый',
     description:
       'Спортивные женские шорты "Спорти" от SportyStyle для активных тренировок и занятий на открытом воздухе.',
     reviews: [
@@ -5518,11 +5578,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'vintageShorts',
-    name: 'Модель "Винтаж"',
+    name: 'Шорты "Винтаж"',
     rating: 4.6,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'RetroStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1699,
     images: [
       '/categories-grid/women/clothing/shorts/shorts6.jpg',
@@ -5531,7 +5591,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts6.jpg',
     ],
     material: 'Хлопок, полиэстер',
-    color: 'Деним',
+    color: 'Бежевый',
     description:
       'Женские шорты "Винтаж" от RetroStyle в стиле ретро для винтажных образов.',
     reviews: [
@@ -5572,12 +5632,12 @@ export const productDetails: Product[] = [
     ],
   },
   {
-    id: 'denim',
-    name: 'Модель "Деним"',
+    id: 'koktailJuice',
+    name: 'Шорты "Тейл"',
     rating: 4.7,
-    reviewsCount: 17,
+    reviewsCount: 4,
     manufacturer: 'DenimStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 2099,
     images: [
       '/categories-grid/women/clothing/shorts/shorts7.jpg',
@@ -5585,8 +5645,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts7.jpg',
       '/categories-grid/women/clothing/shorts/shorts7.jpg',
     ],
-    material: 'Деним',
-    color: 'Светло-голубой',
+    material: 'Хлопок',
+    color: 'Бежевый',
     description:
       'Женские шорты "Деним" от DenimStyle из денима для стильных образов и комфортной носки.',
     reviews: [
@@ -5628,11 +5688,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'holiday',
-    name: 'Модель "Холидей"',
-    rating: 4.5,
-    reviewsCount: 13,
+    name: 'Шорты "Холидей"',
+    rating: 0,
+    reviewsCount: 0,
     manufacturer: 'HolidayVibes',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['36', '38', '40', '42', '44', '46', '48'],
     price: 1599,
     images: [
       '/categories-grid/women/clothing/shorts/shorts8.jpg',
@@ -5641,16 +5701,16 @@ export const productDetails: Product[] = [
       '/categories-grid/women/clothing/shorts/shorts8.jpg',
     ],
     material: 'Хлопок, полиэстер',
-    color: 'Белый',
+    color: 'Коричневый',
     description:
       'Летние женские шорты "Холидей" от HolidayVibes для ярких летних образов и отдыха.',
     reviews: [],
   },
   {
     id: 'flash',
-    name: 'Модель "Флэш"',
+    name: 'Кроссовки "Флэш"',
     rating: 4.8,
-    reviewsCount: 25,
+    reviewsCount: 4,
     manufacturer: 'ShoeMasters',
     sizes: ['36', '37', '38', '39', '40'],
     price: 4999,
@@ -5661,7 +5721,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers1.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Белый',
+    color: 'Бежевый',
     description:
       'Кроссовки "Флэш" - стильные и удобные, подходят для повседневной носки. Они обеспечивают отличную поддержку стопы и превосходный комфорт.',
     reviews: [
@@ -5705,9 +5765,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'vortex',
-    name: 'Модель "Вортекс"',
+    name: 'Кроссовки "Вортекс"',
     rating: 4.6,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'ShoeMasters',
     sizes: ['37', '38', '39', '40', '41'],
     price: 4799,
@@ -5718,7 +5778,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers2.jpg',
     ],
     material: 'Текстиль',
-    color: 'Серый',
+    color: 'Белый',
     description:
       'Кроссовки "Вортекс" - стильные и универсальные, подходят для активного образа жизни. Идеальный выбор для занятий спортом и повседневной носки.',
     reviews: [
@@ -5753,9 +5813,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'comet',
-    name: 'Модель "Комета"',
+    name: 'Кроссовки "Комета"',
     rating: 4.7,
-    reviewsCount: 22,
+    reviewsCount: 4,
     manufacturer: 'GalaxyFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 5299,
@@ -5766,7 +5826,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers3.jpg',
     ],
     material: 'Сетка и искусственная кожа',
-    color: 'Фиолетовый',
+    color: 'Белый',
     description:
       'Кроссовки "Комета" - стильные и элегантные, подходят для повседневной носки. Идеально сочетаются с различными образами и обеспечивают комфорт при каждом шаге.',
     reviews: [
@@ -5810,9 +5870,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'nebula',
-    name: 'Модель "Небула"',
+    name: 'Кроссовки "Небула"',
     rating: 4.5,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'GalaxyFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 4599,
@@ -5823,7 +5883,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers4.jpg',
     ],
     material: 'Сетка и искусственная кожа',
-    color: 'Чёрный',
+    color: 'Белый',
     description:
       'Кроссовки "Небула" - удобные и практичные, подходят для активного образа жизни. Они идеально подходят для занятий спортом и повседневной носки.',
     reviews: [
@@ -5858,9 +5918,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'blaze',
-    name: 'Модель "Блейз"',
+    name: 'Кроссовки "Блейз"',
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
     manufacturer: 'ShoeMasters',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 4999,
@@ -5871,7 +5931,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers5.jpg',
     ],
     material: 'Сетка и искусственная кожа',
-    color: 'Розовый',
+    color: 'Белый',
     description:
       'Кроссовки "Блейз" - яркие и стильные, идеальный выбор для модных образов. Они комфортны и подходят для различных ситуаций, от спорта до повседневных прогулок.',
     reviews: [
@@ -5915,9 +5975,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'zenith-sneakers',
-    name: 'Модель "Зенит"',
+    name: 'Кроссовки "Зенит"',
     rating: 4.7,
-    reviewsCount: 27,
+    reviewsCount: 4,
     manufacturer: 'GalaxyFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 4799,
@@ -5928,7 +5988,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers6.jpg',
     ],
     material: 'Сетка и искусственная кожа',
-    color: 'Синий',
+    color: 'Белый',
     description:
       'Кроссовки "Зенит" - стильные и удобные, подходят для любого образа. Их легкий вес и хорошая вентиляция делают их идеальными для повседневной носки.',
     reviews: [
@@ -5963,9 +6023,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'nova',
-    name: 'Модель "Нова"',
+    name: 'Кроссовки "Нова"',
     rating: 4.6,
-    reviewsCount: 19,
+    reviewsCount: 4,
     manufacturer: 'GalaxyFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 5099,
@@ -5976,7 +6036,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers7.jpg',
     ],
     material: 'Сетка и искусственная кожа',
-    color: 'Серебристый',
+    color: 'Мультицвет',
     description:
       'Кроссовки "Нова" - современный и стильный дизайн, идеально подходят для создания модного образа. Они комфортные и подходят для активного образа жизни.',
     reviews: [
@@ -6020,9 +6080,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'quantum',
-    name: 'Модель "Квантум"',
+    name: 'Кроссовки "Квантум"',
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'GalaxyFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 4699,
@@ -6033,7 +6093,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sneakers/sneakers8.jpg',
     ],
     material: 'Сетка и искусственная кожа',
-    color: 'Фиолетовый',
+    color: 'Розовый',
     description:
       'Кроссовки "Квантум" - модная и комфортная модель для активных девушек. Идеально подходят для тренировок и повседневной носки.',
     reviews: [
@@ -6068,9 +6128,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'oasis',
-    name: 'Модель "Оазис"',
+    name: 'Сандалии "Оазис"',
     rating: 4.7,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 2999,
@@ -6125,9 +6185,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'zen',
-    name: 'Модель "Зен"',
+    name: 'Сандалии "Зен"',
     rating: 4.6,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 2799,
@@ -6138,7 +6198,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals2.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Чёрный',
+    color: 'Бежевый',
     description:
       'Сандалии "Зен" - универсальная модель для жаркого лета. Они легкие и комфортные, подходят для прогулок и повседневного использования.',
     reviews: [
@@ -6173,9 +6233,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'breeze',
-    name: 'Модель "Бриз"',
-    rating: 4.8,
-    reviewsCount: 22,
+    name: 'Сандалии "Бриз"',
+    rating: 4.7,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 3199,
@@ -6186,27 +6246,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals3.jpg',
     ],
     material: 'Натуральная кожа и текстиль',
-    color: 'Серебристый',
-    description:
-      'Сандалии "Бриз" - модная и комфортная модель для жаркого лета. Идеальны для пляжа и городских прогулок.',
-    reviews: [],
-  },
-  {
-    id: 'breeze',
-    name: 'Модель "Бриз"',
-    rating: 4.8,
-    reviewsCount: 22,
-    manufacturer: 'SunshineFootwear',
-    sizes: ['36', '37', '38', '39', '40', '41'],
-    price: 3199,
-    images: [
-      '/categories-grid/women/shoes/sandals/sandals3.jpg',
-      '/categories-grid/women/shoes/sandals/sandals3.jpg',
-      '/categories-grid/women/shoes/sandals/sandals3.jpg',
-      '/categories-grid/women/shoes/sandals/sandals3.jpg',
-    ],
-    material: 'Натуральная кожа и текстиль',
-    color: 'Серебристый',
+    color: 'Чёрный',
     description:
       'Сандалии "Бриз" - модная и комфортная модель для жаркого лета. Идеальны для пляжа и городских прогулок.',
     reviews: [
@@ -6250,9 +6290,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'dune',
-    name: 'Модель "Дюна"',
+    name: 'Сандалии "Дюна"',
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 2699,
@@ -6263,7 +6303,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals4.jpg',
     ],
     material: 'Искусственная кожа и текстиль',
-    color: 'Коричневый',
+    color: 'Бежевый',
     description:
       'Сандалии "Дюна" - стильные и практичные, идеально подходят для городских прогулок и путешествий.',
     reviews: [
@@ -6307,9 +6347,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'serene',
-    name: 'Модель "Сирин"',
+    name: 'Сандалии "Сирин"',
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 2999,
@@ -6320,7 +6360,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals5.jpg',
     ],
     material: 'Натуральная кожа и текстиль',
-    color: 'Белый',
+    color: 'Коричневый',
     description:
       'Сандалии "Сирин" - элегантные и удобные, идеально подходят для летнего отдыха и повседневной носки.',
     reviews: [
@@ -6364,9 +6404,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'union',
-    name: 'Модель "Юнион"',
+    name: 'Сандалии "Юнион"',
     rating: 4.6,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 2899,
@@ -6377,7 +6417,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals6.jpg',
     ],
     material: 'Искусственная кожа и текстиль',
-    color: 'Тёмно-синий',
+    color: 'Коричневый',
     description:
       'Сандалии "Юнион" - стильные и удобные, идеальны для прогулок по городу и отдыха на пляже.',
     reviews: [
@@ -6421,9 +6461,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'ocean',
-    name: 'Модель "Оушен"',
+    name: 'Сандалии "Оушен"',
     rating: 4.7,
-    reviewsCount: 21,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 3099,
@@ -6434,7 +6474,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals7.jpg',
     ],
     material: 'Искусственная кожа и текстиль',
-    color: 'Бирюзовый',
+    color: 'Бежевый',
     description:
       'Сандалии "Оушен" - яркая и стильная модель для летнего отдыха на море и городских прогулок.',
     reviews: [
@@ -6478,9 +6518,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'mirage',
-    name: 'Модель "Мираж"',
+    name: 'Сандалии "Мираж"',
     rating: 4.5,
-    reviewsCount: 17,
+    reviewsCount: 4,
     manufacturer: 'SunshineFootwear',
     sizes: ['36', '37', '38', '39', '40', '41'],
     price: 2799,
@@ -6491,7 +6531,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/shoes/sandals/sandals8.jpg',
     ],
     material: 'Натуральная кожа и текстиль',
-    color: 'Черный',
+    color: 'Коричневый',
     description:
       'Сандалии "Мираж" - стильные и удобные, идеально подходят для летнего отдыха и повседневной носки.',
     reviews: [
@@ -6534,14 +6574,45 @@ export const productDetails: Product[] = [
     ],
   },
   {
+    id: 'evening-clutch',
+    name: 'Рюкзак повседневный',
+    rating: 4.5,
+    reviewsCount: 4,
+    manufacturer: 'ElegantTouch',
+    sizes: ['Один размер'],
+    price: 2599,
+    discountPrice: 0,
+    images: [
+      '/categories-grid/women/accessories/bags/bag3.jpg',
+      '/categories-grid/women/accessories/bags/bag3.jpg',
+      '/categories-grid/women/accessories/bags/bag3.jpg',
+      '/categories-grid/women/accessories/bags/bag3.jpg',
+    ],
+    material: 'Кожа',
+    color: 'Бежевый',
+    description:
+      'Вечерний клатч - элегантный и изысканный аксессуар для особых мероприятий и вечерних выходов.',
+    reviews: [
+      {
+        user: 'Александра Иванова',
+        rating: 5,
+        pros: 'Очень стильный, качественный материал',
+        cons: 'Нет',
+        comment:
+          'Клатч просто великолепен! Очень стильный дизайн, качественный материал. Идеально подошел к моему вечернему наряду.',
+        date: '2024-05-18',
+      },
+    ],
+  },
+  {
     id: 'classic-tote',
     name: 'Классическая сумка-тоут',
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
     manufacturer: 'FashionStyle',
-    sizes: ['M', 'L'],
+    sizes: ['Один размер'],
     price: 4999,
-    discountPrice: 0, // Введите сюда сумму со скидкой, если есть
+    discountPrice: 0,
     images: [
       '/categories-grid/women/accessories/bags/bag1.jpg',
       '/categories-grid/women/accessories/bags/bag1.jpg',
@@ -6549,7 +6620,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/bags/bag1.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Черный',
+    color: 'Розовый',
     description:
       'Классическая сумка-тоут - идеальный выбор для повседневного использования. Просторная и стильная, она подойдет к любому образу.',
     reviews: [
@@ -6593,11 +6664,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'city-backpack',
-    name: 'Городской рюкзак',
+    name: 'Сумка-тоут "Глейз"',
     rating: 4.7,
     reviewsCount: 25,
     manufacturer: 'UrbanStyle',
-    sizes: ['One Size'],
+    sizes: ['Один размер'],
     price: 3499,
     discountPrice: 0,
     images: [
@@ -6606,10 +6677,10 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/bags/bag2.jpg',
       '/categories-grid/women/accessories/bags/bag2.jpg',
     ],
-    material: 'Нейлон',
-    color: 'Серый',
+    material: 'Кожа',
+    color: 'Бежевый',
     description:
-      'Городской рюкзак - стильный и практичный аксессуар для современного городского образа. Идеально подходит для повседневных дел и прогулок по городу.',
+      'Сумка-тоут "Глейз"- стильный и практичный аксессуар для современного городского образа. Идеально подходит для повседневных дел и прогулок по городу.',
     reviews: [
       {
         user: 'Ирина Петрова',
@@ -6646,194 +6717,16 @@ export const productDetails: Product[] = [
         comment:
           'Рюкзак замечательный! Очень понравился его дизайн и удобство использования. Из недостатков - хотелось бы, чтобы он был чуть легче.',
         date: '2024-04-25',
-      },
-    ],
-  },
-  {
-    id: 'evening-clutch',
-    name: 'Вечерний клатч',
-    rating: 4.5,
-    reviewsCount: 18,
-    manufacturer: 'ElegantTouch',
-    sizes: ['One Size'],
-    price: 2599,
-    discountPrice: 0,
-    images: [
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-    ],
-    material: 'Сатин',
-    color: 'Золотой',
-    description:
-      'Вечерний клатч - элегантный и изысканный аксессуар для особых мероприятий и вечерних выходов.',
-    reviews: [
-      {
-        user: 'Александра Иванова',
-        rating: 5,
-        pros: 'Очень стильный, качественный материал',
-        cons: 'Нет',
-        comment:
-          'Клатч просто великолепен! Очень стильный дизайн, качественный материал. Идеально подошел к моему вечернему наряду.',
-        date: '2024-05-18',
-      },
-    ],
-  },
-  {
-    id: 'classic-tote',
-    name: 'Классическая сумка-тоут',
-    rating: 4.8,
-    reviewsCount: 30,
-    manufacturer: 'FashionStyle',
-    sizes: ['M', 'L'],
-    price: 4999,
-    discountPrice: 0, // Введите сюда сумму со скидкой, если есть
-    images: [
-      '/categories-grid/women/accessories/bags/bag1.jpg',
-      '/categories-grid/women/accessories/bags/bag1.jpg',
-      '/categories-grid/women/accessories/bags/bag1.jpg',
-      '/categories-grid/women/accessories/bags/bag1.jpg',
-    ],
-    material: 'Искусственная кожа',
-    color: 'Черный',
-    description:
-      'Классическая сумка-тоут - идеальный выбор для повседневного использования. Просторная и стильная, она подойдет к любому образу.',
-    reviews: [
-      {
-        user: 'Анна Смирнова',
-        rating: 5,
-        pros: 'Просторная, хорошее качество материалов',
-        cons: 'Нет',
-        comment:
-          'Сумка очень понравилась! Очень удобная и стильная. Идеально подходит для работы и прогулок.',
-        date: '2024-05-15',
-      },
-      {
-        user: 'Екатерина Петрова',
-        rating: 4.5,
-        pros: 'Хороший дизайн, удобные ручки',
-        cons: 'Могла бы быть чуть больше по размеру',
-        comment:
-          'Сумка очень красивая и удобная. Ручки не натирают и не царапают. Однако, для меня лично чуть маловата по размеру.',
-        date: '2024-05-10',
-      },
-      {
-        user: 'Мария Иванова',
-        rating: 4.5,
-        pros: 'Хорошее качество материалов, практичная',
-        cons: 'Цена высокая',
-        comment:
-          'Сумка очень понравилась. Качество материалов на высоте, все швы аккуратные. Цена, конечно, высокая, но это оправдывается качеством.',
-        date: '2024-05-05',
-      },
-      {
-        user: 'Ольга Новикова',
-        rating: 4.8,
-        pros: 'Отличный дизайн, прочная конструкция',
-        cons: 'Немного тяжеловата',
-        comment:
-          'Сумка классная! Мне нравится её дизайн и функциональность. Единственное, что она немного тяжеловата, особенно когда полностью набита вещами.',
-        date: '2024-04-28',
-      },
-    ],
-  },
-  {
-    id: 'city-backpack',
-    name: 'Городской рюкзак',
-    rating: 4.7,
-    reviewsCount: 25,
-    manufacturer: 'UrbanStyle',
-    sizes: ['One Size'],
-    price: 3499,
-    discountPrice: 0,
-    images: [
-      '/categories-grid/women/accessories/bags/bag2.jpg',
-      '/categories-grid/women/accessories/bags/bag2.jpg',
-      '/categories-grid/women/accessories/bags/bag2.jpg',
-      '/categories-grid/women/accessories/bags/bag2.jpg',
-    ],
-    material: 'Нейлон',
-    color: 'Серый',
-    description:
-      'Городской рюкзак - стильный и практичный аксессуар для современного городского образа. Идеально подходит для повседневных дел и прогулок по городу.',
-    reviews: [
-      {
-        user: 'Ирина Петрова',
-        rating: 5,
-        pros: 'Очень удобный и вместительный',
-        cons: 'Нет',
-        comment:
-          'Рюкзак превзошел мои ожидания! Он очень удобный и вместительный. Разнообразные карманы позволяют удобно распределить все мои вещи.',
-        date: '2024-05-12',
-      },
-      {
-        user: 'Наталья Иванова',
-        rating: 4.5,
-        pros: 'Хороший дизайн, качественные материалы',
-        cons: 'Мог бы быть чуть больше размером',
-        comment:
-          'Рюкзак очень красивый и сделан из качественных материалов. Но для моих нужд, иногда он чуть маловат по размеру. В остальном - отличный выбор!',
-        date: '2024-05-07',
-      },
-      {
-        user: 'Елена Смирнова',
-        rating: 4.5,
-        pros: 'Удобные лямки, вместительность',
-        cons: 'Немного дороговат',
-        comment:
-          'Рюкзак очень понравился. Лямки не натирают плечи, в нем много места для вещей. Цена, конечно, немного высоковата, но качество оправдывает стоимость.',
-        date: '2024-05-02',
-      },
-      {
-        user: 'Анастасия Новикова',
-        rating: 4.7,
-        pros: 'Отличный дизайн, удобство использования',
-        cons: 'Мог бы быть чуть легче',
-        comment:
-          'Рюкзак замечательный! Очень понравился его дизайн и удобство использования. Из недостатков - хотелось бы, чтобы он был чуть легче.',
-        date: '2024-04-25',
-      },
-    ],
-  },
-  {
-    id: 'evening-clutch',
-    name: 'Вечерний клатч',
-    rating: 4.5,
-    reviewsCount: 18,
-    manufacturer: 'ElegantTouch',
-    sizes: ['One Size'],
-    price: 2599,
-    discountPrice: 0,
-    images: [
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-      '/categories-grid/women/accessories/bags/bag3.jpg',
-    ],
-    material: 'Сатин',
-    color: 'Золотой',
-    description:
-      'Вечерний клатч - элегантный и изысканный аксессуар для особых мероприятий и вечерних выходов.',
-    reviews: [
-      {
-        user: 'Александра Иванова',
-        rating: 5,
-        pros: 'Очень стильный, качественный материал',
-        cons: 'Нет',
-        comment:
-          'Клатч просто великолепен! Очень стильный дизайн, качественный материал. Идеально подошел к моему вечернему наряду.',
-        date: '2024-05-18',
       },
     ],
   },
   {
     id: 'leather-shoulder',
-    name: 'Кожаная сумка через плечо',
+    name: 'Кожаная сумка',
     rating: 4.9,
-    reviewsCount: 32,
+    reviewsCount: 4,
     manufacturer: 'LuxuryLeather',
-    sizes: ['One Size'],
+    sizes: ['Один размер'],
     price: 5999,
     discountPrice: 0,
     images: [
@@ -6843,7 +6736,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/bags/bag4.jpg',
     ],
     material: 'Натуральная кожа',
-    color: 'Коричневый',
+    color: 'Бежевый',
     description:
       'Кожаная сумка через плечо - стильный и элегантный аксессуар для повседневного использования. Выполнена из высококачественной натуральной кожи.',
     reviews: [
@@ -6887,11 +6780,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'minimalist-crossbody',
-    name: 'Минималистичная сумка через плечо',
+    name: 'Походный рюкзак',
     rating: 4.6,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'ModernChic',
-    sizes: ['One Size'],
+    sizes: ['Один размер'],
     price: 3799,
     discountPrice: 0,
     images: [
@@ -6903,7 +6796,7 @@ export const productDetails: Product[] = [
     material: 'Полиуретан',
     color: 'Бежевый',
     description:
-      'Минималистичная сумка через плечо - компактная и элегантная сумка для повседневного использования. Идеально подходит для тех, кто предпочитает минимализм в стиле.',
+      'Походный рюкзак - компактная и элегантная сумка для повседневного использования. Идеально подходит для тех, кто предпочитает минимализм в стиле.',
     reviews: [
       {
         user: 'Анастасия Петрова',
@@ -6936,11 +6829,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'weekend-duffle',
-    name: 'Дорожная сумка',
+    name: 'Сумка "Викенд"',
     rating: 4.7,
-    reviewsCount: 22,
+    reviewsCount: 4,
     manufacturer: 'TravelEssentials',
-    sizes: ['One Size'],
+    sizes: ['Один размер'],
     price: 4499,
     images: [
       '/categories-grid/women/accessories/bags/bag6.jpg',
@@ -6948,8 +6841,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/bags/bag6.jpg',
       '/categories-grid/women/accessories/bags/bag6.jpg',
     ],
-    material: 'Нейлон',
-    color: 'Чёрный',
+    material: 'Кожа',
+    color: 'Бежевый',
     description:
       'Прочная и вместительная дорожная сумка, идеально подходит для коротких поездок. Изготовлена из нейлона высокого качества.',
     reviews: [
@@ -6984,9 +6877,9 @@ export const productDetails: Product[] = [
     id: 'vintage-satchel',
     name: 'Винтажная сумка',
     rating: 4.8,
-    reviewsCount: 28,
+    reviewsCount: 4,
     manufacturer: 'OldFashionStyle',
-    sizes: ['One Size'],
+    sizes: ['Один размер'],
     price: 4299,
     images: [
       '/categories-grid/women/accessories/bags/bag7.jpg',
@@ -7027,11 +6920,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'canvas-shopper',
-    name: 'Холщовая сумка-шоппер',
+    name: 'Сумка "Шопз"',
     rating: 4.5,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'EcoStyle',
-    sizes: ['One Size'],
+    sizes: ['Один размер'],
     price: 2999,
     images: [
       '/categories-grid/women/accessories/bags/bag8.jpg',
@@ -7039,8 +6932,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/bags/bag8.jpg',
       '/categories-grid/women/accessories/bags/bag8.jpg',
     ],
-    material: 'Хлопок',
-    color: 'Бежевый',
+    material: 'Кожа',
+    color: 'Розовый',
     description:
       'Просторная и удобная сумка-шоппер, идеально подходит для повседневного использования. Изготовлена из экологически чистого хлопка.',
     reviews: [
@@ -7082,9 +6975,9 @@ export const productDetails: Product[] = [
     id: 'classic-leather',
     name: 'Классический кожаный ремень',
     rating: 4.7,
-    reviewsCount: 25,
+    reviewsCount: 4,
     manufacturer: 'LeatherStyle',
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 2999,
     images: [
       '/categories-grid/women/accessories/belts/belt1.jpg',
@@ -7093,7 +6986,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/belts/belt1.jpg',
     ],
     material: 'Натуральная кожа',
-    color: 'Чёрный',
+    color: 'Коричневый',
     description:
       'Классический кожаный ремень, который отлично дополнит ваш образ. Изготовлен из высококачественной натуральной кожи.',
     reviews: [
@@ -7129,7 +7022,7 @@ export const productDetails: Product[] = [
     rating: 4.6,
     reviewsCount: 20,
     manufacturer: 'FashionStyle',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 2499,
     images: [
       '/categories-grid/women/accessories/belts/belt2.jpg',
@@ -7172,9 +7065,9 @@ export const productDetails: Product[] = [
     id: 'slim-waist',
     name: 'Тонкий пояс',
     rating: 4.5,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'SlimStyle',
-    sizes: ['XS', 'S', 'M'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 1999,
     images: [
       '/categories-grid/women/accessories/belts/belt3.jpg',
@@ -7218,9 +7111,9 @@ export const productDetails: Product[] = [
     id: 'boho-belt',
     name: 'Бохо-ремень',
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
     manufacturer: 'BohoStyle',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 3499,
     images: [
       '/categories-grid/women/accessories/belts/belt4.jpg',
@@ -7263,9 +7156,9 @@ export const productDetails: Product[] = [
     id: 'wide-buckle',
     name: 'Ремень с широкой пряжкой',
     rating: 4.7,
-    reviewsCount: 26,
+    reviewsCount: 4,
     manufacturer: 'WideStyle',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 2799,
     images: [
       '/categories-grid/women/accessories/belts/belt5.jpg',
@@ -7274,7 +7167,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/belts/belt5.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Чёрный',
+    color: 'Коричневый',
     description:
       'Ремень с широкой пряжкой, который подчеркнёт вашу талию и добавит современный акцент в ваш образ. Изготовлен из качественной искусственной кожи.',
     reviews: [
@@ -7309,9 +7202,9 @@ export const productDetails: Product[] = [
     id: 'casual-belt',
     name: 'Повседневный ремень',
     rating: 4.4,
-    reviewsCount: 15,
+    reviewsCount: 4,
     manufacturer: 'CasualStyle',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 1799,
     images: [
       '/categories-grid/women/accessories/belts/belt6.jpg',
@@ -7319,8 +7212,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/belts/belt6.jpg',
       '/categories-grid/women/accessories/belts/belt6.jpg',
     ],
-    material: 'Ткань',
-    color: 'Серый',
+    material: 'Кожа',
+    color: 'Коричневый',
     description:
       'Повседневный ремень из ткани, подходящий для различных нарядов. Простой и удобный в использовании.',
     reviews: [
@@ -7347,9 +7240,9 @@ export const productDetails: Product[] = [
     id: 'ornate-belt',
     name: 'Изысканный ремень',
     rating: 4.9,
-    reviewsCount: 32,
+    reviewsCount: 4,
     manufacturer: 'ElegantStyle',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 3999,
     images: [
       '/categories-grid/women/accessories/belts/belt7.jpg',
@@ -7358,7 +7251,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/belts/belt7.jpg',
     ],
     material: 'Кожа',
-    color: 'Бежевый',
+    color: 'Коричневый',
     description:
       'Изысканный ремень из натуральной кожи с уникальным дизайном и декоративной пряжкой. Идеально дополнит ваш вечерний образ.',
     reviews: [
@@ -7386,9 +7279,9 @@ export const productDetails: Product[] = [
     id: 'fashion-belt',
     name: 'Модный ремень',
     rating: 4.6,
-    reviewsCount: 22,
+    reviewsCount: 4,
     manufacturer: 'FashionStyle',
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['70', '75', '80', '85', '90', '95', '100'],
     price: 3299,
     images: [
       '/categories-grid/women/accessories/belts/belt8.jpg',
@@ -7397,7 +7290,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/belts/belt8.jpg',
     ],
     material: 'Искусственная кожа',
-    color: 'Чёрный',
+    color: 'Коричневый',
     description:
       'Модный ремень из искусственной кожи с элегантной пряжкой. Отлично сочетается с различными стилями одежды.',
     reviews: [
@@ -7421,11 +7314,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'wide-brim-hat',
-    name: 'Широкополая шляпа',
+    name: 'Бейсболка "IA"',
     rating: 4.8,
-    reviewsCount: 30,
+    reviewsCount: 4,
     manufacturer: 'FashionTrends',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['Универсальный'],
     price: 3499,
     images: [
       '/categories-grid/women/accessories/hats/hat1.jpg',
@@ -7433,8 +7326,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat1.jpg',
       '/categories-grid/women/accessories/hats/hat1.jpg',
     ],
-    material: 'Солома',
-    color: 'Натуральный',
+    material: 'Полиэстер',
+    color: 'Розовый',
     description:
       'Широкополая шляпа из натуральной соломы с регулируемой лентой. Подходит для летнего отдыха и повседневного использования.',
     reviews: [
@@ -7459,11 +7352,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'fedora-hat',
-    name: 'Федора',
+    name: 'Панама "Федора"',
     rating: 4.6,
-    reviewsCount: 25,
+    reviewsCount: 4,
     manufacturer: 'ModernStyle',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['Универсальный'],
     price: 2999,
     images: [
       '/categories-grid/women/accessories/hats/hat2.jpg',
@@ -7472,7 +7365,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat2.jpg',
     ],
     material: 'Войлок',
-    color: 'Черный',
+    color: 'Бежевый',
     description:
       'Классическая федора из высококачественного войлока с широким полями и украшенной лентой. Подходит как для повседневного использования, так и для особых случаев.',
     reviews: [
@@ -7497,9 +7390,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'beanie-hat',
-    name: 'Шапка-бини',
+    name: 'Бейсболка классическая',
     rating: 4.5,
-    reviewsCount: 20,
+    reviewsCount: 4,
     manufacturer: 'UrbanStyle',
     sizes: ['Универсальный'],
     price: 1999,
@@ -7509,8 +7402,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat3.jpg',
       '/categories-grid/women/accessories/hats/hat3.jpg',
     ],
-    material: 'Шерсть',
-    color: 'Серый меланж',
+    material: 'Поэлистер',
+    color: 'Фиолетовый',
     description:
       'Удобная и стильная шапка-бини из мягкой шерсти, подходит для холодного времени года. Идеально сидит и хорошо греет.',
     reviews: [
@@ -7535,11 +7428,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'bucket-hat',
-    name: 'Бакет',
+    name: 'Панама "Бакет"',
     rating: 4.7,
-    reviewsCount: 28,
+    reviewsCount: 4,
     manufacturer: 'TrendyWear',
-    sizes: ['S/M', 'L/XL'],
+    sizes: ['Универсальный'],
     price: 2599,
     images: [
       '/categories-grid/women/accessories/hats/hat4.jpg',
@@ -7574,9 +7467,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'sun-hat',
-    name: 'Солнечная шляпа',
+    name: 'Пёстрая кепи',
     rating: 4.5,
-    reviewsCount: 22,
+    reviewsCount: 4,
     manufacturer: 'SunnyDays',
     sizes: ['Универсальный'],
     price: 2399,
@@ -7586,8 +7479,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat5.jpg',
       '/categories-grid/women/accessories/hats/hat5.jpg',
     ],
-    material: 'Строительный материал',
-    color: 'Белый',
+    material: 'Хлопок',
+    color: 'Мультицвет',
     description:
       'Солнечная шляпа с широкими полями из легкого и влагостойкого материала. Идеально подходит для пляжа и отдыха на солнце.',
     reviews: [
@@ -7599,53 +7492,14 @@ export const productDetails: Product[] = [
         comment:
           'Шляпа хорошо защищает от солнца и смотрится стильно, но немного великовата.',
         date: '2024-06-10',
-      },
-    ],
-  },
-  {
-    id: 'sun-hat',
-    name: 'Солнечная шляпа',
-    rating: 4.5,
-    reviewsCount: 22,
-    manufacturer: 'SunnyDays',
-    sizes: ['Универсальный'],
-    price: 2399,
-    images: [
-      '/categories-grid/women/accessories/hats/hat5.jpg',
-      '/categories-grid/women/accessories/hats/hat5.jpg',
-      '/categories-grid/women/accessories/hats/hat5.jpg',
-      '/categories-grid/women/accessories/hats/hat5.jpg',
-    ],
-    material: 'Строительный материал',
-    color: 'Белый',
-    description:
-      'Солнечная шляпа с широкими полями из легкого и влагостойкого материала. Идеально подходит для пляжа и отдыха на солнце.',
-    reviews: [
-      {
-        user: 'Александра Морозова',
-        rating: 4.7,
-        pros: 'Отличная защита от солнца',
-        cons: 'Не очень удобная посадка',
-        comment:
-          'Шляпа хорошо защищает от солнца и смотрится стильно, но немного великовата.',
-        date: '2024-06-10',
-      },
-      {
-        user: 'Иван Павлов',
-        rating: 4.3,
-        pros: 'Легкая и удобная',
-        cons: 'Цвет не соответствует фото',
-        comment:
-          'Солнечная шляпа приятная на ощупь, хорошо защищает от солнца, но цвет немного отличается от изображения.',
-        date: '2024-06-08',
       },
     ],
   },
   {
     id: 'baseball-cap',
-    name: 'Бейсболка',
+    name: 'Бейсболка осенняя',
     rating: 4.3,
-    reviewsCount: 18,
+    reviewsCount: 4,
     manufacturer: 'SportStyle',
     sizes: ['Универсальный'],
     price: 1799,
@@ -7656,7 +7510,7 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat6.jpg',
     ],
     material: 'Хлопок',
-    color: 'Синий',
+    color: 'Мультицвет',
     description:
       'Классическая бейсболка из хлопка с регулируемым задником. Подходит для активного образа жизни и повседневной носки.',
     reviews: [
@@ -7681,11 +7535,11 @@ export const productDetails: Product[] = [
   },
   {
     id: 'newsboy-cap',
-    name: 'Гаврош',
+    name: 'Панама "Гаврош"',
     rating: 4.6,
-    reviewsCount: 26,
+    reviewsCount: 4,
     manufacturer: 'RetroStyle',
-    sizes: ['S', 'M', 'L'],
+    sizes: ['Универсальный'],
     price: 2999,
     images: [
       '/categories-grid/women/accessories/hats/hat7.jpg',
@@ -7693,8 +7547,8 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat7.jpg',
       '/categories-grid/women/accessories/hats/hat7.jpg',
     ],
-    material: 'Твид',
-    color: 'Коричневый',
+    material: 'Хлопок',
+    color: 'Мультицвет',
     description:
       'Традиционная гаврош из твида с мягким козырьком. Подходит для создания ретро-образа и добавления стиля в повседневный наряд.',
     reviews: [
@@ -7720,9 +7574,9 @@ export const productDetails: Product[] = [
   },
   {
     id: 'beret-cap',
-    name: 'Берет',
+    name: 'Бейсболка "Шишка"',
     rating: 4.4,
-    reviewsCount: 23,
+    reviewsCount: 4,
     manufacturer: 'FrenchChic',
     sizes: ['Универсальный'],
     price: 2199,
@@ -7732,10 +7586,10 @@ export const productDetails: Product[] = [
       '/categories-grid/women/accessories/hats/hat8.jpg',
       '/categories-grid/women/accessories/hats/hat8.jpg',
     ],
-    material: 'Шерсть',
-    color: 'Бордовый',
+    material: 'Хлопок',
+    color: 'Бежевый',
     description:
-      'Классический берет из мягкой шерсти с украшением на вершине. Подходит для создания элегантного и стильного образа.',
+      'Бейсболка "Шишка" из мягкого хлопка с украшением на вершине. Подходит для создания элегантного и стильного образа.',
     reviews: [
       {
         user: 'Наталья Васильева',

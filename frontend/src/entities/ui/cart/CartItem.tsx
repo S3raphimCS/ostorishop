@@ -124,7 +124,7 @@ export const CartItem: React.FC<CartItemProps> = ({
                           className="mr-2"
                           color={option.value as ColorVariant}
                         />
-                        <span className="text-black">
+                        <span className="text-sm text-black">
                           {option.value as string}
                         </span>
                       </>
