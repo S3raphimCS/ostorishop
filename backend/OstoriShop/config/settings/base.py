@@ -1,5 +1,6 @@
 from pathlib import Path
 from os import getenv
+import os
 from dotenv import load_dotenv
 
 from utils.typing import SecondTo
@@ -62,12 +63,13 @@ USE_TZ = True
 
 # Static and media files
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+#STATICFILES_DIRS = [
+#    BASE_DIR / "static",
+#]
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

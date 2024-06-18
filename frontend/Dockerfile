@@ -7,7 +7,6 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-#RUN npm run dev
 
-CMD ["npx", "next", "dev", "-p", "3000"] 
+CMD ["npx", "next", "start", "-p", "3000"] 
 

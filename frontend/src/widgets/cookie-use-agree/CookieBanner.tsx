@@ -26,7 +26,7 @@ export const CookieBanner = () => {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 end-0 z-[60] mx-auto w-full p-6 sm:max-w-xl">
+    <div className="fixed bottom-0 end-0 z-[999] mx-auto w-full p-6 sm:max-w-xl">
       <div className="rounded-xl border border-accent bg-white p-4 shadow-sm">
         <div className="flex gap-x-5">
           <CookieSvg />
@@ -39,7 +39,7 @@ export const CookieBanner = () => {
               файлов cookie. Посетите нашу{' '}
               <Link
                 className="inline-flex items-center gap-x-1.5 font-medium text-accent decoration-2 hover:underline"
-                href="/help/privacy-policy"
+                href="/help/cookie-policy"
               >
                 Политику в отношении файлов cookie,
               </Link>{' '}

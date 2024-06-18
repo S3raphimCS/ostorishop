@@ -18,17 +18,17 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='order',
             name='apartment_number',
-            field=models.PositiveSmallIntegerField(default=1, verbose_name='Номер квартиры'),
+            field=models.IntegerField(default=1, verbose_name='Номер квартиры'),
         ),
         migrations.AddField(
             model_name='order',
             name='house_number',
-            field=models.PositiveSmallIntegerField(default=53, verbose_name='Номер дома'),
+            field=models.IntegerField(default=53, verbose_name='Номер дома'),
         ),
         migrations.AddField(
             model_name='order',
             name='postal_code',
-            field=models.PositiveSmallIntegerField(default=680031, verbose_name='Почтовый индекс'),
+            field=models.IntegerField(default=680031, verbose_name='Почтовый индекс'),
         ),
         migrations.AddField(
             model_name='order',

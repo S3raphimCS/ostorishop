@@ -74,11 +74,11 @@ class Order(models.Model):
         max_length=50,
         default="Карла Маркса"
     )
-    house_number = models.PositiveSmallIntegerField(
+    house_number = models.IntegerField(
         _("Номер дома"),
         default=53
     )
-    apartment_number = models.PositiveSmallIntegerField(
+    apartment_number = models.IntegerField(
         _("Номер квартиры"),
         default=1
     )
@@ -87,7 +87,7 @@ class Order(models.Model):
         max_length=100,
         default="Иванов Иван Иванович"
     )
-    postal_code = models.PositiveSmallIntegerField(
+    postal_code = models.IntegerField(
         _("Почтовый индекс"),
         default=680031
     )

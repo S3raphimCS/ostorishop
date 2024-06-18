@@ -19,7 +19,8 @@ urlpatterns = [
     path('api/utils/', include('utils.urls'), name="utils"),
     path("api/auth/", include("authentication.urls"), name='auth'),
     path('api/order/', include("orders.urls"), name='orders')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
+  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += docs_urls
 

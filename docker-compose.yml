@@ -1,21 +1,6 @@
 version: '3.8'
 
 services:
-  django: 
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: django_web
-    volumes:
-      - ./backend/OstoriShop:/api 
-    ports: 
-      - '8000:8000'
-    depends_on:
-      - pgdb
-    networks:  
-      bridge_net:
-        ipv4_address: 172.20.0.10 
-
   pgdb:
     image: postgres
     container_name: pgdb
@@ -25,7 +10,25 @@ services:
     env_file:
       - backend/.env
     networks:
-      - bridge_net
+      bridge_net: 
+        ipv4_address: 172.20.0.12
+
+  django: 
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: django_web
+    volumes:
+      - ./backend/OstoriShop:/api 
+      - ./backend/OstoriShop/static:/api/static
+    ports: 
+      - '8000:8000'
+    depends_on:
+      - pgdb
+      - redis
+    networks:  
+      bridge_net:
+        ipv4_address: 172.20.0.10 
 
   redis:
     image: "redis:7.0.5-alpine"
@@ -38,13 +41,14 @@ services:
       timeout: 3s
       retries: 30
     networks:
-      - bridge_net
+      bridge_net: 
+        ipv4_address: 172.20.0.13
 
-  react-app:
+  client-app:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: react_app
+    container_name: client-app
     volumes:
       - ./frontend:/frontend
     ports:
@@ -52,6 +56,26 @@ services:
     networks:
       bridge_net: 
         ipv4_address: 172.20.0.11  
+
+  nginx:
+    build:
+      context: ./services/nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./backend/OstoriShop:/api 
+      - ./backend/OstoriShop/static:/static
+    depends_on:
+      - django
+      - client-app  
+    networks:
+      bridge_net: 
+        ipv4_address: 172.20.0.100
+
+    
 
 networks:
   bridge_net:
