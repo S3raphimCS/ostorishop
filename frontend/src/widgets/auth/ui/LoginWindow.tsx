@@ -13,11 +13,11 @@ export const LoginWindow: React.FC<LoginWindowProps> = ({
   return (
     <section className="my-0">
       <div className="mx-auto flex flex-col items-center justify-center lg:py-0">
-        <div className="mb-4 flex items-center gap-2 text-2xl font-bold tracking-wide text-base-100">
+        <div className="mb-4 flex hidden items-center gap-2 text-2xl font-bold tracking-wide text-base-100 sm:hidden md:flex">
           <Logo width={48} height={48} />
           OstoriShop
         </div>
-        <div className="w-full rounded-lg border border-gray-700 bg-base-100 shadow sm:max-w-md md:mt-0 xl:p-0">
+        <div className="w-full rounded-lg border-gray-700 bg-base-100 shadow sm:max-w-md sm:border-0 md:mt-0 md:border xl:p-0">
           <div className="space-y-4 p-6 sm:p-8 md:space-y-6">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-neutral-content md:text-2xl">
               Войти в свой аккаунт

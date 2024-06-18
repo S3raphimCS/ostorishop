@@ -1,7 +1,6 @@
 export const openModal = (modalId: string) => {
-  const modal = document.getElementById(modalId);
+  const modal = document.getElementById(modalId) as HTMLDialogElement;
   if (modal) {
-    // @ts-ignore
     modal.showModal();
   }
 };

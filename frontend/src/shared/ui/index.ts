@@ -25,6 +25,7 @@ export { Range } from './range/Range';
 export type { RangeProps } from './range/Range';
 export { Rating } from './rating/Rating';
 export { Select } from './select/Select';
+export { Sidebar } from './sidebar/Sidebar';
 export { Tooltip } from './tooltip/Tooltip';
 
 export { openModal } from './modal/lib/openModal';

@@ -39,7 +39,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
   };
 
   return (
-    <section className="bg-white">
+    <section className="overflow-scroll bg-white sm:overflow-scroll md:overflow-hidden">
       <div className="mx-auto flex flex-col justify-center lg:py-0">
         <section className="relative mx-0 flex bg-gray-900 py-0">
           <img
@@ -185,7 +185,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
                 </p>
               </div>
 
-              <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
+              <div className="col-span-6 pb-16 sm:flex sm:items-center sm:gap-4 sm:pb-16 md:pb-0">
                 <Button className="text-white" variant={'secondary'}>
                   Создать аккаунт
                 </Button>
