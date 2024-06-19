@@ -5,7 +5,9 @@ import { TokenObtainPair, UserRegister } from '@/shared/model/Api';
 // Test delay for some API executions
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const BACKEND_SERVER_URL = process.env.NEXT_PUBLIC_BACKEND_SERVER_URL;
+// TODO: На деве поставить в env http://localhost:8000
+// const BACKEND_SERVER_URL = process.env.NEXT_PUBLIC_BACKEND_SERVER_URL;
+const BACKEND_SERVER_URL = '';
 const API_URL: string = BACKEND_SERVER_URL + 'api/auth/user';
 
 const TOKEN_NAME = 'authorized';
@@ -29,7 +31,7 @@ export const registerUser = async (userData: UserRegister) => {
     loginUser({ email: userData.email, password: userData.password1 });
     return response.data;
   } catch (error: any) {
-    throw error.response?.data?.message || 'Registration failed';
+    throw error.response?.data?.message || 'Registration failed ' + error;
   }
 };
 

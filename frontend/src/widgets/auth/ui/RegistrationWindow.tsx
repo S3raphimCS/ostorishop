@@ -32,10 +32,7 @@ export const RegistrationWindow: React.FC<RegistrationWindowProps> = ({
     e.preventDefault();
     try {
       const data = await registerUser(formData);
-      console.log('Registration successful:', data);
-    } catch (error: any) {
-      console.error('Registration error:', error);
-    }
+    } catch (error: any) {}
   };
 
   return (

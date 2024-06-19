@@ -17,7 +17,6 @@ export const fetchExchangeRates = createAsyncThunk(
     }
 
     const response = await axios.get(BASE_URL);
-    console.log(response);
     return response.data.conversion_rates;
   }
 );

@@ -6,7 +6,6 @@ SECRET_KEY = getenv("DJANGO_SECRET_KEY", 'set_me_in_prod')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "*",
     "localhost",
     "ostori.ru",
     "212.60.21.149"
