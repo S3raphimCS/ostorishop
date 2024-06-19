@@ -8,8 +8,7 @@
 
 # echo "PostgreSQL started"
 
-# python wait_for_postgres.py
 python manage.py migrate
-python manage.py collectstatic --no-input
+python manage.py collectstatic --noinput
 
 daphne config.asgi:application --port 8000 -b 0.0.0.0

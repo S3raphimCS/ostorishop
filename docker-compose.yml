@@ -68,6 +68,8 @@ services:
     volumes:
       - ./backend/OstoriShop:/api 
       - ./backend/OstoriShop/static:/static
+      - ./nginx/cert.pem:/etc/cert.pem
+      - ./nginx/key.pem:/etc/key.pem
     depends_on:
       - django
       - client-app  
@@ -75,7 +77,23 @@ services:
       bridge_net: 
         ipv4_address: 172.20.0.100
 
-    
+  certbot:
+    build:
+      context: ./services/certbot
+      dockerfile: Dockerfile
+    depends_on:
+      - nginx
+    ports:
+      - "6000:80"
+    env_file:
+      - backend/.env
+    volumes:
+      - ./nginx/:/etc/nginx/
+    command: certonly --standalone --email s3raphimcs@gmail.com -d ostori.ru --cert-name=certfolder --key-type rsa --agree-tos
+    networks:
+      bridge_net:
+        ipv4_address: 172.20.0.101
+
 
 networks:
   bridge_net:
