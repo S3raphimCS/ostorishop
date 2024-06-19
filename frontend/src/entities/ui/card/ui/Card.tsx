@@ -12,6 +12,7 @@ import {
 } from '@/features/wishlist';
 import { paths } from '@/shared/routing';
 import { ColorVariant } from '../../filter/product-filters/color-filter/Color';
+import { SizeVariant } from '../../filter/product-filters/size-filter/Size';
 
 export interface CardProps {
   id?: string;
@@ -21,6 +22,7 @@ export interface CardProps {
   rating?: number;
   reviewsCount?: number;
   color?: ColorVariant;
+  sizes?: SizeVariant[];
   price?: number;
   cardPlates?: CardPlateProps[];
   showHeart?: boolean;
