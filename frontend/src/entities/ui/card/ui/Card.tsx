@@ -11,6 +11,7 @@ import {
   selectFavorites,
 } from '@/features/wishlist';
 import { paths } from '@/shared/routing';
+import { ColorVariant } from '../../filter/product-filters/color-filter/Color';
 
 export interface CardProps {
   id?: string;
@@ -19,6 +20,7 @@ export interface CardProps {
   alt: string;
   rating?: number;
   reviewsCount?: number;
+  color?: ColorVariant;
   price?: number;
   cardPlates?: CardPlateProps[];
   showHeart?: boolean;

@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button, Icon, Rating } from '@/shared/ui';
-import { CardPlate, CardPlateVariant } from '@/entities/ui/card';
+import { CardPlate, CardPlateVariant, CardProps } from '@/entities/ui/card';
 import { Product } from '@/entities/model';
 import { Price } from '@/entities/ui/price';
 import {
@@ -10,6 +10,22 @@ import {
   ColorVariant,
 } from '@/entities/ui/filter/product-filters/color-filter/Color';
 import { addToCart } from '@/features/cart';
+import {
+  addFavorite,
+  removeFavorite,
+  selectFavorites,
+} from '@/features/wishlist';
+import {
+  menBagsProducts,
+  menBeltsProducts,
+  menHatsProducts,
+  menJacketsProducts,
+  menJeansProducts,
+  menSandalsProducts,
+  menShortsProducts,
+  menSneakersProducts,
+  menTShirtsProducts,
+} from '@/app-wrapper/types/mocks';
 
 interface ProductDetailsProps {
   product: Product;
@@ -21,6 +37,47 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
   const handleSizeClick = (size: string) => {
     setSelectedSize(size);
+  };
+
+  const favorites = useSelector(selectFavorites);
+  const isFavorite = favorites.some((item: any) => item.id === product.id);
+
+  const findProductById = (id: string): CardProps | undefined => {
+    const allProducts = [
+      ...menJacketsProducts,
+      ...menTShirtsProducts,
+      ...menJeansProducts,
+      ...menHatsProducts,
+      ...menBagsProducts,
+      ...menBeltsProducts,
+      ...menShortsProducts,
+      ...menSandalsProducts,
+      ...menSneakersProducts,
+    ];
+    return allProducts.find((product) => product.id === id);
+  };
+
+  const handleFavoriteClick = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    if (!product.id) return;
+    const productDetails = findProductById(product.id);
+    if (!productDetails) return;
+
+    if (isFavorite) {
+      dispatch(removeFavorite(product.id));
+    } else {
+      dispatch(
+        addFavorite({
+          id: productDetails.id as string,
+          title: productDetails.title,
+          imageUrl: productDetails.imageUrl,
+          alt: productDetails.alt,
+          rating: productDetails.rating,
+          reviewsCount: productDetails.reviewsCount,
+          price: productDetails.price,
+        })
+      );
+    }
   };
 
   const handleAddToCart = () => {
@@ -64,8 +121,13 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           variant="default"
           size={'tiny'}
           className="border-0	bg-base-100 shadow-none hover:bg-base-100 hover:shadow-none"
+          onClick={handleFavoriteClick}
         >
-          <Icon icon={'heart-outline'} />
+          <Icon
+            size={'2em'}
+            icon={isFavorite ? 'heart' : 'heart-outline'}
+            color={isFavorite ? 'red' : 'black'}
+          />
         </Button>
       </div>
       <h1 className="mt-2 text-3xl font-bold">{product.name}</h1>
